@@ -8,7 +8,7 @@
 * At least one other participant must be specified.
 * If a user ID appears in the list multiple times, duplicates will be ignored.
 * If there is an existing IM conversation with the specified participants, then the id of the existing stream will be returned.
-* Use [Create IM or MIM non-inclusive](ref:create-im-or-mim-admin) to exclude the calling user.
+* Use [Create IM or MIM non-inclusive](create-im-or-mim-admin.md) to exclude the calling user.
 
 When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
 

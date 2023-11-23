@@ -46,9 +46,6 @@
   * [List Message Receipts](endpoints-reference/messages/list-message-receipts.md)
   * [Message Metadata](endpoints-reference/messages/message-metadata-relationship.md)
 * [Datafeed - Event Stream](endpoints-reference/datafeed/README.md)
-  * [Datafeed v1](endpoints-reference/datafeed/datafeed-v1/README.md)
-    * [Create Datafeed v1](endpoints-reference/datafeed/datafeed-v1/create-messagesevents-stream-v4.md)
-    * [Read Datafeed v1](endpoints-reference/datafeed/datafeed-v1/read-messagesevents-stream-v4.md)
   * [Datafeed v2](endpoints-reference/datafeed/datafeed-v2/README.md)
     * [Create Datafeed v2](endpoints-reference/datafeed/datafeed-v2/create-datafeed-v5.md)
     * [Read Datafeed v2](endpoints-reference/datafeed/datafeed-v2/read-datafeed-v5.md)
@@ -249,3 +246,6 @@
 
 * [Get Message IDs by Timestamp](deprecated-endpoints/get-message-ids-by-timestamp.md)
 * [Health Check v2](deprecated-endpoints/health-check-v2.md)
+* [Datafeed v1](deprecated-endpoints/datafeed-v1/README.md)
+  * [Create Datafeed v1](deprecated-endpoints/datafeed-v1/create-messagesevents-stream-v4.md)
+  * [Read Datafeed v1](deprecated-endpoints/datafeed-v1/read-messagesevents-stream-v4.md)
