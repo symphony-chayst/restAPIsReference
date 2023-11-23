@@ -4300,17 +4300,10 @@ components:
             A diagnostic message containing an error message in the event that the
             message import failed. May also be present in the case of a successful
             call if there is useful narrative to return.
-      examples:
-        Success:
-          value:
-            messageId: FjSY1y3L...
-            originatingSystemId: AGENT_SDK
-            originalMessageId: M2
-        Something wrong:
-          value:
-            originatingSystemId: AGENT_SDK
-            originalMessageId: M1
-            diagnostic: 500 . status.INTERNAL_SERVER_ERROR
+      example:
+        messageId: FjSY1y3L...
+        originatingSystemId: AGENT_SDK
+        originalMessageId: M2
     V4AttachmentInfo:
       required:
         - id
