@@ -4280,6 +4280,13 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/V4ImportResponse'
+      example:
+        - messageId: FjSY1y3L...
+          originatingSystemId: AGENT_SDK
+          originalMessageId: M2
+        - originatingSystemId: AGENT_SDK
+          originalMessageId: M1
+          diagnostic: 500 . status.INTERNAL_SERVER_ERROR
     V4ImportResponse:
       type: object
       properties:
@@ -4300,10 +4307,17 @@ components:
             A diagnostic message containing an error message in the event that the
             message import failed. May also be present in the case of a successful
             call if there is useful narrative to return.
-      example:
-        messageId: FjSY1y3L...
-        originatingSystemId: AGENT_SDK
-        originalMessageId: M2
+      examples:
+        Success:
+          value:
+            messageId: FjSY1y3L...
+            originatingSystemId: AGENT_SDK
+            originalMessageId: M2
+        Failure:
+          value:
+            originatingSystemId: AGENT_SDK
+            originalMessageId: M1
+            diagnostic: 500 . status.INTERNAL_SERVER_ERROR
     V4AttachmentInfo:
       required:
         - id
