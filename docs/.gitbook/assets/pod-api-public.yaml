@@ -4217,10 +4217,18 @@ paths:
           description: 'Client error, see response body for further details.'
           schema:
             $ref: '#/definitions/Error'
+          examples:
+            application/json:
+              code: 400
+              message: //Client error, see response body for further details.
         '401':
           description: 'Unauthorized: Session tokens invalid.'
           schema:
             $ref: '#/definitions/Error'
+          examples:
+            application/json:
+              code: 401
+              message: Invalid session
         '403':
           description: 'Forbidden: Caller lacks necessary entitlement.'
           schema:
@@ -5891,6 +5899,11 @@ definitions:
     type: array
     items:
         type: string
+    example:
+      - ftp
+      - mailto
+      - fdsup
+      - skype
   DisclaimerList:
     type: array
     items:
