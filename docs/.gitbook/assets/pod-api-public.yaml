@@ -5065,8 +5065,10 @@ definitions:
       code:
         type: integer
         format: int32
+        example: 401
       message:
         type: string
+        example: Invalid session
   CompanyCert:
       type: object
       properties:
@@ -6871,6 +6873,7 @@ definitions:
       scheme:
         type: string
         description: "URI protocol scheme (example: http, https, ftp)"
+        example: skype
   AppAuthenticationKeys:
     description: App RSA keys information.
     type: object
