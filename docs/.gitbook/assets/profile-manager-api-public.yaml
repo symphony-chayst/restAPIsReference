@@ -1315,15 +1315,6 @@ components:
           $ref: '#/components/schemas/Member'
           nullable: false
 
-  requestBodies:
-    CreateGroupBody:
-      description: JSON object containing Group info
-      required: true
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/CreateGroup'
-
     UpdateGroupBody:
       description: JSON object containing Group info
       required: true
