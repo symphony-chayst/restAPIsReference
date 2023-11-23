@@ -1,5 +1,9 @@
 # Search Rooms
 
+`Released in 1.48.`
+
+Search for rooms, querying name, description, and specified keywords.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v3/room/search" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

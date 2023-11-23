@@ -1,6 +1,8 @@
 # List Streams for Enterprise
 
-`Released in 1.50`Returns a list of all the streams (IMs, MIMs, chatrooms, Wall posts as well as streams reserved for internal use) for the calling user's company, sorted by creation date (ascending – oldest to newest).&#x20;
+`Released in 1.50`
+
+Returns a list of all the streams (IMs, MIMs, chatrooms, Wall posts as well as streams reserved for internal use) for the calling user's company, sorted by creation date (ascending – oldest to newest).&#x20;
 
 **Filtering** parameters can be used to narrow the list of streams that are returned. For more information, refer to the **Filtering Returned Streams** section below.
 

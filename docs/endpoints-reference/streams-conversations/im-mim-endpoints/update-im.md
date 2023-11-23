@@ -1,5 +1,9 @@
 # Update IM
 
+`Released in 20.13.`
+
+Updates the attributes of an existing IM.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/im/{id}/update" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

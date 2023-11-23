@@ -1,5 +1,9 @@
 # Update Room
 
+`Released in 1.48.Data Loss Protection (DLP) included in 1.54.2.`
+
+Updates the attributes of an existing chat room.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v3/room/{id}/update" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

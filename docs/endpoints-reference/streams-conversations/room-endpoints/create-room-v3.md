@@ -1,5 +1,9 @@
 # Create Room
 
+`Released in 1.48. Starting with SBE 20.14, it is possible to create External chat rooms with view history enabled, depending on a pod parameter.`
+
+Creates a new chatroom. See [Room Attributes](ref:room-attributes-1) for room creation parameters.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v3/room/create" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

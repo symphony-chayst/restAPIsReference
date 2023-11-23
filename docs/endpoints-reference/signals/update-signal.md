@@ -1,5 +1,9 @@
 # Update Signal
 
+`Available on Agent 2.0.0 and above. Data Loss Protection (DLP) included in 1.54.2`&#x20;
+
+Updates an existing Signal.
+
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/signals/{id}/update" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}

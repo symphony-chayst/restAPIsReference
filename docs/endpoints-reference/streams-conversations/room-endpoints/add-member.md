@@ -1,5 +1,9 @@
 # Add Member
 
+`Released prior to 1.43.`
+
+Adds a new member to an existing room.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/room/{id}/membership/add" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

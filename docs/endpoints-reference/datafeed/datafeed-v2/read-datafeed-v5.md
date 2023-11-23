@@ -1,5 +1,9 @@
 # Read Datafeed v2
 
+`Available on Agent 2.57.0 and above.`&#x20;
+
+Reads the specified datafeed.The datafeed provides messages and events from all conversations that the user is in. The types of events surfaced in the datafeed can be found in the [Real Time Events](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/real-time-events) list.
+
 {% swagger src="../../../.gitbook/assets/agent-api-public.yaml" path="/v5/datafeeds/{datafeedId}/read" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}

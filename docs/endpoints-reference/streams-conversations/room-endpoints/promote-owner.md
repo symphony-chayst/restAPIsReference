@@ -1,5 +1,9 @@
 # Promote Owner
 
+`Released prior to 1.43.`
+
+Promotes user to owner of the chat room.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/room/{id}/membership/promoteOwner" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

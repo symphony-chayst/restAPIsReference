@@ -1,5 +1,7 @@
 # Room Attributes
 
+Rooms are specified by name, description, optional keywords, and a variety of settings, such as whether all participants can invite new participants or whether the room is accessible for anyone to join.
+
 The following attributes apply to these Room endpoints:
 
 * [Create Room](ref:create-room-v3)

@@ -1,5 +1,9 @@
 # Stream Members
 
+`Released in 1.45.`
+
+Returns a list of all the current members of a stream (IM, MIM, or chatroom).
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/stream/{id}/membership/list" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

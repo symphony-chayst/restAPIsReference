@@ -1,5 +1,9 @@
 # Create IM or MIM non-inclusive
 
+`Released prior to 1.43.`
+
+Creates a new single or multi-party instant message conversation or returns an existing IM or MIM between the specified users, but excludes the calling user.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/im/create" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

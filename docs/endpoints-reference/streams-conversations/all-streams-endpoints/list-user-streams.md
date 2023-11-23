@@ -1,5 +1,9 @@
 # List User Streams
 
+`Released prior to 1.43.`
+
+Returns a list of all the streams of which the requesting user is a member, sorted by creation date (ascending - oldest to newest).
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/streams/list" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

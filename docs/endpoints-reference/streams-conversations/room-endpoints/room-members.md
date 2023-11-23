@@ -1,5 +1,9 @@
 # Room Members
 
+`Released prior to 1.43.`
+
+Lists the current members of an existing room.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v2/room/{id}/membership/list" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}

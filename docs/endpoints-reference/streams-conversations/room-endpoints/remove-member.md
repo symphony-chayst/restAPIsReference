@@ -1,5 +1,9 @@
 # Remove Member
 
+`Released prior to 1.43.`
+
+Removes an existing member from an existing room.
+
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/room/{id}/membership/remove" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
