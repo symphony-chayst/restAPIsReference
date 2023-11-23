@@ -4286,7 +4286,7 @@ components:
           originalMessageId: M2
         - originatingSystemId: AGENT_SDK
           originalMessageId: M1
-          diagnostic: '500 : {\"status\":\"INTERNAL_SERVER_ERROR\"}'
+          diagnostic: '500 : {"status":"INTERNAL_SERVER_ERROR"}'
     V4ImportResponse:
       type: object
       properties:
