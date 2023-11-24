@@ -8712,7 +8712,7 @@ definitions:
     x-since: 20.14
     items:
       $ref: '#/definitions/AppProperty'
-    examples:
+    example:
       - key: port
         value: 4000
       - key: url
