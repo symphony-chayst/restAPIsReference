@@ -8370,6 +8370,12 @@ definitions:
       publisher:
         description: The publisher for this application.
         type: string
+    example:
+      appId: my-test-app
+      name: my-test-app
+      appUrl: https://joe.mydomain.com
+      domain: mydomain.com
+      publisher: Joe Smith
   ApplicationDetail:
     description: Detailed record of application.
     type: object
@@ -8380,14 +8386,17 @@ definitions:
       iconUrl:
         description: Url to a icon to use for app. Must start with "https://".
         type: string
+        example: https://myiconUrl.com
       description:
         description: Description of the application.
         type: string
+        example: a test app
       allowOrigins:
         description: |
           The permitted domains to send or receive a request from.
           The field is for the purpose of CORS which set the app specific "ALLOW-ORIGIN-DOMAINS" header in HTTP.
         type: string
+        example: mydomain.com
       permissions:
         description: |
           List of application permissions provisioned for the application.
@@ -8414,9 +8423,13 @@ definitions:
           type: string
           maxLength: 64
           minLength: 1
+        example:
+          - ACT_AS_USER
+          - SEND_MESSAGES
       cert:
         description: The app public certificate in pem format.
         type: string
+        example: -----BEGIN PUBLIC KEY-----\nMIICIANBgkqhw0BAQ...cCAwEAAQ==\n-----END PUBLIC KEY-----
       authenticationKeys:
         $ref: '#/definitions/AppAuthenticationKeys'
       notification:
@@ -8664,10 +8677,12 @@ definitions:
       key:
         description: Application RSA public key.
         type: string
+        example: -----BEGIN PUBLIC KEY-----\nMIICIANBgkqhw0BAQ...cCAwEAAQ==\n-----END PUBLIC KEY-----
       expirationDate:
         description: RSA key expiration date. This value is set just for rotated keys.
         type: integer
         format: int64
+        example: 1700815176000
       action:
         description: |
           Action to be performed on the RSA key.
@@ -8678,6 +8693,7 @@ definitions:
             - REVOKE
             - EXTEND
         type: string
+        example: SAVE
   AppNotification:
     type: object
     description: Application callback information
@@ -8685,9 +8701,11 @@ definitions:
       url:
         type: string
         description: "callback URL"
+        example: https://some.url
       apiKey:
         type: string
         description: "apiKey sent into every callback request, using the X-API-KEY header"
+        example: test123456
   AppProperties:
     type: array
     description: Application configuration properties that are shared with the extension application, client side. Do not store sensitive information here. Since SBE 20.14.
@@ -8704,6 +8722,9 @@ definitions:
       value:
         type: string
         description: Value of an application configuration property. It cannot be null and its length is limited to 4096 characters. It can be empty.
+    example:
+      key: port
+      value: 4000
   StreamAttachmentResponse:
     type: array
     items:
