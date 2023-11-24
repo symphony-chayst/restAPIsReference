@@ -8712,6 +8712,11 @@ definitions:
     x-since: 20.14
     items:
       $ref: '#/definitions/AppProperty'
+    examples:
+      - key: port
+        value: 4000
+      - key: url
+        value: https://someother.url
   AppProperty:
     type: object
     description: Application configuration property that is shared with the extension application, client side. Do not store sensitive information here.
