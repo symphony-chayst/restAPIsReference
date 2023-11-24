@@ -1,5 +1,5 @@
 # V2 All Policies
 
-{% swagger src="../../../endpoints-reference/.gitbook/assets/agent-api-public.yaml" path="/v1/dlp/policies" method="get" expanded="true" fullWidth="true" %}
-[agent-api-public.yaml](../../../endpoints-reference/.gitbook/assets/agent-api-public.yaml)
+{% swagger src="../../../.gitbook/assets/agent-api-public.yaml" path="/v1/dlp/policies" method="get" expanded="true" fullWidth="true" %}
+[agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
