@@ -1,5 +1,5 @@
 # Delete Dictionary
 
-{% swagger src="../../../.gitbook/assets/agent-api-public.yaml" path="/v1/dlp/dictionaries/{dictId}/data/download" method="delete" expanded="true" fullWidth="true" %}
+{% swagger src="../../../.gitbook/assets/agent-api-public.yaml" path="/v1/dlp/dictionaries/{dictId}" method="delete" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
