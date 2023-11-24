@@ -6418,6 +6418,12 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/StringList'
+          examples:
+            application/json:
+              - .bmp
+              - .doc
+              - .png
+              - .mp4
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6978,46 +6984,64 @@ definitions:
       id:
         type: integer
         format: int64
+        example: 7696581394433
       emailAddress:
         type: string
         format: email
+        example: admin@symphony.com
       firstName:
         type: string
+        example: Symphony
       lastName:
         type: string
+        example: Admin
       displayName:
         type: string
+        example: Symphony Admin
       title:
         type: string
+        example: Administrator
       company:
         type: string
+        example: Acme
       username:
         type: string
+        example: admin@symphony.com
       location:
         type : string
+        example: California
       accountType:
         type: string
         enum: [NORMAL, SYSTEM, SDL]
+        example: NORMAL
       avatars:
         # avatar urls for both original size and small size
         $ref: '#/definitions/AvatarList'
       workPhoneNumber:
         type: string
         description: 'Note: only available if the application has the extended user or contact permission'
+        example: +33901020304
       mobilePhoneNumber:
         type: string
         description: 'Note: only available if the application has the extended user or contact permission'
+        example: +33601020304
       jobFunction:
         type: string
         description: 'Note: only available if the application has the extended user or contact permission'
+        example: Sales
       department:
         type: string
         description: 'Note: only available if the application has the extended user or contact permission'
+        example: APIs
       division:
         type: string
         description: 'Note: only available if the application has the extended user or contact permission'
+        example: Partnerships
       roles:
         $ref: '#/definitions/StringList'
+        example:
+          - INDIVIDUAL
+          - SUPER_ADMINISTRATOR
   V2UserList:
     description: List of User record version 2
     type: object
@@ -7357,13 +7381,20 @@ definitions:
       size:
         description: 'The Avatar Size'
         type: string
+        example: original
       url:
         description: 'Url of the image'
         type: string
+        example: ../avatars/izcQTdRVFOK_qhCrYeQOpIuHKuZuMk3J88Uz_bShzM8.png
   AvatarList:
     type: array
     items:
      $ref: '#/definitions/Avatar'
+    example:
+      - size: original
+        url: ../avatars/izcQTdRVFOK_qhCrYeQOpIuHKuZuMk3J88Uz_bShzM8.png
+      - size: small
+        url: ../avatars/izcQTdRVFOK_qhCrYeQOpIuHKuZuMk3J88Uz_bShzM8_small.png
   UserStatus:
     type: object
     properties:
@@ -8071,12 +8102,15 @@ definitions:
     properties:
       messageId:
         type: string
+        example: _Gj13MiR-5IrVtrmPNl6fn___qvWCYI_dA
       suppressed:
         type: boolean
+        example: true
       suppressionDate:
         type: integer
         format: int64
         description: The date when this message was suppressed.
+        example: 1461565603191
   BulkActionResult:
     description: |
       The results of list based bulk action. The list contains the result messages
@@ -8309,18 +8343,25 @@ definitions:
     properties:
       userId:
         type: string
+        example: 7078106103901
       firstName:
         type: string
+        example: Gustav
       lastName:
         type: string
+        example: Mahler
       displayName:
         type: string
+        example: Gustav Mahler
       email:
         type: string
+        example: gustav.mahler@music.org
       userName:
         type: string
+        example: gmahler
       timestamp:
         type: string
+        example: 1531968487845
   MessageStatus:
     description: |
       Holds the status of a particular message, indicating which user the message has been sent, delivered or read.
@@ -8348,6 +8389,21 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/MessageStatusUser'
+        example:
+          - userId: 7078106103904
+            firsName: Benjamin
+            lastName: Britten
+            displayName: Benjamin Britten
+            email: benjamin.britten@music.org
+            userName: bbritten
+            timestamp: 1484156123000
+          - userId: 7078106103901
+            firsName: Gustav
+            lastName: Mahler
+            displayName: Gustav Mahler
+            email: gmahler@music.org
+            userName: gmahler
+            timestamp: 1531968487845
   ApplicationInfo:
     description: |
       Required information for creating an application.
@@ -8740,24 +8796,31 @@ definitions:
     properties:
       messageId:
         type: string
+        example: PYLHNm/1K6p...peOpj+FbQ
       ingestionDate:
         type: integer
         format: int64
+        example: 1548089933946
       userId:
         type: integer
         format: int64
+        example: 14568529068038
       fileId:
         type: string
         description: The attachment File ID.
+        example: internal_14362
       name:
         type: string
         description: The file name.
+        example: butterfly.jpg
       size:
         type: integer
         format: int64
         description: Size in bytes.
+        example: 70186
       content-type:
         type: string
+        example: image/jpeg
       previews:
         type: array
         items:
@@ -8769,9 +8832,11 @@ definitions:
       fileId:
         type: string
         description: The preview file ID
+        example: internal_14362
       width:
         type: integer
         description: The preview image width
+        example: 600
   UserGroupCreate:
     description: Body for group creation
     type: object
@@ -8907,18 +8972,23 @@ definitions:
         type: integer
         format: int64
         description: User ID
+        example: 7215545058329
       username:
         type: string
         description: Username
+        example: dpayet
       firstName:
         type: string
         description: User first name
+        example: Dimitri
       lastName:
         type: string
         description: User last name
+        example: Payet
       emailAddress:
         type: string
         description: User email addressIntegrationUserManagerTest
+        example: dpayet@om.fr
   UserGroupMembershipRequest:
     description: Body for user group membership creation
     type: object
@@ -9109,9 +9179,11 @@ definitions:
     properties:
       fileName:
         type: string
+        example: Untitled Document.txt
       timestamp:
         type: integer
         format: int64
+        example: 1552999335740
   MessageReceiptDetail:
     description: Message receipt details response object
     type: object
@@ -9122,14 +9194,17 @@ definitions:
         description: Timestamp of message delivery receipts
         type: integer
         format: int64
+        example: 1552999333784
       readReceiptTimestamp:
         description: Timestamp of message read receipts
         type: integer
         format: int64
+        example: 1552999335114
       emailNotificationTimestamp:
         description: Timestamp of message email notifications
         type: integer
         format: int64
+        example: 1552999335114
       downloadReceiptCounts:
         type: array
         items:
@@ -9147,12 +9222,16 @@ definitions:
       creationDate:
         type: integer
         format: int64
+        example: 1552999333141
       deliveryReceiptCount:
         type: integer
+        example: 1
       readReceiptCount:
         type: integer
+        example: 1
       emailNotificationCount:
         type: integer
+        example: 1
       downloadReceiptCounts:
         type: array
         items:
@@ -9169,25 +9248,32 @@ definitions:
       id:
         type: integer
         format: int64
+        example: 7215545058329
       name:
         type: string
+        example: User Test
   MessageStream:
     type: object
     properties:
       id:
         type: string
+        example: lFpyw0ATFmji+Cc/cSzbk3///pZkWpe1dA==
       name:
         type: string
+        example: Test Room
       streamType:
         type: string
+        example: ROOM
   MessageDownloadReceiptCount:
     type: object
     properties:
       fileName:
         type: string
+        example: internal_707810
       count:
         type: integer
         format: int64
+        example: 1
   MessageDetail:
     description: Message detail
     type: object
