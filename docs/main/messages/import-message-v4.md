@@ -1,5 +1,7 @@
 # Import Message
 
+Available on Agent 2.0.0 and above. Organizations can import messages to Symphony from another system using Symphony’s REST API. Typically message import is performed before an organization begins using Symphony, so that users' previous content and context are available from day one within Symphony.This endpoint Imports a message into Symphony from another system. Imported messages will be displayed in Symphony clients with the original system's content, sender, and timestamp.This endpoint takes as input a list of messages to be imported and outputs a status for each message. If a message is successfully imported, the `messageId` of the message created in Symphony is returned.If import fails on a given message, the rest of the operation will continue. It will be possible to detect any failures only after the entire operation is completed.
+
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v4/message/import" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}

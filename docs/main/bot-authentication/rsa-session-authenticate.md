@@ -1,5 +1,7 @@
 # Session Authenticate
 
+Released in 1.51. Authenticates the API caller on the Symphony servers (pod) using a JWT.
+
 {% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/authenticate" method="post" expanded="true" fullWidth="true" %}
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)
 {% endswagger %}

@@ -1,3 +1,7 @@
 # List Attachments
 
-{% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/streams/{sid}/attachments" method="get" expanded="true" fullWidth="true" %} pod-api-public.yaml {% endswagger %}
+Released in 1.53. List attachments in a particular stream.
+
+{% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/streams/{sid}/attachments" method="get" expanded="true" fullWidth="true" %}
+[pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
+{% endswagger %}

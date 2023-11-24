@@ -1,5 +1,7 @@
 # Message Status
 
+Released in 1.47. Get the status of a particular message: `sent`, `delivered`, and `read`.
+
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/message/{mid}/status" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
