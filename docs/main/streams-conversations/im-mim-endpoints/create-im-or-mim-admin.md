@@ -11,7 +11,7 @@ Creates a new single or multi-party instant message conversation or returns an e
 * At least two participants must be specified.
 * If a user ID appears in the list multiple times, duplicates will be ignored.
 * If there is an existing IM conversation with the specified participants, then the id of the existing stream will be returned.
-* Use [Create IM or MIM](ref:create-im-or-mim) to include the calling user.
+* Use [Create IM or MIM](create-im-or-mim.md) to include the calling user.
 
 > 🚧 Required Permissions
 >

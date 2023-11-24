@@ -7,9 +7,9 @@ Sets the online status of the calling user.
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
+When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 
-The available online status values (presence categories) for users are are available in [Get Presence](ref:get-presence)
+The available online status values (presence categories) for users are are available in [Get Presence](get-presence.md)
 
 > 📘 Idle state
 >

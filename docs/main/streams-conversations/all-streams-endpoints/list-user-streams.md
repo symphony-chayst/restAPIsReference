@@ -10,7 +10,7 @@ Returns a list of all the streams of which the requesting user is a member, sort
 
 ### Request Example
 
-```curl
+```bash
 curl -X POST \
 https://acme.symphony.com/pod/v1/streams/list \
 -H "sessionToken: SESSION_TOKEN" \

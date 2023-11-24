@@ -12,7 +12,7 @@ Returns a list of all the streams (IMs, MIMs, chatrooms, Wall posts as well as s
 
 ### Request Example
 
-```curl
+```bash
 curl -X POST \
 https://acme.symphony.com/pod/v2/admin/streams/list \
     -H 'Content-Type: application/json' \ 

@@ -18,7 +18,7 @@ In the response,
 * `lastMessageDate` states when the last message sent in that stream. The time is in epoch format.
 * `streamType` can be `IM` (1-1 instant message), `MIM` (multi-party instant message), `ROOM`, or `POST` (user profile wall posts).
 * For IMs, MIMs, and walls, `streamAttributes` contains the `members` array with userIds of participants. In the case of wall posts, there is only one participant (the user whose wall it is).
-* For rooms, `roomAttributes` contains the `name` of the room. To get the participants of the room, call the [Room Members](doc:room-members) endpoint.
+* For rooms, `roomAttributes` contains the `name` of the room. To get the participants of the room, call the [Room Members](stream-members.md) endpoint.
 * If the stream is IM/MIM or rooms with `discoverable`set as "false", the caller needs to have the VIEW\_ANY\_STREAM\_DETAILS privilege. Refer to [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.
 
 > 📘 Note - Groups
@@ -28,4 +28,4 @@ In the response,
 > * `id` attribute: ID of the Group,
 > * `addedBy`: ID of the user who added the Group to the room
 >
-> See [Groups](ref:groups-distribution-lists) for more information.
+> See [Groups](../../groups-distribution-lists/) for more information.

@@ -11,7 +11,7 @@ This endpoint retrieves all connections of the requesting user. (i.e. both conne
 
 > 📘 Note
 >
-> * When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
+> * When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 > * Pods from all users involved need to have `crossPod` enabled between them.
 
 ### Connection Status

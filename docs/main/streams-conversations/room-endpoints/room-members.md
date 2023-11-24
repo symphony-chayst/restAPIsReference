@@ -36,4 +36,4 @@ Lists the current members of an existing room.
 >
 > Since 20.14, please note that the object `addedThroughGroups` has been added only for members added to the room via Groups.
 >
-> See [Groups](ref:groups-distribution-lists) for more information.
+> See [Groups](../../groups-distribution-lists/) for more information.

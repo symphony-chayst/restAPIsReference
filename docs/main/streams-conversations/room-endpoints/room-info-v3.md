@@ -21,7 +21,7 @@
 > * `id` attribute: ID of the Group,
 > * `addedBy`: ID of the user who added the Group to the room
 >
-> See [Groups](ref:groups-distribution-lists) for more information.
+> See [Groups](../../groups-distribution-lists/) for more information.
 
 > 🚧 Required Permissions
 >

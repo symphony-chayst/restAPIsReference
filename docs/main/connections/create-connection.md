@@ -13,7 +13,7 @@ Sends a connection request to another user.
 
 > 📘 Note
 >
-> * When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
+> * When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 > * Pods from all users involved need to have `crossPod` enabled between them.
 > * Only one connection request is allowed between two users. When this limit is exceeded, no more connections requests are allowed. A new connection request will be allowed only if the user that received the connection request declines it.
 
