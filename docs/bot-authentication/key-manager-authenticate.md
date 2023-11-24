@@ -1,7 +1,7 @@
 # Key Manager Authenticate (Cert)
 
-{% swagger src="../../.gitbook/assets/authenticator-api-public.yaml" path="/v1/authenticate" method="post" expanded="true" fullWidth="true" %}
-[authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)
+{% swagger src="../.gitbook/assets/authenticator-api-public.yaml" path="/v1/authenticate" method="post" expanded="true" fullWidth="true" %}
+[authenticator-api-public.yaml](../.gitbook/assets/authenticator-api-public.yaml)
 {% endswagger %}
 
 > ❗️ Key Manager Token Management
@@ -10,7 +10,7 @@
 >
 > You should keep using the same token until you receive a HTTP 401, at which you should re-authenticate and get a new token for a new session.
 >
-> [Datafeeds](../datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
+> [Datafeeds](../endpoints-reference/datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
 
 > 🚧
 >

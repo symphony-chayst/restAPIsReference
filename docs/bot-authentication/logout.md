@@ -1,7 +1,7 @@
 # Session Logout
 
-{% swagger src="../../.gitbook/assets/authenticator-api-public.yaml" path="/v1/logout" method="post" expanded="true" fullWidth="true" %}
-[authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)
+{% swagger src="../.gitbook/assets/authenticator-api-public.yaml" path="/v1/logout" method="post" expanded="true" fullWidth="true" %}
+[authenticator-api-public.yaml](../.gitbook/assets/authenticator-api-public.yaml)
 {% endswagger %}
 
 > 📘 Note
@@ -18,8 +18,8 @@ To call the Logout endpoint for an app, you must have a valid session token for 
 
 Example call sequences:
 
-1. Call [App Authenticate](../apps-on-behalf-of-obo/obo-rsa-app-authentication.md) to get a `sessionToken`.
+1. Call [App Authenticate](../endpoints-reference/apps-on-behalf-of-obo/obo-rsa-app-authentication.md) to get a `sessionToken`.
 2. Call [Logout](logout.md) with the `sessionToken`.
-3. Call [App Authenticate](../apps-on-behalf-of-obo/obo-rsa-app-authentication.md) to get a `sessionToken`.
-4. Call [User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) with the `sessionToken`.
+3. Call [App Authenticate](../endpoints-reference/apps-on-behalf-of-obo/obo-rsa-app-authentication.md) to get a `sessionToken`.
+4. Call [User Authenticate](../endpoints-reference/apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) with the `sessionToken`.
 5. Call [Logout](logout.md) with the `sessionToken`.

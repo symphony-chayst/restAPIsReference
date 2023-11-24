@@ -1,16 +1,16 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Bots Authentication](bot-authentication/README.md)
+  * [Session Authenticate](bot-authentication/rsa-session-authenticate.md)
+  * [Key Manager Authenticate](bot-authentication/rsa-key-manager-authenticate.md)
+  * [Session Authenticate (Cert)](bot-authentication/session-authenticate.md)
+  * [Key Manager Authenticate (Cert)](bot-authentication/key-manager-authenticate.md)
+  * [Session Logout](bot-authentication/logout.md)
+  * [Key Manager Logout](bot-authentication/key-manager-logout.md)
 
 ## Endpoints Reference
 
-* [Bots Authentication](endpoints-reference/bot-authentication/README.md)
-  * [Session Authenticate](endpoints-reference/bot-authentication/rsa-session-authenticate.md)
-  * [Key Manager Authenticate](endpoints-reference/bot-authentication/rsa-key-manager-authenticate.md)
-  * [Session Authenticate (Cert)](endpoints-reference/bot-authentication/session-authenticate.md)
-  * [Key Manager Authenticate (Cert)](endpoints-reference/bot-authentication/key-manager-authenticate.md)
-  * [Session Logout](endpoints-reference/bot-authentication/logout.md)
-  * [Key Manager Logout](endpoints-reference/bot-authentication/key-manager-logout.md)
 * [Apps Authentication](endpoints-reference/application-authentication/README.md)
   * [Authenticate App](endpoints-reference/application-authentication/application-rsa-authentication.md)
   * [Pod Certificate](endpoints-reference/application-authentication/pod-certificate-jwt.md)

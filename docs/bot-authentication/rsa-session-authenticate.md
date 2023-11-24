@@ -1,7 +1,7 @@
 # Session Authenticate
 
-{% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/authenticate" method="post" expanded="true" fullWidth="true" %}
-[login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)
+{% swagger src="../.gitbook/assets/login-api-public.yaml" path="/pubkey/authenticate" method="post" expanded="true" fullWidth="true" %}
+[login-api-public.yaml](../.gitbook/assets/login-api-public.yaml)
 {% endswagger %}
 
 > ❗️ Session Token Management
@@ -10,7 +10,7 @@
 >
 > You should keep using the same token until you receive a HTTP 401, at which you should re-authenticate and get a new token for a new session.
 >
-> [Datafeeds](../datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
+> [Datafeeds](../endpoints-reference/datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
 
 > 🚧 Important
 >
