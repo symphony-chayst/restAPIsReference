@@ -1,3 +1,5 @@
 # Pod Certificate
 
-{% swagger src="../../.gitbook/assets/authenticator-api-public-deprecated.yaml" path="/v1/app/pod/certificate" method="get" expanded="true" fullWidth="true" %} authenticator-api-public-deprecated.yaml {% endswagger %}
+{% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/podcert" method="get" %}
+[pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
+{% endswagger %}

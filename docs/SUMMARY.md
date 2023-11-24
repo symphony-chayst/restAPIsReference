@@ -13,7 +13,6 @@
   * [Key Manager Logout](endpoints-reference/bot-authentication/key-manager-logout.md)
 * [Apps Authentication](endpoints-reference/application-authentication/README.md)
   * [Authenticate App](endpoints-reference/application-authentication/application-rsa-authentication.md)
-  * [Authenticate App (Cert)](endpoints-reference/application-authentication/application-authenticate.md)
   * [Pod Certificate](endpoints-reference/application-authentication/pod-certificate-jwt.md)
 * [Apps On Behalf Of (OBO)](endpoints-reference/apps-on-behalf-of-obo/README.md)
   * [API Endpoints for Apps](endpoints-reference/apps-on-behalf-of-obo/obo-enabled-endpoints.md)
