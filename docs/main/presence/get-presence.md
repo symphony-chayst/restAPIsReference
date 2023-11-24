@@ -7,7 +7,7 @@ Returns the online status of the calling user.
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
+When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 
 The available online status values (presence categories) for users are:
 
@@ -24,6 +24,6 @@ The available online status values (presence categories) for users are:
 | `OFF_WORK`        | Yellow clock     | `OFFLINE`       | Deprecated in 20.16 |
 | `DO_NOT_DISTURB`  | Red circle       | `AWAY`          | Deprecated in 20.16 |
 
-See [Set Presence](ref:set-presence) for a description of the **Presence category** and **External view** values for internal and external users.
+See [Set Presence](set-presence.md) for a description of the **Presence category** and **External view** values for internal and external users.
 
 **Note**: It is also possible for Symphony users to have other presence values, which should be handled in your implementation as edge cases.

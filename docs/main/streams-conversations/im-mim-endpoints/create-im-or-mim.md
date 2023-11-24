@@ -14,7 +14,7 @@ Creates a new single or multi-party instant message conversation or returns an e
 * If there is an existing IM conversation with the specified participants, then the id of the existing stream will be returned.
 * Use [Create IM or MIM non-inclusive](create-im-or-mim-admin.md) to exclude the calling user.
 
-When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
+When calling this as an [OBO-enabled endpoint](../../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 
 A user needs to have the entitlement `isExternalIMEnabled` if he wants to create a crosspod IM/MIM (User entitlements are set on Admin Portal).
 

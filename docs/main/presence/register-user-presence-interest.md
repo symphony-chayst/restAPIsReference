@@ -1,7 +1,7 @@
 # External Presence Interest
 
 `Released in 1.44.`\
-To get the [presence](ref:user-presence-v3) state of external users, you must first register interest in those users using this endpoint.
+To get the [presence](user-presence-v3.md) state of external users, you must first register interest in those users using this endpoint.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/presence/register" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
@@ -18,7 +18,7 @@ curl -X POST \
   -d '[7215545078541, 7215545078461]'
 ```
 
-When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
+When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 
 ### Querying Presence of External Users
 
@@ -29,7 +29,7 @@ When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use t
 To query the presence of external users:
 
 1. Call this endpoint to register interest in the desired users.
-2. Call the [Get User Presence](ref:user-presence-v3) endpoint to query the presence of each user.\
+2. Call the [Get User Presence](user-presence-v3.md) endpoint to query the presence of each user.\
    To keep the registration active, call this endpoint every hour.
 
 To query the presence of internal users, you do not need to register interest.

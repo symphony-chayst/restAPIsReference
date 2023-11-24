@@ -11,6 +11,6 @@ Returns the presence of all users in a pod.
 
 > 🚧 Only users with the "User Provisioning" role can call this endpoint
 
-When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
+When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 
-For a list of the available presence statuses, please see the [Get Presence](ref:get-presence)
+For a list of the available presence statuses, please see the [Get Presence](get-presence.md)

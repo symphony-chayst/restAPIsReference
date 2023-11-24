@@ -9,7 +9,7 @@ Get connection status, i.e. check if the calling user is connected to the specif
 
 > 📘 Note
 >
-> * When calling this as an [OBO-enabled endpoint](ref:obo-enabled-endpoints), use the [OBO User Authenticate](ref:obo-user-authenticate) token for `sessionToken`.
+> * When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 > * Pods from all users involved need to have `crossPod` enabled between them.
 
 > 📘 404 Not Found
@@ -17,7 +17,7 @@ Get connection status, i.e. check if the calling user is connected to the specif
 > A `404 Not Found` error indicates either:
 >
 > * The specified user doesn’t exist.
-> * The calling user and specified user are not connected because a [Create Connection](ref:create-connection) request has not yet been sent.
+> * The calling user and specified user are not connected because a [Create Connection](create-connection.md) request has not yet been sent.
 
 > 📘 Internal Connections
 >
