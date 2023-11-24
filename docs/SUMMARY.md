@@ -68,6 +68,7 @@
   * [General to Streams (IM, MIM, or Rooms)](main/streams-conversations/all-streams-endpoints/README.md)
     * [Share Content](main/streams-conversations/all-streams-endpoints/share-v3.md)
     * [List User Streams](main/streams-conversations/all-streams-endpoints/list-user-streams.md)
+    * [List User Streams (Admin)](main/streams-conversations/all-streams-endpoints/list-user-streams-admin.md)
     * [Stream Info](main/streams-conversations/all-streams-endpoints/stream-info-v2.md)
     * [List Streams for Enterprise](main/streams-conversations/all-streams-endpoints/list-streams-for-enterprise-v2.md)
     * [Stream Members](main/streams-conversations/all-streams-endpoints/stream-members.md)
