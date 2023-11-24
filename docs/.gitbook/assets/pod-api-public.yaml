@@ -9209,6 +9209,9 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/DownloadReceiptCount'
+        example:
+          - fileName: Untitled Document.txt
+            timestamp: 1552999335740
   MessageReceiptDetailResponse:
     description: List of Message receipt details
     type: object
@@ -9236,10 +9239,26 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/MessageDownloadReceiptCount'
+        example:
+          - fileName: internal_70781
+            count: 1
       MessageReceiptDetail:
         type: array
         items:
           $ref: '#/definitions/MessageReceiptDetail'
+        example:
+          - user:
+              id: 7215545058329
+              username: dpayet
+              firstName: Dimitri
+              lastName: Payet
+              emailAddress: dpayet@om.fr
+            deliveryReceiptTimestamp: 1552999333784
+            readReceiptTimestamp: 1552999335114
+            emailNotificationTimestamp: 1552999335114
+            downloadReceiptCounts:
+              - fileName: Untitled Document.txt
+                timestamp: 1552999335740
       pagination:
         $ref: "#/definitions/Pagination"
   MessageUser:
