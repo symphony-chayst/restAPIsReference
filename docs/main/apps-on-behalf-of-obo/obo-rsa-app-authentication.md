@@ -1,5 +1,7 @@
 # App Authentication
 
+Released in 1.53. Authenticates an OBO app using the application saved RSA public key.
+
 {% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/app/authenticate" method="post" expanded="true" fullWidth="true" %}
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)
 {% endswagger %}

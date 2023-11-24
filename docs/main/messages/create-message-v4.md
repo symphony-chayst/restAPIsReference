@@ -1,5 +1,7 @@
 # Create Message
 
+Available on Agent 2.53.0 and above. Posts a message to an existing stream.
+
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v4/stream/{sid}/message/create" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
