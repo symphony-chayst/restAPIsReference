@@ -1,8 +1,8 @@
 ---
 description: >-
-  Released in 1.52.Adds a URI protocol to a pod's configuration. Each pod stores
-  a configuration to indicate which URI protocols can be transformed to a link
-  inside a message in the UI.
+  Released in 1.52. Adds a URI protocol to a pod's configuration. Each pod
+  stores a configuration to indicate which URI protocols can be transformed to a
+  link inside a message in the UI.
 ---
 
 # Create Protocol
@@ -11,11 +11,11 @@ description: >-
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 Naming
+> ### 📘 Naming
 >
 > The name specified for the `scheme` parameter must start with a letter, must contain only letters, numbers, dashes, dots, and plus characters, and cannot be null.
 
-> ❗️ Required Permissions
+> ### ❗️ Required Permissions
 >
 > This endpoint may only be called by _Service User_ accounts with the _User Provisioning_ role.
 >
