@@ -5670,7 +5670,7 @@ paths:
               limit: 50
               filter:
                 streamTypes:
-                  -
+                  - ""
               streams:
                 - id: Q2KYGm7JkljrgymMajYTJ3___qcLPr1UdA
                   isExternal: false
