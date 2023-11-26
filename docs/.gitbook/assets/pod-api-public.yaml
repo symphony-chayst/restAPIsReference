@@ -976,6 +976,9 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/Stream'
+          examples:
+            application/json:
+              id: xhGxbTcvTDK6EIMMrwdOrX___quztr2HdA
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1038,6 +1041,14 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V1IMDetail'
+          examples:
+            application/json:
+              V1IMAttributes:
+                pinnedMessageId: vd7qwNb6hLoUV0BfXXPC43___oPIvkwJbQ
+              IMSystemInfo:
+                id: usnBKBkH_BVrGOiVpaupEH___okFfE7QdA
+                creationDate: 1610520703317
+                active: true
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3497,6 +3508,9 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/Stream'
+          examples:
+            application/json:
+              id: xhGxbTcvTDK6EIMMrwdOrX___quztr2HdA
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -7056,6 +7070,7 @@ definitions:
     properties:
       id:
         type: string
+        example: xhGxbTcvTDK6EIMMrwdOrX___quztr2HdA
   UserError:
     description: User error information
     type: object
@@ -7217,6 +7232,7 @@ definitions:
     properties:
       username:
         type: string
+        example: dpayet
   UserIdList:
     type: array
     items:
@@ -7236,6 +7252,7 @@ definitions:
     properties:
       id:
         type: string
+        example: xhGxbTcvTDK6EIMMrwdOrX___quztr2HdA
   RoomAttributes:
     type: object
     properties:
@@ -9540,6 +9557,7 @@ definitions:
       pinnedMessageId:
         type: string
         description: UrlSafe message id of the pinned message inside the IM. To perform unpin operation, send an empty string.
+        example: vd7qwNb6hLoUV0BfXXPC43___oPIvkwJbQ
   V1IMDetail:
     type: object
     properties:
@@ -9552,13 +9570,16 @@ definitions:
     properties:
       id:
         type: string
+        example: usnBKBkH_BVrGOiVpaupEH___okFfE7QdA
       creationDate:
         type: integer
         format: int64
         description: The datetime when the stream was originally created. Milliseconds since Jan 1 1970.
+        example: 1610520703317
       active:
         type: boolean
         description: If false, no messages can be sent in this stream, and membership is locked.
+        example: true
   ServiceAccountManifest:
     type: object
     properties:
