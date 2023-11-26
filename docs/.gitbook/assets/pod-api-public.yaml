@@ -6656,6 +6656,35 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/MessageReceiptDetailResponse'
+          examples:
+            application/json:
+              creator:
+                id: 7215545058329
+                name: User Test
+              stream:
+                id: lFpyw0ATFmji+Cc/cSzbk3///pZkWpe1dA==
+                name: Test Room
+                streamType: ROOM
+              creationDate: 1552999333141
+              deliveryReceiptCount: 1
+              readReceiptCount: 1
+              emailNotificationCount: 1
+              downloadReceiptCounts:
+                - fileName: internal_7078106
+                  count: 1
+              MessageReceiptDetail:
+                - user:
+                    id: 7215545058329
+                    username: adrian1
+                    firstName: Adrian1
+                    lastName: QA5
+                    emailAddress: adrian1@qa5.com
+                  deliveryReceiptTimestamp: 1552999333784
+                  readReceiptTimestamp: 1552999335114
+                  emailNotificationTimestamp: 1552999335114
+                  downloadReceiptCounts:
+                    - fileName: Untitled Document.txt
+                      timestamp: 1552999335740
         '400':
           description: 'Client error, see response body for further details.'
           schema:
