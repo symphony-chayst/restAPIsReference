@@ -1112,6 +1112,14 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V1IMDetail'
+          examples:
+            application/json:
+              V1IMAttributes:
+                pinnedMessageId: vd7qwNb6hLoUV0BfXXPC43___oPIvkwJbQ
+              IMSystemInfo:
+                id: usnBKBkH_BVrGOiVpaupEH___okFfE7QdA
+                creationDate: 1610520703317
+                active: true
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1348,6 +1356,30 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V3RoomDetail'
+          examples:
+            application/json:
+              roomAttributes:
+                name: API room
+                keywords:
+                  - key: region
+                    value: EMEA
+                  - key: lead
+                    value: Bugs Bunny
+                description: Created via the API
+                membersCanInvite: true
+                discoverable: false
+                readOnly: false
+                copyProtected: false
+                crossPod: false
+                viewHistory: false
+                multiLateralRoom: false
+                public: false
+                groupChat: false
+              roomSystemInfo:
+                id: bjHSiY4iz3ar4iIh6-VzCX___peoM7cPdA
+                creationDate: 1547661232368
+                createdByUserId: 14362370637825
+                active: true
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1426,6 +1458,55 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V3RoomSearchResults'
+          examples:
+            application/json:
+              count: 2
+              skip: 0
+              limit: 10
+              query:
+                query: automobile
+                labels:
+                  - industry
+                active: true
+                creator:
+                  id: 7696581411197
+              rooms:
+                - roomAttributes:
+                    name: Automobile Industry Room
+                    description: Room to discuss car companies
+                    membersCanInvite: true
+                    readOnly: false
+                    copyProtected: false
+                    crossPod: false
+                    viewHistory: false
+                    public: false
+                    multiLateralRoom: false
+                  roomSystemInfo:
+                    id: tzwvAZIdDMG3ZPRxv+xsgH///qr+JJkWdA==
+                    creationDate: 1464615003895
+                    createdByUserId: 7696581411197
+                    active: true
+                - roomAttributes:
+                    name: Tesla Room
+                    keywords:
+                      - key: industry
+                        value: automobile
+                    description: Discussions on TSLA
+                    membersCanInvite: true
+                    readOnly: false
+                    copyProtected: false
+                    crossPod: false
+                    viewHistory: false
+                    public: false
+                    multiLateralRoom: false
+                  roomSystemInfo:
+                    id: o6UkQ1TEmU0Tf/DHUlZrCH///qr+JQowdA==
+                    creationDate: 1464614974947
+                    createdByUserId: 7696581411197
+                    active: true
+              facetedMatchCount:
+                - facet: industry
+                  count: 1
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1481,6 +1562,30 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V3RoomDetail'
+          examples:
+            application/json:
+              roomAttributes:
+                name: API room
+                keywords:
+                  - key: region
+                    value: EMEA
+                  - key: lead
+                    value: Bugs Bunny
+                description: Created via the API
+                membersCanInvite: true
+                discoverable: false
+                readOnly: false
+                copyProtected: false
+                crossPod: false
+                viewHistory: false
+                multiLateralRoom: false
+                public: false
+                groupChat: false
+              roomSystemInfo:
+                id: bjHSiY4iz3ar4iIh6-VzCX___peoM7cPdA
+                creationDate: 1547661232368
+                createdByUserId: 14362370637825
+                active: true
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1542,6 +1647,22 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/RoomDetail'
+          examples:
+            application/json:
+              roomAttributes:
+                name: API room
+                description: Updated via the API
+                membersCanInvite: true
+                discoverable: true
+              roomSystemInfo:
+                id: HNmksPVAR6-f14WqKXmqHX___qu8LMLgdA
+                creationDate: 1461426797875
+                createdByUserId: 7078106103809
+                active: false
+              immutableRoomAttributes:
+                readOnly: false
+                copyProtected: false
+                public: false
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1604,6 +1725,31 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V3RoomDetail'
+          examples:
+            application/json:
+              roomAttributes:
+                name: API room updated
+                keywords:
+                  - key: region
+                    value: EMEA
+                  - key: lead
+                    value: Bugs Bunny
+                description: Updated via the API
+                membersCanInvite: true
+                discoverable: false
+                readOnly: false
+                copyProtected: false
+                crossPod: false
+                viewHistory: true
+                multiLateralRoom: false
+                pinnedMessageId: vd7qwNb6hLoUV0BfXXPC43___oPIvkwJbQ
+                public: true
+                groupChat: false
+              roomSystemInfo:
+                id: bjHSiY4iz3ar4iIh6-VzCX___peoM7cPdA
+                creationDate: 1547661232368
+                createdByUserId: 14362370637825
+                active: true
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1674,6 +1820,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: Member added
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1736,6 +1886,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: Member removed
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1798,6 +1952,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: Member promoted to owner
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1860,6 +2018,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: Owner demoted
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1915,6 +2077,19 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/MembershipList'
+          examples:
+            application/json:
+              - id: 7078106103900
+                owner: false
+                joinDate: 1461430710531
+              - id: 7078106103809
+                owner: true
+                joinDate: 1461426797875
+              - id: 7078106103810
+                owner: true
+                joinDate: 1461426797833
+                addedThroughGroups:
+                  - 68719476744
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -2670,6 +2845,16 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/StreamList'
+          examples:
+            application/json:
+              - id: iWyZBIOdQQzQj0tKOLRivX___qu6YeyZdA
+                crossPod: false
+                active: true
+                streamType:
+                  type: POST
+                streamAttributes:
+                  members:
+                    - 7215545078229
         '204':
             description: 'Stream not found.'
         '400':
@@ -2748,6 +2933,25 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/StreamList'
+          examples:
+            application/json:
+              - id: Jq6uPN4-uIop7lvjOkYdXX___nn9I0PHdA
+                crossPod: false
+                active: true
+                streamType:
+                  type: IM
+                streamAttributes:
+                  members:
+                    - 9139690966401
+                    - 9139691042211
+              - id: iWyZBIOdQQzQj0tKOLRivX___qu6YeyZdA
+                crossPod: false
+                active: true
+                streamType:
+                  type: POST
+                streamAttributes:
+                  members:
+                    - 7215545078229
         '204':
           description: 'Stream not found.'
         '400':
@@ -2805,6 +3009,20 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2StreamAttributes'
+          examples:
+            application/json:
+              id: BZQYepoT0Zf4vL_jpeMPqn___oEWvVy3dA
+              crossPod: false
+              origin: INTERNAL
+              active: true
+              lastMessageDate: 1644590972696
+              streamType:
+                type: ROOM
+              roomAttributes:
+                name: API room
+                groups:
+                  - id: 68719476744
+                    addedBy: 68719476743
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3741,6 +3959,19 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/MembershipList'
+          examples:
+            application/json:
+              - id: 7078106103900
+                owner: false
+                joinDate: 1461430710531
+              - id: 7078106103809
+                owner: true
+                joinDate: 1461426797875
+              - id: 7078106103810
+                owner: true
+                joinDate: 1461426797833
+                addedThroughGroups:
+                  - 68719476744
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5432,6 +5663,76 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2AdminStreamList'
+          examples:
+            application/json:
+              count: 4
+              skip: 0
+              limit: 50
+              filter:
+                streamTypes:
+                  -
+              streams:
+                - id: Q2KYGm7JkljrgymMajYTJ3___qcLPr1UdA
+                  isExternal: false
+                  isActive: true
+                  isPublic: false
+                  type: ROOM
+                  attributes:
+                    roomName: Active Internal Private Room
+                    roomDescription: Active Internal Private Room
+                    createdByUserId: 8933531975689
+                    createdDate: 1481575056047
+                    lastModifiedDate: 1481575056047
+                    originCompany: Symphony
+                    originCompanyId: 130
+                    membersCount: 1
+                    lastMessageDate: 1516699467959 
+                - id: _KnoYrMkhEn3H2_8vE0kl3___qb5SANQdA
+                  isExternal: true
+                  isActive: false
+                  isPublic: false
+                  type: ROOM
+                  attributes:
+                    roomName: Inactive External Room
+                    roomDescription: Inactive External Room
+                    createdByUserId: 8933531975686
+                    createdDate: 1481876438194
+                    lastModifiedDate: 1481876438194
+                    originCompany: Symphony
+                    originCompanyId: 130
+                    membersCount: 2
+                    lastMessageDate: 1516699467959 
+                - id: fBoaBSRUyb5Rq3YgeSqZvX___qbf5IAhdA
+                  isExternal: false
+                  isActive: true
+                  type: IM
+                  attributes:
+                    members:
+                      - 8933531975686
+                      - 8933531975689
+                    createdByUserId: 8933531975689
+                    createdDate: 1482302390238
+                    lastModifiedDate: 1482302390238
+                    originCompany: Symphony
+                    originCompanyId: 130
+                    membersCount: 2
+                    lastMessageDate: 1516699467959 
+                - id: k19u9c3GSE_iq0VHDKe1on___qa0Cp2WdA
+                  isExternal: false
+                  isActive: true
+                  type: MIM
+                  attributes:
+                    members:
+                      - 8933531975688
+                      - 8933531975689
+                      - 8933531975717
+                    createdByUserId: 8933531975688
+                    createdDate: 1483038089833
+                    lastModifiedDate: 1483038089833
+                    originCompany: Symphony
+                    originCompanyId: 130
+                    membersCount: 3
+                    lastMessageDate: 1516699467959
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5497,6 +5798,48 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2MembershipList'
+          examples:
+            application/json:
+              count: 3
+              skip: 0
+              limit: 32
+              members:
+                - user:
+                    userId: 13537736917000
+                    email: john.doe@symphony.com
+                    firstName: John
+                    lastName: Doe
+                    displayName: John Doe
+                    company: pod197
+                    companyId: 197
+                    isExternal: false
+                  isOwner: true
+                  isCreator: true
+                  joinDate: 1604494574047
+                - user:
+                    userId: 13606456393736
+                    email: alice.smith@pod198.com
+                    firstName: Alice
+                    lastName: Smith
+                    displayName: Alice Smith
+                    company: pod198
+                    companyId: 198
+                    isExternal: true
+                  isOwner: false
+                  isCreator: false
+                  joinDate: 1604494722469
+                - user:
+                    userId: 13537736917001
+                    email: bot@symphony.com
+                    displayName: User Provisioning Bot
+                    company: pod197
+                    companyId: 197
+                    isExternal: false
+                  isOwner: false
+                  isCreator: false
+                  joinDate: 1604494605272
+                  addedThroughGroups:
+                    - 68719476744
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -7239,7 +7582,7 @@ definitions:
         type: integer
         format: int64
     example:
-      - "7215545058313"
+      - 7215545058313
   UserId:
     type: object
     properties:
@@ -7274,68 +7617,91 @@ definitions:
       name:
         type: string
         description: Room name.
+        example: API room
       keywords:
         type: array
         description: Keywords for search to use to find this room
         items:
           $ref: '#/definitions/RoomTag'
+        example:
+          - key: region
+            value: EMEA
+          - key: lead
+            value: Daffy Duck
       description:
         type: string
         description: Room description.
+        example: Created via the API
       membersCanInvite:
         type: boolean
         description: If true, any chatroom participant can add new participants. If false, only owners can add new participants.
+        example: true
       discoverable:
         type: boolean
         description: If true, this chatroom (name, description and messages) can be searched and listed by non-participants. If false, only participants can search this room.
+        example: false
       public:
         type: boolean
         description: If true, this is a public chatroom. IF false, a private chatroom.
+        example: false
       readOnly:
         type: boolean
         description: If true, only stream owners can send messages.
+        example: false
       copyProtected:
         type: boolean
         description: If true, clients disable the clipboard copy for content in this stream.
+        example: false
       crossPod:
         type: boolean
         description: If true, this room is a cross pod room
+        example: false
       viewHistory:
         type: boolean
         description: If true, new members can view the room chat history of the room.
+        example: false
       multiLateralRoom:
         type: boolean
         description: If true, this is a multi lateral room where we can find users belonging to more than 2 companies.
+        example: false
       scheduledMeeting:
         type: boolean
         description: If true, this room is for a scheduled meeting.
+        example: false
       subType:
         type: string
         description: This field is ignored when creating a new room as it was only used for email integration which is now sunset.
       pinnedMessageId:
         type: string
         description: UrlSafe message id of the pinned message inside the room. To perform unpin operation, send an empty string.
+        example: vd7qwNb6hLoUV0BfXXPC43___oPIvkwJbQ
       groupChat:
         type: boolean
         description: "If true, this room is a group chat. Note: this parameter is ignored for creating rooms. Since SBE 20.16."
         x-since: 20.16
+        example: false
   RoomSearchCriteria:
     description: Room Query Object. Used to specify the parameters for room search.
     properties:
       query:
         description: The search query. Matches the room name and description.
         type: string
+        example: automobile
       labels:
         description: A list of room tag labels whose values will be queried.
         type: array
         items:
           type: string
+        example:
+          - industry
       active:
         description: Restrict the search to active/inactive rooms. If unspecified, search all rooms.
         type: boolean
+        example: true
       private:
         description: Restrict the search to private rooms. If unspecified, search all rooms.
         type: boolean
+        example: true
       owner:
         # Restrict the search to rooms owned by the specified user ID.
         $ref: '#/definitions/UserId'
@@ -7353,6 +7719,7 @@ definitions:
         enum:
           - BASIC
           - RELEVANCE
+        example: RELEVANCE
     required:
     - query
   V2RoomSearchCriteria:
@@ -7364,6 +7731,7 @@ definitions:
           subType:
             description: "Restrict the search to the specific room subtype. Valid values are: EMAIL"
             type: string
+            example: EMAIL
   V3RoomSearchResults:
     description: A list of search results and counts per search parameter.
     properties:
@@ -7371,12 +7739,15 @@ definitions:
         description: The total number of rooms matched by the search.
         type: integer
         format: int64
+        example: 2
       skip:
         description: The number of skipped results.
         type: integer
+        example: 0
       limit:
         description: The number of returned results.
         type: integer
+        example: 10
       query:
         # The search query that produced this result.
         $ref: '#/definitions/V2RoomSearchCriteria'
@@ -7385,20 +7756,59 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/V3RoomDetail'
+        example:
+          - roomAttributes:
+              name: Automobile Industry Room
+              description: Room to discuss car companies
+              membersCanInvite: true
+              readOnly: false
+              copyProtected: false
+              crossPod: false
+              viewHistory: false
+              public: false
+              multiLateralRoom: false
+            roomSystemInfo:
+              id: tzwvAZIdDMG3ZPRxv+xsgH///qr+JJkWdA==
+              creationDate: 1464615003895
+              createdByUserId: 7696581411197
+              active: true
+          - roomAttributes:
+              name: Tesla Room
+              keywords:
+                - key: industry
+                  value: automobile
+              description: Discussions on TSLA
+              membersCanInvite: true
+              readOnly: false
+              copyProtected: false
+              crossPod: false
+              viewHistory: false
+              public: false
+              multiLateralRoom: false
+            roomSystemInfo:
+              id: o6UkQ1TEmU0Tf/DHUlZrCH///qr+JQowdA==
+              creationDate: 1464614974947
+              createdByUserId: 7696581411197
+              active: true
       facetedMatchCount:
         description: Detailed counts of matched rooms per search criterion.
         type: array
         items:
           $ref: '#/definitions/FacetedMatchCount'
+        example:
+          - facet: industry
+            count: 1
   RoomTag:
     description: Room Tag object. A key:value pair describing additional properties of the room.
     properties:
       key:
         description: A unique label of the Tag.
         type: string
+        example: region
       value:
         description: The value of this Tag's label.
         type: string
+        example: EMEA
     required:
     - key
     - value
@@ -7416,16 +7826,20 @@ definitions:
     properties:
      id:
         type: string
+        example: bjHSiY4iz3ar4iIh6-VzCX___peoM7cPdA
      creationDate:
         type: integer
         format: int64
         description: The datetime when the stream was originally created. Milliseconds since Jan 1 1970.
+        example: 1547661232368
      createdByUserId:
         type: integer
         format: int64
+        example: 14362370637825
      active:
         type: boolean
         description: If false, no messages can be sent in this stream, and membership is locked.
+        example: true
   ImmutableRoomAttributes:
     type: object
     description: These attributes cannot be changed once the room has been created
@@ -7460,6 +7874,9 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/GroupItem'
+        example:
+          - id: 68719476744
+            addedBy: 68719476743
   GroupItem:
     type: object
     properties:
@@ -7467,10 +7884,12 @@ definitions:
         description: The ID of the added group (aka SDL).
         type: integer
         format: int64
+        example: 68719476744
       addedBy:
         description: The user ID who added the group to the room.
         type: integer
         format: int64
+        example: 68719476743
   SuccessResponse:
     type: object
     properties:
@@ -8123,11 +8542,14 @@ definitions:
       id:
         type: integer
         format: int64
+        example: 7078106103810
       owner:
         type: boolean
+        example: true
       joinDate:
         type: integer
         format: int64
+        example: 1461426797833
       addedThroughGroups:
         description: When the user has been added to the stream through a group (aka SDL), this array contains the group ID which the user belongs to. Since SBE 20.14.
         x-since: 20.14
@@ -8135,11 +8557,25 @@ definitions:
         items:
           type: integer
           format: int64
+        example:
+          - 68719476744
   MembershipList:
     description: List of members in a room.
     type: array
     items:
       $ref: '#/definitions/MemberInfo'
+    example:
+      - id: 7078106103900
+        owner: false
+        joinDate: 1461430710531
+      - id: 7078106103809
+        owner: true
+        joinDate: 1461426797875
+      - id: 7078106103810
+        owner: true
+        joinDate: 1461426797833
+        addedThroughGroups:
+          - 68719476744
   V2MemberUserDetail:
     description: User detail information for stream membership
     type: object
@@ -8147,24 +8583,32 @@ definitions:
       userId:
         type: integer
         format: int64
+        example: 13537736917013
       email:
         type: string
+        example: dpayet@om.fr
       firstName:
         type: string
+        example: Dimitri
       lastName:
         type: string
+        example: Payet
       displayName:
         type: string
         description: Display name for the user
+        example: Dimitri Payet
       company:
         type: string
         description: Company name
+        example: Mars
       companyId:
         type: integer
         description: Company ID
+        example: 13
       isExternal:
         type: boolean
         description: true indicate that this user belong to another company
+        example: true
   V2MemberInfo:
     description: Detailed membership record.
     type: object
@@ -8175,13 +8619,16 @@ definitions:
       isOwner:
         type: boolean
         description: true if this is an owner of the room
+        example: true
       isCreator:
         type: boolean
         description: true if this is the creator of the room
+        example: true
       joinDate:
         description: unix timestamp for join date
         type: integer
         format: int64
+        example: 1604494574047
       addedThroughGroups:
         description: When the user has been added to the stream through a group (aka SDL), this array contains the group ID which the user belongs to. Since SBE 20.14.
         x-since: 20.14
@@ -8189,10 +8636,37 @@ definitions:
         items:
           type: integer
           format: int64
+        example:
+          - 68719476744
   V2MemberInfoList:
     type: array
     items:
       $ref: '#/definitions/V2MemberInfo'
+    example:
+      - user:
+          userId: 13537736917000
+          email: john.doe@symphony.com
+          firstName: John
+          lastName: Doe
+          displayName: John Doe
+          company: pod197
+          companyId: 197
+          isExternal: false
+        isOwner: true
+        isCreator: true
+        joinDate: 1604494574047
+      - user:
+          userId: 13537736917001
+          email: bot@symphony.com
+          displayName: User Provisioning Bot
+          company: pod197
+          companyId: 197
+          isExternal: false
+        isOwner: false
+        isCreator: false
+        joinDate: 1604494605272
+        addedThroughGroups:
+          - 68719476744
   V2MembershipList:
     description: List of members in the stream.
     type: object
@@ -8200,12 +8674,15 @@ definitions:
       count:
         type: integer
         description: total members count
+        example: 
       skip:
         type: integer
         description: number of items to skip from the request
+        example: 
       limit:
         type: integer
         description: maximum number of items to return
+        example: 
       members:
         $ref: '#/definitions/V2MemberInfoList'
   MessageSuppressionResponse:
@@ -8314,6 +8791,7 @@ definitions:
           - MIM
           - ROOM
           - POST
+        example: ROOM
   ConversationSpecificStreamAttributes:
     type: object
     properties:
@@ -8334,28 +8812,37 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/StreamType'
+        example:
+          - type: IM
+          - type: ROOM
       includeInactiveStreams:
         description: Whether to include inactive streams in the list of results.
         type: boolean
+        example: false
   V2StreamAttributes:
     type: object
     properties:
       id:
         type: string
         description: The stream ID.
+        example: BZQYepoT0Zf4vL_jpeMPqn___oEWvVy3dA
       crossPod:
         type: boolean
         description: If true, this is a cross-pod stream.
+        example: false
       origin:
         type: string
         description: INTERNAL if the creator of this stream belongs to the pod, EXTERNAL otherwise
+        example: INTERNAL
       active:
         type: boolean
         description: If true, this stream is active.
+        example: true
       lastMessageDate:
         type: integer
         format: int64
         description: unix timestamp of the last message sent in the stream
+        example: 1644590972696
       streamType:
         description: The type of the stream (IM = IM, multi-IM = MIM, chat room = ROOM, user wall = POST).
         $ref: '#/definitions/V2StreamType'
@@ -8370,6 +8857,7 @@ definitions:
     properties:
       type:
         type: string
+        example: ROOM
   V2ConversationSpecificStreamAttributes:
     type: object
     properties:
@@ -8382,12 +8870,16 @@ definitions:
       name:
         type: string
         description: Room name.
+        example: API room
       groups:
         description: List of groups (aka SDLs) that were added to the room. Since SBE 20.14.
         x-since: 20.14
         type: array
         items:
           $ref: '#/definitions/GroupItem'
+        example:
+          - id: 68719476744
+            addedBy: 68719476743
   V2AdminStreamFilter:
     description: stream filter criteria
     type: object
@@ -8398,42 +8890,52 @@ definitions:
         items:
           description: Valid values are IM, MIM or ROOM
           $ref: '#/definitions/V2AdminStreamType'
+        example:
+          - type: IM
+          - type: ROOM
       scope:
         description: |
           Scope of the room. Valid values are INTERNAL or EXTERNAL.
           If not specified, it will include both Internal and External scope
         type: string
+        example: INTERNAL
       origin:
         description: |
           Origin of the room. It indicates whether the room was created by a user within the company by another company.
           Valid values are INTERNAL or EXTERNAL.
           If not specified, it will include both Internal and External origin
         type: string
+        example: INTERNAL
       status:
         description: |
           Status of the room.
           Valid values are ACTIVE or INACTIVE.
           If not specified, it will include both Active and Inactive status
         type: string
+        example: ACTIVE
       privacy:
         description: |
           Privacy setting of the stream.
           Valid values are PUBLIC or PRIVATE.
           If not specified, it will include both public and private streams
         type: string
+        example: PRIVATE
       startDate:
         description: Start date in unix timestamp in millseconds
         type: integer
         format: int64
+        example: 1481575056047
       endDate:
         description: End date in unix timestamp in millseconds.  If not specified, it assume to be current time.
         type: integer
         format: int64
+        example: 1483038089833
   V2AdminStreamType:
     type: object
     properties:
       type:
         type: string
+        example: ROOM
   AdminJustifiedUserAction:
     type: object
     properties:
@@ -8654,12 +9156,15 @@ definitions:
         type: integer
         format: int64
         description: total number of streams which match the filter criteria
+        example: 4
       skip:
         type: integer
         description: number of streams skipped
+        example: 0
       limit:
         type: integer
         description: maximum number of streams return
+        example: 50
       filter:
         # filter criteria used in the request
         $ref: '#/definitions/V2AdminStreamFilter'
@@ -8671,6 +9176,37 @@ definitions:
     description: list of stream info
     items:
       $ref: '#/definitions/V2AdminStreamInfo'
+    example:
+      - id: Q2KYGm7JkljrgymMajYTJ3___qcLPr1UdA
+        isExternal: false
+        isActive: true
+        isPublic: false
+        type: ROOM
+        attributes:
+          roomName: Active Internal Private Room
+          roomDescription: Active Internal Private Room
+          createdByUserId: 8933531975689
+          createdDate: 1481575056047
+          lastModifiedDate: 1481575056047
+          originCompany: Symphony
+          originCompanyId: 130
+          membersCount: 1
+          lastMessageDate: 1516699467959
+      - id: _KnoYrMkhEn3H2_8vE0kl3___qb5SANQdA
+        isExternal: true
+        isActive: false
+        isPublic: false
+        type: ROOM
+        attributes:
+          roomName: Inactive External Room
+          roomDescription: Inactive External Room
+          createdByUserId: 8933531975686
+          createdDate: 1481876438194
+          lastModifiedDate: 1481876438194
+          originCompany: Symphony
+          originCompanyId: 130
+          membersCount: 2
+          lastMessageDate: 1516699467959
   V2AdminStreamInfo:
     description: Stream information
     type: object
@@ -8678,24 +9214,31 @@ definitions:
       id:
         type: string
         description: stream id
+        example: Q2KYGm7JkljrgymMajYTJ3___qcLPr1UdA
       isExternal:
         type: boolean
         description: true indicate this stream has the scope of external and false indictate this stream has the scope of internal. Deprecated, use origin
+        example: false
       isActive:
         type: boolean
         description: true indicate that this stream has the status of active and false indicate this stream has the scope of inactive
+        example: true
       isPublic:
         type: boolean
         description: true indicate that this stream has a privacy setting of public.  This only apply a ROOM stream type.
+        example: false
       type:
         type: string
         description: type of stream (IM, MIM, ROOM)
+        example: ROOM
       crossPod:
         type: boolean
         description: If true, this is a cross-pod stream.
+        example: false
       origin:
         type: string
         description: INTERNAL if the creator of this stream belongs to the pod, EXTERNAL otherwise
+        example: INTERNAL
       attributes:
         # additional optional properties of the stream
         $ref: '#/definitions/V2AdminStreamAttributes'
@@ -8706,44 +9249,57 @@ definitions:
       roomName:
         type: string
         description: room name (room only)
+        example: API room
       roomDescription:
         type: string
         description: description of the room (room only)
+        example: Room created via API
       members:
         type: array
         description: list of userid who is member of the stream - im or mim only
         items:
           type: integer
           format: int64
+        example: 
+          - 8933531975686
+          - 8933531975689
       createdByUserId:
         type: integer
         format: int64
         description: creator user id
+        example: 8933531975689
       createdDate:
         type: integer
         format: int64
         description: created date
+        example: 1481575056047
       lastModifiedDate:
         type: integer
         format: int64
         description: last modified date
+        example: 1481575056047
       originCompany:
         type: string
         description: company name of the creator
+        example: Symphony
       originCompanyId:
         type: integer
         description: company id of the creator
+        example: 130
       membersCount:
         type: integer
         description: total number of members in the stream
+        example: 1
       lastMessageDate:
         type: integer
         format: int64
         description: last date a message was sent in this stream
+        example: 1516699467959
       groupChat:
         type: boolean
         description: whether a stream is a group chat or not. Since SBE 20.16.
         x-since: 20.16
+        example: false
   FileExtension:
     type: object
     required:
