@@ -7224,6 +7224,7 @@ definitions:
         format: int64
     example:
       - 7215545058313
+      - 7215545058313
   UserId:
     type: object
     properties:
