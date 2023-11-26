@@ -2353,8 +2353,52 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2UserList'
+          examples:
+            application/json:
+              users:
+                - id: 15942919536460
+                  emailAddress: technicalwriter@symphony.com
+                  firstName: Technical
+                  lastName: Writer
+                  displayName: Technical Writer
+                  title: Technical Writer
+                  company: Symphony
+                  department: Marketing // if internal user
+                  username: tw
+                  accountType: NORMAL 
+                  location: France // if internal user
+                  avatars:
+                    - size: original
+                      url: ../avatars/static/150/default.png
+                    - size: small
+                      url: ../avatars/static/50/default.png
+                - id: 15942919536461
+                  emailAddress: serviceaccount@symphony.com
+                  firstName: null
+                  lastName: null
+                  displayName: Service Account
+                  title: null
+                  company: pod232
+                  department: Marketing // if internal user
+                  username: SA
+                  location: France // if internal user
+                  accountType: SYSTEM
+                  avatars:
+                    - size: original
+                      url: ../avatars/static/150/default.png
+                    - size: small
+                      url: ../avatars/static/50/default.png
+              errors:
+                - error: invalid.format
+                  email: notavalidemail
+                - error: invalid.format
+                  id: 654321
         '204':
           description: 'No user found.'
+          examples:
+            application/json:
+              code: 204
+              message: // No user found. See response body for further details.
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -2857,8 +2901,44 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/UserSearchResults'
+          examples:
+            application/json:
+              count: 1
+              skip: 0
+              limit: 1
+              searchQuery:
+                query: jane
+                filters:
+                  title: Sales Manager
+                  company: Symphony
+                  location: San Francisco
+                  marketCoverage: EMEA
+                  responsibility: BAU
+                  function: Trade Management
+                  instrument: Securities
+                  accountTypes:
+                    - NORMAL
+              users:
+                - id: 13056700581099
+                  emailAddress: janedoe@symphony.com
+                  firstName: Jane
+                  lastName: Doe
+                  displayName: Jane Doe
+                  title: Sales Manager
+                  company: Symphony
+                  location: San Francisco
+                  accountType: NORMAL
+                  avatars:
+                    - size: original
+                      url: ../avatars/static/150/default.png
+                    - size: small
+                      url: ../avatars/static/50/default.png
         '204':
           description: 'No user found.'
+          examples:
+            application/json:
+              code: 204
+              message: // No user found. See response body for further details.
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5244,6 +5324,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: User(s) successfully added in the list of followers
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5308,6 +5392,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: User(s) successfully removed from the list of followers
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5379,6 +5467,17 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/FollowersListResponse'
+          examples:
+            application/json:
+              count: 5
+              followers:
+                - 13056700579848
+                - 13056700580889
+                - 13056700580890
+              pagination:
+                cursors:
+                  before: 1
+                  after: 4
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5450,6 +5549,15 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/FollowingListResponse'
+          examples:
+            application/json:
+              count: 3
+              followers:
+                - 13056700580888
+                - 13056700580889
+              pagination:
+                cursors:
+                  before: 1
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -7504,12 +7612,15 @@ definitions:
       error:
         type: string
         description: 'Error code informing what is wrong'
+        example: invalid.format
       email:
         type: string
         description: 'Email with error. Only one of the following fields should be present: email or id'
+        example: notavalidemail
       id:
         type: string
         description: 'Id with error. Only one of the following fields should be present: email or id'
+        example: notavalidid
   UserV2:
     description: User record version 2
     type: object
@@ -7584,11 +7695,50 @@ definitions:
         items:
           $ref: '#/definitions/UserV2'
         description: 'List of all users found with the search'
+        example:
+          - id: 15942919536460
+            emailAddress: technicalwriter@symphony.com
+            firstName: Technical
+            lastName: Writer
+            displayName: Technical Writer
+            title: Technical Writer
+            company: Symphony
+            department: Marketing // if internal user
+            username: tw
+            accountType: NORMAL 
+            location: France // if internal user
+            mobilePhoneNumber: +33601020304
+            avatars:
+              - size: original
+                url: ../avatars/static/150/default.png
+              - size: small
+                url: ../avatars/static/50/default.png
+          - id: 15942919536461
+            emailAddress: serviceaccount@symphony.com
+            firstName: null
+            lastName: null
+            displayName: Service Account
+            title: null
+            company: pod232
+            department: Marketing // if internal user
+            username: SA
+            location: France // if internal user
+            accountType: SYSTEM
+            avatars:
+              - size: original
+                url: ../avatars/static/150/default.png
+              - size: small
+                url: ../avatars/static/50/default.png
       errors:
         type: array
         items:
           $ref: '#/definitions/UserError'
         description: 'List of all errors found with the informed search criteria'
+        example:
+          - error: invalid.format
+            email: notavalidemail
+          - error: invalid.format
+            id: 654321
   UserSearchResults:
     type: object
     properties:
@@ -7596,14 +7746,17 @@ definitions:
         description: The total number of users which matched the search criteria.
         type: integer
         format: int64
+        example: 1
       skip:
         description: The number of skipped results.
         type: integer
         format: int64
+        example: 0
       limit:
         description: The number of returned results.
         type: integer
         format: int64
+        example: 1
       searchQuery:
         # The search query that produced this result.
         $ref: '#/definitions/UserSearchQuery'
@@ -7612,39 +7765,50 @@ definitions:
         type: array
         items:
           $ref: '#/definitions/UserV2'
+        example:
+          -
   UserSearchFilter:
     type: object
     properties:
       accountTypes:
         $ref: '#/definitions/StringList'
         description: type of user used to search
+        example: NORMAL
       title:
         type: string
         description: user's job title
+        example: Sales Manager
       company:
         type: string
         description: company name
+        example: Symphony
       location:
         type: string
         description: city of the user's job location
+        example: Marseille
       marketCoverage:
         type: string
         description: geographic area the user works with
+        example: EMEA
       responsibility:
         type: string
         description: user's responsibility
+        example: BAU
       function:
         type: string
         description: user's function
+        example: Trade Management
       instrument:
         type: string
         description: higher level instrument for the Asset Classes
+        example: Securities
   UserSearchQuery:
     type: object
     properties:
       query:
         type: string
         description: search / query term.  This can be firstname, lastname, displayname or email
+        example: jane
       filters:
         # query filters
         $ref: '#/definitions/UserSearchFilter'
@@ -10197,11 +10361,15 @@ definitions:
       count:
         type: integer
         format: int64
+        example: 2
       followers:
         type: array
         items:
           type: integer
           format: int64
+        example:
+          - 13056700579848
+          - 13056700580889
       pagination:
         $ref: '#/definitions/Pagination'
   FollowingListResponse:
@@ -10210,11 +10378,15 @@ definitions:
       count:
         type: integer
         format: int64
+        example: 2
       following:
         type: array
         items:
           type: integer
           format: int64
+        example:
+          - 13056700579848
+          - 13056700580889
       pagination:
         $ref: '#/definitions/Pagination'
   V1IMAttributes:
