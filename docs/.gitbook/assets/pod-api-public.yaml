@@ -2877,6 +2877,28 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/StreamAttachmentResponse'
+          examples:
+            application/json:
+              - messageId: PYLHNm/1K6p...peOpj+FbQ
+                userId: USER_ID
+                ingestionDate: 1548089933946
+                fileId: internal_143623
+                name: butterfly.jpg
+                size: 70186
+                contentType: image/jpeg
+                previews:
+                  - fileId: internal_143623
+                    width: 600
+              - messageId: KpjYuzMLR+JK1co7QBfukX///peOpZmdbQ==
+                userId: USER_ID
+                ingestionDate: 1548089976418
+                fileId: internal_1436237
+                name: car.png
+                size: 15754
+                contentType: image/png
+                previews:
+                  - fileId: internal_14362370637
+                    width: 600
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5850,6 +5872,47 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/MessageStatus'
+          examples:
+            application/json:
+              author: 
+                userId: 7078106103901
+                firstName: Gustav
+                lastName: Mahler
+                displayName: Gustav Mahler
+                email: gustav.mahler@music.org
+                userName: gmahler
+                timestamp: 1531968487845
+              read:
+                - userId: 7078106103901 
+                  firsName: Gustav 
+                  lastName: Mahler 
+                  displayName: Gustav Mahler 
+                  email: gustav.mahler@music.org 
+                  userName: gmahler 
+                  timestamp: 1489769156271
+                - userId: 7078106103902 
+                  firsName: Hildegard 
+                  lastName: Bingen 
+                  displayName: Hildegard Bingen 
+                  email: hildegard.bingen@music.org 
+                  userName: hbingen 
+                  timestamp: 1487352923000
+              delivered:
+                - userId: 7078106103903 
+                  firsName: Franz 
+                  lastName: Liszt 
+                  displayName: Franz Liszt 
+                  email: franz.liszt@music.org 
+                  userName: fliszt 
+                  timestamp: 1484674523000
+              sent:
+                - userId: 7078106103904 
+                  firsName: Benjamin 
+                  lastName: Britten 
+                  displayName: Benjamin Britten 
+                  email: benjamin.britten@music.org 
+                  userName: bbritten 
+                  timestamp: 1484156123000
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6674,11 +6737,11 @@ paths:
                   count: 1
               MessageReceiptDetail:
                 - user:
-                    id: 7215545058329
-                    username: adrian1
-                    firstName: Adrian1
-                    lastName: QA5
-                    emailAddress: adrian1@qa5.com
+                    id: 7215545058313
+                    username: dpayet
+                    firstName: Dimitiri
+                    lastName: Payet
+                    emailAddress: dpayet@om.fr
                   deliveryReceiptTimestamp: 1552999333784
                   readReceiptTimestamp: 1552999335114
                   emailNotificationTimestamp: 1552999335114
@@ -7159,12 +7222,15 @@ definitions:
     items:
         type: integer
         format: int64
+    examples:
+      - 7215545058313
   UserId:
     type: object
     properties:
       id:
         type: integer
         format: int64
+        example: 7215545058313
   StringId:
     type: object
     properties:
