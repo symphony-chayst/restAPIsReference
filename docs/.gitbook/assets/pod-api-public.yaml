@@ -2457,6 +2457,11 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2Presence'
+          examples:
+            application/json:
+              category: AVAILABLE
+              userId: 14568529068038
+              timestamp: 1533928483800
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -9163,6 +9168,13 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/V2Presence'
+    example:
+      - category: AVAILABLE
+        userId: 14568529068038
+        timestamp: 1533928483800
+      - category: OFFLINE
+        userId: 974217539631
+        timestamp: 1503286226030
   V2Presence:
     allOf:
       - $ref: '#/definitions/V2UserPresence'
@@ -9172,6 +9184,7 @@ definitions:
             type: integer
             format: int64
             description: The time, in milliseconds since Jan 1 1970, when the presence state was set.
+            example: 1533928483800
   V2UserPresence:
     allOf:
       - $ref: '#/definitions/V2PresenceStatus'
@@ -9181,6 +9194,7 @@ definitions:
             type: integer
             format: int64
             description: The ID of the user to whom the presence state relates.
+            example: 14568529068038
   V2PresenceStatus:
     type: object
     properties:
@@ -9199,6 +9213,7 @@ definitions:
             - OUT_OF_OFFICE
             - OFF_WORK
             - OFFLINE
+        example: AVAILABLE
     required:
       - category
   V2AdminStreamList:
