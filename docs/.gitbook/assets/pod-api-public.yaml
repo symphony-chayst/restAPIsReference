@@ -566,6 +566,14 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/UserConnectionList'
+          examples:
+            application/json:
+              - userId: 769658112378
+                status: ACCEPTED
+                updatedAt: 1471018076255
+              - userId: 7078106103809
+                status: PENDING_INCOMING
+                updatedAt: 1467562406219
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -631,6 +639,13 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/UserConnection'
+          examples:
+            application/json:
+              userId: 7078106126503
+              status: PENDING_OUTGOING
+              firstRequestedAt: 1470018076306
+              updatedAt: 1471018076255
+              requestCounter: 1
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -696,6 +711,13 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/UserConnection'
+          examples:
+            application/json:
+              userId: 7078106126503
+              status: ACCEPTED
+              firstRequestedAt: 1470018076306
+              updatedAt: 1471018076255
+              requestCounter: 1
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -764,6 +786,13 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/UserConnection'
+          examples:
+            application/json:
+              userId: 7078106126503
+              status: REJECTED
+              firstRequestedAt: 1470018076306
+              updatedAt: 1471018076255
+              requestCounter: 1
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -827,6 +856,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/UserConnection'
+          examples:
+            application/json:
+              userId: 769658112378
+              status: ACCEPTED
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -894,6 +927,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: Connection Removed.
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5670,7 +5707,7 @@ paths:
               limit: 50
               filter:
                 streamTypes:
-                  - ""
+                  -  
               streams:
                 - id: Q2KYGm7JkljrgymMajYTJ3___qcLPr1UdA
                   isExternal: false
@@ -7898,8 +7935,10 @@ definitions:
         enum:
           - TEXT
           - XML
+        example: TEXT
       message:
         type: string
+        example: Success
   AvatarUpdate:
     type: object
     properties:
@@ -8723,6 +8762,7 @@ definitions:
         type: integer
         format: int64
         description: user id
+        example: 769658112378
   UserConnection:
     type: object
     description: Connection status between two users
@@ -8731,6 +8771,7 @@ definitions:
         type: integer
         format: int64
         description: user id
+        example: 769658112378
       status:
         type: string
         description: Connection status between the requesting user and the request sender
@@ -8739,22 +8780,34 @@ definitions:
           - PENDING_OUTGOING
           - ACCEPTED
           - REJECTED
+        example: ACCEPTED
       firstRequestedAt:
         type: integer
         format: int64
         description: unix timestamp when the first request was made
+        example: 1470018073812
       updatedAt:
         type: integer
         format: int64
         description: unix timestamp on the last updated date
+        example: 1471018076255
       requestCounter:
         type: integer
         format: int32
         description: number of requests made
+        example: 1
   UserConnectionList:
     type: array
     items:
       $ref: '#/definitions/UserConnection'
+    example:
+      - userId: 769658112378
+        status: PENDING_OUTGOING
+        firstRequestedAt: 1470018073812
+        updatedAt: 1471018076255
+        requestCounter: 1
+      - userId: 7078106103809
+        status: ACCEPTED
   StreamList:
     description: A list of streams of which the requesting user is a member.
     type: array
@@ -8818,7 +8871,7 @@ definitions:
       includeInactiveStreams:
         description: Whether to include inactive streams in the list of results.
         type: boolean
-        example: false
+        example: "false"
   V2StreamAttributes:
     type: object
     properties:
