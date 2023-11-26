@@ -1215,6 +1215,9 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/StringId'
+          examples:
+            application/json:
+              id: c4dca251-8639-48db-a9d4-f387089e17cf
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1273,6 +1276,14 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2PresenceList'
+          examples:
+            application/json:
+              - category: AVAILABLE
+                userId: 14568529068038
+                timestamp: 1533928483800
+              - category: ON_THE_PHONE
+                userId: 974217539631
+                timestamp: 1503286226030
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -1332,6 +1343,9 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/StringId'
+          examples:
+            application/json:
+              id: c4dca251-8639-48db-a9d4-f387089e17cf
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -2399,6 +2413,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -2520,6 +2538,11 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2Presence'
+          examples:
+            application/json:
+              category: AWAY
+              userId: 14568529068038
+              timestamp: 1533928483800
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -2583,6 +2606,11 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2Presence'
+          examples:
+            application/json:
+              category: AVAILABLE
+              userId: 14568529068038
+              timestamp: 1533928483800
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -2669,6 +2697,14 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2PresenceList'
+          examples:
+            application/json:
+              - category: AVAILABLE
+                userId: 14568529068038
+                timestamp: 1533928483800
+              - category: OFFLINE
+                userId: 974217539631
+                timestamp: 1503286226030
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -2734,6 +2770,11 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/V2Presence'
+          examples:
+            application/json:
+              category: AVAILABLE
+              userId: 14568529068038
+              timestamp: 1533928483800
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -7625,6 +7666,7 @@ definitions:
         format: int64
     example:
       - 7215545058313
+      - 7215545078461
   UserId:
     type: object
     properties:
@@ -9213,7 +9255,7 @@ definitions:
             - OUT_OF_OFFICE
             - OFF_WORK
             - OFFLINE
-        example: AVAILABLE
+        example: AWAY
     required:
       - category
   V2AdminStreamList:
