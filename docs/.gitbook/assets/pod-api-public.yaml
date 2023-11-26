@@ -7222,7 +7222,7 @@ definitions:
     items:
         type: integer
         format: int64
-    examples:
+    example:
       - 7215545058313
   UserId:
     type: object
