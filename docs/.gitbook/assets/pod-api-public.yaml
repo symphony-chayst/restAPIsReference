@@ -4322,6 +4322,54 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/V2UserDetailList'
+          examples:
+            application/json:
+              - userAttributes:
+                  emailAddress: nexus.user@email.com
+                  userName: nexus.user
+                  displayName: nexus.user
+                  accountType: SYSTEM
+                userSystemInfo:
+                  id: 9826885173290
+                  status: ENABLED
+                  suspended: false
+                  createdDate: 1499375475000
+                  createdBy: "9826885173255"
+                  lastUpdatedDate: 1499375475852
+                  lastLoginDate: 1504899124191
+                roles:
+                  - USER_PROVISIONING
+                  - CONTENT_MANAGEMENT
+                  - INDIVIDUAL
+              - userAttributes:
+                  emailAddress: admin@mail.com
+                  firstName: admin
+                  lastName: admin
+                  userName: admin@mail.com
+                  displayName: Admin Admin
+                  companyName: Company Name
+                  department: Departament
+                  division: Division
+                  title: Administrator
+                  twoFactorAuthPhone: "+15419999999"
+                  workPhoneNumber: "+15419999999"
+                  mobilePhoneNumber: "+15419999999"
+                  accountType: NORMAL
+                  assetClasses:
+                    - Currencies
+                  industries:
+                    - Technology
+                userSystemInfo:
+                  id: 7696581394433
+                  status: ENABLED
+                  suspended: false
+                  createdDate: 1438054194000
+                  lastUpdatedDate: 1527532171729
+                  lastLoginDate: 1523912043015
+                roles:
+                  - SUPER_COMPLIANCE_OFFICER
+                  - INDIVIDUAL
+                  - SUPER_ADMINISTRATOR
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4390,6 +4438,49 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/UserDetailList'
+          examples:
+            application/json:
+              - userAttributes:
+                  emailAddress: janedoe@symphony.com
+                  firstName: Jane
+                  lastName: Doe
+                  userName: jane.doe
+                  displayName: Jane Doe
+                  accountType: NORMAL
+                  assetClasses:
+                    - Commodities
+                  industries:
+                    - Financials
+                    - Healthcare
+                userSystemInfo:
+                  id: 9826885173258
+                  status: ENABLED
+                  suspended: true
+                  suspensionReason: The user will be OOO due to a mandatory leave
+                  suspendedUntil: 1601546400
+                  createdDate: 1499347606000
+                  createdBy: "9826885173252"
+                  lastUpdatedDate: 1499348554853
+                  lastLoginDate: 1504839044527
+                roles:
+                  - INDIVIDUAL
+              - userAttributes:
+                  emailAddress: nexus.user@email.com
+                  userName: nexus.user
+                  displayName: nexus.user
+                  accountType: SYSTEM
+                userSystemInfo:
+                  id: 9826885173290
+                  status: ENABLED
+                  suspended: false
+                  createdDate: 1499375475000
+                  createdBy: "9826885173255"
+                  lastUpdatedDate: 1499375475852
+                  lastLoginDate: 1504899124191
+                roles:
+                  - USER_PROVISIONING
+                  - CONTENT_MANAGEMENT
+                  - INDIVIDUAL
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4454,6 +4545,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: Role added
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4518,6 +4613,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: Role removed
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4767,6 +4866,12 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/AvatarList'
+          examples:
+            application/json:
+              - size: original
+                url: ../avatars/izcQTdRVFOK_qhCrYeQOpIuHKuZuMk3J88Uz_bShzM8.png
+              - size: small
+                url: ../avatars/izcQTdRVFOK_qhCrYeQOpIuHKuZuMk3J88Uz_bShzM8_small.png
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4831,6 +4936,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5196,6 +5305,20 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/FeatureList'
+          examples:
+            application/json:
+              - entitlment: canCreatePublicRoom
+                enabled: true
+              - entitlment: isExternalRoomEnabled
+                enabled: false
+              - entitlment: delegatesEnabled
+                enabled: true
+              - entitlment: isExternalIMEnabled
+                enabled: true
+              - entitlment: sendFilesEnabled
+                enabled: true
+              - entitlment: canUpdateAvatar
+                enabled: true
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5260,6 +5383,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5722,6 +5849,9 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/UserStatus'
+          examples:
+            application/json:
+              status: ENABLED
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5786,6 +5916,9 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6083,6 +6216,11 @@ paths:
           description: The list of valid feature entitlement names.
           schema:
             $ref: '#/definitions/StringList'
+          examples:
+            application/json:
+              - postReadEnabled
+              - canCreatePublicRoom
+              - canJoinMultiLateralRoom
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6365,6 +6503,24 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/RoleDetailList'
+          examples:
+            application/json:
+              - id: CONTENT_MANAGEMENT
+                name: Content Management
+                userTypes:
+                  - SYSTEM
+                  - NORMAL
+                optionalActions:
+                  - MONITOR_ROOMS
+              - id: COMPLIANCE_OFFICER
+                name: Compliance Officer
+                userTypes:
+                  - NORMAL
+                optionalActions:
+                  - BAN_AND_UNBAN_ROOM_MEMBER
+                  - LOCK_AND_UNLOCK_ROOM
+                  - MONITOR_ROOMS
+                  - MONITOR_WALL_POSTS
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6856,6 +7012,42 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/V2UserDetail'
+          examples:
+            application/json:
+              userAttributes:
+                emailAddress: johndoe@symphony.com
+                firstName: John
+                lastName: Doe
+                userName: johndoe
+                displayName: John Doe
+                companyName: Company
+                department: Departament
+                division: Division
+                title: Junior Trader
+                twoFactorAuthPhone: "+15419999999"
+                workPhoneNumber: "+15419999999"
+                mobilePhoneNumber: "+15419999999"
+                accountType: NORMAL
+                location: New York
+                jobFunction: Trader
+                assetClasses:
+                  - Equities
+                industries:
+                  - Healthcare
+                  - Technology
+              userSystemInfo:
+                id: 7215545078461
+                status: ENABLED
+                suspended: true
+                suspensionReason: The user will be OOO due to a mandatory leave
+                suspendedUntil: 1601546400
+                createdDate: 1461508270000
+                createdBy: "7215545057281"
+                lastUpdatedDate: 1461508270000
+                lastLoginDate: 1461508270000
+                deactivatedDate: 1461508270000
+              roles:
+                - INDIVIDUAL
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6920,6 +7112,42 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/V2UserDetail'
+          examples:
+            application/json:
+              userAttributes:
+                emailAddress: johndoe@symphony.com
+                firstName: John
+                lastName: Doe
+                userName: johndoe
+                displayName: John Doe
+                companyName: Company
+                department: Departament
+                division: Division
+                title: Junior Trader
+                twoFactorAuthPhone: "+15419999999"
+                workPhoneNumber: "+15419999999"
+                mobilePhoneNumber: "+15419999999"
+                accountType: NORMAL
+                location: New York
+                jobFunction: Trader
+                assetClasses:
+                  - Equities
+                industries:
+                  - Healthcare
+                  - Technology
+              userSystemInfo:
+                id: 7215545078461
+                status: ENABLED
+                suspended: true
+                suspensionReason: The user will be OOO due to a mandatory leave
+                suspendedUntil: 1601546400
+                createdDate: 1461508270000
+                createdBy: "7215545057281"
+                lastUpdatedDate: 1461508270000
+                lastLoginDate: 1461508270000
+                deactivatedDate: 1461508270000
+              roles:
+                - INDIVIDUAL
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6954,7 +7182,7 @@ paths:
               message: // Server error, see response body for further details.
   '/v2/admin/user/{uid}':
     get:
-      summary: Retreive V2 User details for a particular user
+      summary: Retrieve V2 User details for a particular user
       consumes:
         - application/json
       produces:
@@ -6979,6 +7207,42 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/V2UserDetail'
+          examples:
+            application/json:
+              userAttributes:
+                emailAddress: johndoe@symphony.com
+                firstName: John
+                lastName: Doe
+                userName: johndoe
+                displayName: John Doe
+                companyName: Company
+                department: Departament
+                division: Division
+                title: Junior Trader
+                twoFactorAuthPhone: "+15419999999"
+                workPhoneNumber: "+15419999999"
+                mobilePhoneNumber: "+15419999999"
+                accountType: NORMAL
+                location: New York
+                jobFunction: Trader
+                assetClasses:
+                  - Equities
+                industries:
+                  - Healthcare
+                  - Technology
+              userSystemInfo:
+                id: 7215545078461
+                status: ENABLED
+                suspended: true
+                suspensionReason: The user will be OOO due to a mandatory leave
+                suspendedUntil: 1601546400
+                createdDate: 1461508270000
+                createdBy: "7215545057281"
+                lastUpdatedDate: 1461508270000
+                lastLoginDate: 1461508270000
+                deactivatedDate: 1461508270000
+              roles:
+                - INDIVIDUAL
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -7441,6 +7705,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: User suspended with success
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -7664,11 +7932,11 @@ definitions:
       workPhoneNumber:
         type: string
         description: 'Note: only available if the application has the extended user or contact permission'
-        example: +33901020304
+        example: "+33901020304"
       mobilePhoneNumber:
         type: string
         description: 'Note: only available if the application has the extended user or contact permission'
-        example: +33601020304
+        example: "+33601020304"
       jobFunction:
         type: string
         description: 'Note: only available if the application has the extended user or contact permission'
@@ -8156,6 +8424,7 @@ definitions:
       image:
         description: Base64 encoded image. Original image must be less than 2MB.
         type: string
+        example: iVBORw0KGgoAAAANSUhEUgAAAJgAAAAoCAMAAAA11sNmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAX1QTFRFAAAAVVVVZmZmc8bmd3d3jMyMmZmZ+cxA////VVVVZmZmc8bmd3d3jMyM8oCZ+cxA////VVVVZmZmc8bmd3d3jMyM////VVVVZmZmc8bmd3d3jMyMmZmZ8oCZ+cxA////ZmZmjMyM////VVVVd3d3jMyM+cxA////VVVVZmZmc8bmd3d3jMyMmZmZnMyB8oCZ+cxA////ZmZmc8bmd3d3jMyMmZmZ+cxA////d3d3jMyM8oCZ+cxA////VVVVZmZmdm1RjMyM8oCZ+cxA////ZmZmmZmZ+cxA////W1tbZmZmc8bmdpGcd3d3jMyMmZmZ8oCZ////d3d3jMyMmZmZx3iJ+cxA////VVVVZmZmc8bmd3d3jMyMuIOVyqpG////VVVVZmZmbW1td3d3jMyMmZmZ+cxA////VVVVX1xUZmZmb46ac8bmdZ+vd3d3fnNQjMyMkpeGlqaWmJyYmZmZnYlMp5FLsZhJvJ9Iz3qM0K5F78VB8oCZ+cxA////9laq9wAAAGh0Uk5TABAQEBAQEBAQICAgICAgICAwMDAwMDBAQEBAQEBAQEBQUFBgYGBgYHBwcHBwcHBwcHCAgICAgICAj4+Pj4+fn5+fn5+fr6+vr7+/v7+/v7+/v8/Pz8/Pz9/f39/f39/f7+/v7+/v7+/qia/hAAADQ0lEQVRYw+2Xa1fTQBCGV0WJCBIvxEq10YoEVNQoaLxURKNWUHRRqYgaUSC1QkWsNzT7252Z3W1TWpCjX+I5fT/ksrM782T2Tc4JYy211NL/oJ50Ot2TRLD5FdTkma6kgU2uSB1PGtiY5HqZuK0ckWAjiQNLS7CdiQPrIq6xpGHtGnr0eRXA0gnjGlqoVCoA9kTe9rfXQob1r8ntv1mUmjlGYBUJdhJv2u9FlzWVHwohAt9kBuc+Dfk8zxjnWRnn3GHM4lKuAUM5nsMIjNETOQVM4NJstQpCzKxL10TjpdJ4B5zvEtg8Wj+zGEVRtwxjVpLFckIAA8sKAVWECBGCeUJ40BI9qwCDXHBqkxDYKT8WwVWWDDFMh5QOpWtURwk0dwE8toBgV2HoeoQ6T2GL6rJsAZ7OCBAGjgUqIbAvptBgNggo/XVgMJQ3mZmHk1wVGArMCPEajrxpwwZLpJkUO4JgXax7mriiaaay1xyWRQhPjsgmAoQGk9uCVeJg1bo+TafW6enxdI26U1Ia3X6psjrJ+hcjJQpjRwLOPYf2DZ7blp2iEhxz14FxCRZ4IB/BbLlflMjDVQVsqprOKZ3HNrKY0tzg09Wzt4Ho59r3NThlKO6E0iLkDTNUe4EloLAb4FGCIUuebrg2HIB5ihgXEJgNZI4Ci6XbDKxUevvp9bcvH98Xi8WvVTAo6no5yBbgtSt0B6AEAoRGM/PXOuZUd0qDgUeFxnWFfEGaaX8q9eyH0qsP998USTczmUx7/BPkqlSByOs6NrwY8EJpMPxa+E51P5XHTL1VLj0RDlm0B6w+XVPd+kV6fHRieWrbwHMEO6FjDr5TMTCuLYElctjGOo+x9WC4r0hrh9RyGsrWwPhGDiOdk1js4tJy+Qpjh24Ui/t0LIceJ/PkG8GM0P4jGPqogFYILQ2GxtsS2F7CYoeXAKzcCwO7B2rBrPrCcqMRrOadjcHgCy/NZ8VW+VsDY9cAi+14QWDv2tZHLcfzXP2tsWxTvRK2oS9gxLBjHrZsmm3oKZbreVbdqur0arpNtGeCwMoPk/czcuDUAwArn07gf9IwgpUPJhVsqi2hYLOdiQSb7Uugx3qH+zpZSy211FJNvwFNoXAncdBvawAAAABJRU5ErkJggg==
   Avatar:
     type: object
     properties:
@@ -8184,19 +8453,23 @@ definitions:
         enum:
           - ENABLED
           - DISABLED
+        example: ENABLED
       suspended:
         type: boolean
         description: An optional attribute indicating whether the user is temporarily suspended or not. Since SBE 20.14.
         x-since: 20.14
+        example: true
       suspendedUntil:
         type: integer
         format: int64
         description: An optional unix timestamp until which the suspension is effective. Since SBE 20.14.
         x-since: 20.14
+        example: 1601546400
       suspensionReason:
         type: string
         description: An optional description of the suspension reason. Since SBE 20.14.
         x-since: 20.14
+        example: The user will be OOO due to a mandatory leave
   UserFilter:
     type: object
     properties:
@@ -8218,19 +8491,29 @@ definitions:
         type: string
         enum:
           - EMAIL
+        example: EMAIL
   FeatureList:
     type: array
     items:
      $ref: '#/definitions/Feature'
+    example:
+      - entitlment: canCreatePublicRoom
+        enabled: true
+      - entitlment: isExternalRoomEnabled
+        enabled: false
+      - entitlment: canUpdateAvatar
+        enabled: true
   Feature:
     description: Entitlement feature record.
     type: object
     properties:
       entitlment:
         type: string
+        example: canCreatePublicRoom
       enabled:
         type: boolean
         description: Whether this entitlement is enabled for the user.
+        example: true
   Group:
     description: Information Barrier Group record.
     type: object
@@ -8386,22 +8669,47 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/RoleDetail'
+    example:
+      - id: CONTENT_MANAGEMENT
+        name: Content Management
+        userTypes:
+          - SYSTEM
+          - NORMAL
+        optionalActions:
+          - MONITOR_ROOMS
+      - id: COMPLIANCE_OFFICER
+        name: Compliance Officer
+        userTypes:
+          - NORMAL
+        optionalActions:
+          - BAN_AND_UNBAN_ROOM_MEMBER
+          - LOCK_AND_UNLOCK_ROOM
+          - MONITOR_ROOMS
+          - MONITOR_WALL_POSTS
   RoleDetail:
     description: Role detailed.
     type: object
     properties:
       id:
         type: string
+        example: CONTENT_MANAGEMENT
       name:
         type: string
+        example: Content Management
       userTypes:
         type: array
         items:
           type: string
+        example:
+          - NORMAL
+          - SYSTEM
       optionalActions:
         type: array
         items:
           type: string
+        example:
+          - MONITOR_ROOMS
+          - MONITOR_WALL_POSTS
   GroupList:
     type: array
     items:
@@ -8469,6 +8777,9 @@ definitions:
     items:
         type: integer
         format: int64
+    example:
+      - 1461508270000
+      - 7215545057281
   StringList:
     type: array
     items:
@@ -8534,46 +8845,66 @@ definitions:
     properties:
       emailAddress:
         type: string
+        example: janedoe@symphony.com
       firstName:
         type: string
+        example: Jane
       lastName:
         type: string
+        example: Doe
       userName:
         type: string
+        example: jane.doe
       displayName:
         type: string
+        example: Jane Doe
       companyName:
         type: string
+        example: Company
       department:
         type: string
+        example: Department
       division:
         type: string
+        example: Division
       title:
         type: string
+        example: Trader
       workPhoneNumber:
         type: string
+        example: "+12349999999"
       mobilePhoneNumber:
         type: string
+        example: "+12349999999"
       smsNumber:
         type: string
+        example: "+12349999999"
       accountType:
         type: string
         enum:
           - NORMAL
           - SYSTEM
           - SDL
+        example: NORMAL
       location:
         type: string
+        example: New York
       jobFunction:
         type: string
+        example: Trader
       assetClasses:
         type: array
         items:
           type: string
+        example:
+          - Commodities
       industries:
         type: array
         items:
           type: string
+        example:
+          - Financials
+          - Services
   V2UserDetail:
     description: V2 Detailed User record.
     type: object
@@ -8600,66 +8931,96 @@ definitions:
     properties:
       emailAddress:
         type: string
+        example: johndoe@symphony.com
       firstName:
         type: string
+        example: John
       lastName:
         type: string
+        example: Doe
       userName:
         type: string
+        example: johndoe
       displayName:
         type: string
+        example: John Doe
       companyName:
         type: string
+        example: Company
       department:
         type: string
+        example: Department
       division:
         type: string
+        example: Division
       title:
         type: string
+        example: Trader
       workPhoneNumber:
         type: string
+        example: "+15419999999"
       mobilePhoneNumber:
         type: string
+        example: "+15419999999"
       twoFactorAuthPhone:
         type: string
+        example: "+15419999999"
       smsNumber:
         type: string
+        example: "+15419999999"
       accountType:
         type: string
         enum:
           - NORMAL
           - SYSTEM
           - SDL
+        example: NORMAL
       location:
         type: string
+        example: New York
       recommendedLanguage:
         type: string
+        example: english
       jobFunction:
         type: string
+        example: Trader
       assetClasses:
         type: array
         items:
           type: string
+        example:
+          - Equities
       industries:
         type: array
         items:
           type: string
+        example:
+          - Healthcare
+          - Technology
       marketCoverage:
         type: array
         items:
           type: string
+        example:
+          - EMEA
       responsibility:
         type: array
         items:
           type: string
+        example:
+          - BAU
       function:
         type: array
         items:
           type: string
+        example: 
+          - Trade Processing
       instrument:
         type: array
         items:
           type: string
+        example:
+          - Equities
       currentKey:
         $ref: '#/definitions/V2UserKeyRequest'
       previousKey:
@@ -8671,10 +9032,12 @@ definitions:
       key:
         description: User RSA public key.
         type: string
+        example: -----BEGIN PUBLIC KEY-----\nMIICIANBgkqhw0BAQ...cCAwEAAQ==\n-----END PUBLIC KEY-----
       expirationDate:
         description: RSA key expiration date. This value is set just for rotated keys.
         type: integer
         format: int64
+        example: 1467562406219
       action:
         description: |
           Action to be performed on the RSA key.
@@ -8685,6 +9048,7 @@ definitions:
             - REVOKE
             - EXTEND
         type: string
+        example: SAVE
   V2UserCreate:
     description: |
       V2 User Creation Object.
@@ -8699,10 +9063,60 @@ definitions:
         type: array
         items:
           type: string
+        example:
+          - INDIVIDUAL
+          - COMPLIANCE_OFFICER
   V2UserDetailList:
       type: array
       items:
         $ref: '#/definitions/V2UserDetail'
+      example:
+        - userAttributes:
+            emailAddress: nexus.user@email.com
+            userName: nexus.user
+            displayName: nexus.user
+            accountType: SYSTEM
+          userSystemInfo:
+            id: 9826885173290
+            status: ENABLED
+            suspended: false
+            createdDate: 1499375475000
+            createdBy: "9826885173255"
+            lastUpdatedDate: 1499375475852
+            lastLoginDate: 1504899124191
+          roles:
+            - USER_PROVISIONING
+            - CONTENT_MANAGEMENT
+            - INDIVIDUAL
+        - userAttributes:
+            emailAddress: admin@mail.com
+            firstName: admin
+            lastName: admin
+            userName: admin@mail.com
+            displayName: Admin Admin
+            companyName: Company Name
+            department: Departament
+            division: Division
+            title: Administrator
+            twoFactorAuthPhone: "+15419999999"
+            workPhoneNumber: "+15419999999"
+            mobilePhoneNumber: "+15419999999"
+            accountType: NORMAL
+            assetClasses:
+              - Currencies
+            industries:
+              - Technology
+          userSystemInfo:
+            id: 7696581394433
+            status: ENABLED
+            suspended: false
+            createdDate: 1438054194000
+            lastUpdatedDate: 1527532171729
+            lastLoginDate: 1523912043015
+          roles:
+            - SUPER_COMPLIANCE_OFFICER
+            - INDIVIDUAL
+            - SUPER_ADMINISTRATOR
   UserSystemInfo:
     description: User Status Information.
     type: object
@@ -8710,45 +9124,98 @@ definitions:
       id:
         type: integer
         format: int64
+        example: 7215545078461
       status:
         type: string
         enum:
           - ENABLED
           - DISABLED
+        example: ENABLED
       suspended:
         type: boolean
         description: An optional attribute indicating whether the user is temporarily suspended or not. Since SBE 20.14.
         x-since: 20.14
+        example: true
       suspendedUntil:
         type: integer
         format: int64
         description: An optional unix timestamp until which the suspension is effective. Since SBE 20.14.
         x-since: 20.14
+        example: 1601546400
       suspensionReason:
         type: string
         description: An optional description of the suspension reason. Since SBE 20.14.
         x-since: 20.14
+        example: The user will be OOO due to a mandatory leave
       createdDate:
         type: integer
         format: int64
+        example: 1461508270000
       createdBy:
         type: string
+        example: "7215545057281"
       lastUpdatedDate:
         type: integer
         format: int64
+        example: 1461508270000
       lastLoginDate:
         type: integer
         format: int64
+        example: 1461508270000
       lastPasswordReset:
         type: integer
         format: int64
+        example: 1461508270000
       deactivatedDate:
         type: integer
         format: int64
+        example: 1461508270000
   UserDetailList:
     type: array
     items:
       $ref: '#/definitions/UserDetail'
+    example:
+      - userAttributes:
+          emailAddress: janedoe@symphony.com
+          firstName: Jane
+          lastName: Doe
+          userName: jane.doe
+          displayName: Jane Doe
+          accountType: NORMAL
+          assetClasses:
+            - Commodities
+          industries:
+            - Financials
+            - Healthcare
+        userSystemInfo:
+          id: 9826885173258
+          status: ENABLED
+          suspended: true
+          suspensionReason: The user will be OOO due to a mandatory leave
+          suspendedUntil: 1601546400
+          createdDate: 1499347606000
+          createdBy: "9826885173252"
+          lastUpdatedDate: 1499348554853
+          lastLoginDate: 1504839044527
+        roles:
+          - INDIVIDUAL
+      - userAttributes:
+          emailAddress: nexus.user@email.com
+          userName: nexus.user
+          displayName: nexus.user
+          accountType: SYSTEM
+        userSystemInfo:
+          id: 9826885173290
+          status: ENABLED
+          suspended: false
+          createdDate: 1499375475000
+          createdBy: "9826885173255"
+          lastUpdatedDate: 1499375475852
+          lastLoginDate: 1504899124191
+        roles:
+          - USER_PROVISIONING
+          - CONTENT_MANAGEMENT
+          - INDIVIDUAL
   UserDetail:
     description: Detailed User record.
     type: object
@@ -8776,15 +9243,19 @@ definitions:
       hSalt:
         description: Pod password salt used for PBKDF2 derivation.
         type: string
+        example: hsalt
       hPassword:
         description: Pod password derived with PBKDF2.
         type: string
+        example: hpassword
       khSalt:
         description: Key Manager password salt used for PBKDF2 derivation.
         type: string
+        example: khsalt
       khPassword:
         description: Key Manager password derived with PBKDF2.
         type: string
+        example: khpassword
   MemberInfo:
     description: Detailed membership record.
     type: object
@@ -10345,11 +10816,14 @@ definitions:
     properties:
       suspended:
         type: boolean
+        example: true
       suspendedUntil:
         type: integer
         format: int64
+        example: 1601546400
       suspensionReason:
         type: string
+        example: The user will be OOO due to a mandatory leave
   FollowersList:
     type: object
     properties:
