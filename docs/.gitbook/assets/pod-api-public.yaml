@@ -3343,6 +3343,13 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/PodAppEntitlementList'
+          examples:
+            application/json:
+              - appId: djApp
+                appName: Dow Jones
+                enable: true
+                listed: true
+                install: true
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3399,6 +3406,23 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/PodAppEntitlementList'
+          examples:
+            application/json:
+              - appId: djApp
+                appName: Dow Jones
+                enable: true
+                listed: true
+                install: false
+              - appId: spcapiq
+                appName: S&P Capital IQ Data
+                enable: true
+                listed: true
+                install: false
+              - appId: selerity
+                appName: Selerity Context
+                enable: false
+                listed: true
+                install: true
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4683,6 +4707,26 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/UserAppEntitlementList'
+          examples:
+            application/json:
+              - appId: djApp
+                appName: Dow Jones
+                listed: true
+                install: false
+              - appId: selerity
+                appName: Selerity Context
+                listed: true
+                install: true
+                products:
+                  - appId: selerity
+                    name: Standard
+                    subscribed: true
+                    type: default
+                  - appId: selerity
+                    name: Premium
+                    sku: AcDccU53SsY
+                    subscribed: false
+                    type: premium
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4745,6 +4789,26 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/UserAppEntitlementList'
+          examples:
+            application/json:
+              - appId: djApp
+                appName: Dow Jones
+                listed: true
+                install: false
+              - appId: selerity
+                appName: Selerity Context
+                listed: true
+                install: true
+                products:
+                  - appId: selerity
+                    name: Standard
+                    subscribed: true
+                    type: default
+                  - appId: selerity
+                    name: Premium
+                    sku: AcDccU53SsY
+                    subscribed: false
+                    type: premium
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4807,6 +4871,26 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/UserAppEntitlementList'
+          examples:
+            application/json:
+              - appId: djApp
+                appName: Dow Jones
+                listed: true
+                install: false
+              - appId: selerity
+                appName: Selerity Context
+                listed: true
+                install: true
+                products:
+                  - appId: selerity
+                    name: Standard
+                    subscribed: true
+                    type: default
+                  - appId: selerity
+                    name: Premium
+                    sku: AcDccU53SsY
+                    subscribed: false
+                    type: premium
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6335,6 +6419,11 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/StringList'
+          examples:
+            application/json:
+              - ftp
+              - mailto
+              - skype
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6769,6 +6858,29 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/ApplicationDetail'
+          examples:
+            application/json:
+              applicationInfo:
+                appId: my-test-app
+                name: my-test-app
+                appUrl: https://joe.mydomain.com
+                domain: mydomain.com
+                publisher: Joe Smith
+              description: a test app
+              allowOrigins: mydomain.com
+              permissions:
+                - ACT_AS_USER
+                - SEND_MESSAGES
+              notification:
+                url: https://some.url
+                apiKey: 123456
+              cert: -----BEGIN PUBLIC KEY-----\nMIICIANBgkqhw0BAQ...cCAwEAAQ==\n-----END PUBLIC KEY-----
+              authenticationKeys: null
+              properties:
+                - key: port
+                  value: 4000
+                - key: url
+                  value: https://someother.url
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6826,6 +6938,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -6883,6 +6999,29 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/ApplicationDetail'
+          examples:
+            application/json:
+              applicationInfo:
+                appId: my-test-app
+                name: my-test-app
+                appUrl: https://joe.mydomain.com
+                domain: mydomain.com
+                publisher: Joe Smith
+              description: a test app
+              allowOrigins: mydomain.com
+              permissions:
+                - ACT_AS_USER
+                - SEND_MESSAGES
+              notification:
+                url: https://some.url
+                apiKey: 123456
+              cert: -----BEGIN PUBLIC KEY-----\nMIICIANBgkqhw0BAQ...cCAwEAAQ==\n-----END PUBLIC KEY-----
+              authenticationKeys: null
+              properties:
+                - key: port
+                  value: 4000
+                - key: url
+                  value: https://someother.url
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -8550,26 +8689,41 @@ definitions:
         description: App ID for the Product
         maxLength: 256
         minLength: 1
+        example: selerity
       name:
         type: string
         minLength: 1
         maxLength: 50
         description: Product Name
+        example: Premium
       sku:
         type: string
         minLength: 1
         maxLength: 100
         description: Product SKU
+        example: AcDccU53SsY
       subscribed:
         type: boolean
         description: indicate whether the product is subscribed or not
+        example: false
       type:
         type: string
         description: Product Type (default or premium)
+        example: premium
   ProductList:
     type: array
     items:
       $ref: '#/definitions/Product'
+    example:
+      - appId: selerity
+        name: Standard
+        subscribed: true
+        type: default
+      - appId: selerity
+        name: Premium
+        sku: AcDccU53SsY
+        subscribed: false
+        type: premium
   PolicyList:
     type: array
     items:
@@ -8613,17 +8767,21 @@ definitions:
         description: Unique ID for the Application
         maxLength: 256
         minLength: 1
+        example: selerity
       appName:
         type: string
         description: Name for this Application
         maxLength: 50
         minLength: 1
+        example: Selerity Context
       listed:
         type: boolean
         description: if true, this application will be listed in the appstore for this user.  Otherwise, this application will be hidden in the appstore.
+        example: true
       install:
         type: boolean
         description: if true, it indicate this application is installed for this user.  Otherwise, this user does not have this application installed.
+        example: true
       products:
         $ref: '#/definitions/ProductList'
   PodAppEntitlement:
@@ -8641,19 +8799,24 @@ definitions:
         description: Unique ID for the Application
         maxLength: 256
         minLength: 1
+        example: djApp
       appName:
         type: string
         description: Name for this Application
         maxLength: 50
         minLength: 1
+        example: Dow Jones
       enable:
         type: boolean
+        example: true
       listed:
         type: boolean
         description: if true, this application will be listed in the appstore for everyone.  Otherwise, this application will be hidden in the appstore.
+        example: true
       install:
         type: boolean
         description: if true, the entitlement is set to automatic for the company.  Otherwise, it is set to manual.
+        example: true
   Role:
     description: Role record.
     type: object
@@ -8737,6 +8900,7 @@ definitions:
            * FALSE - The parameter should be set to false.
            * KEEP - The parameter should not be updated, the current value will be kept.
            * REMOVE - The parameter should be reverted to tenant level's value.
+        example: KEEP
   UserAppEntitlementPatch:
     description: Application Entitlements to patch for the user
     type: object
@@ -8748,26 +8912,59 @@ definitions:
         description: Unique ID for the Application
         maxLength: 256
         minLength: 1
+        example: selerity
       listed:
         type: string
         enum: *UserAppEntitlementPatchEnum
         default: KEEP
         description: If "TRUE", this application will be listed in the appstore for this user. If "FALSE", this application will be hidden in the appstore. If "KEEP" or not set, the current value is kept. If "REMOVE", it will be removed from user settings and the pod level setting's value will be used.
+        example: KEEP
       install:
         type: string
         enum: *UserAppEntitlementPatchEnum
         default: KEEP
         description: If "TRUE", this application will be installed for this user. If "FALSE", this application will not be installed for this user. If "KEEP" or not set, the current value is kept. If "REMOVE", it will be removed from user settings and the pod level setting's value will be used.
+        example: TRUE
       product:
         $ref: '#/definitions/Product'
   UserAppEntitlementList:
     type: array
     items:
       $ref: '#/definitions/UserAppEntitlement'
+    example:
+      - appId: djApp
+        appName: Dow Jones
+        listed: true
+        install: false
+      - appId: selerity
+        appName: Selerity Context
+        listed: true
+        install: true
+        products:
+          - appId: selerity
+            name: Standard
+            subscribed: true
+            type: default
+          - appId: selerity
+            name: Premium
+            sku: AcDccU53SsY
+            subscribed: false
+            type: premium
   PodAppEntitlementList:
     type: array
     items:
       $ref: '#/definitions/PodAppEntitlement'
+    example:
+      - appId: djApp
+        appName: Dow Jones
+        enable: true
+        listed: true
+        install: false
+      - appId: selerity
+        appName: Selerity Context
+        enable: false
+        listed: true
+        install: true
   RoleList:
     type: array
     items:
