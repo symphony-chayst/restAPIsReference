@@ -12,6 +12,7 @@ info:
 servers:
   - url: /at2
 host: 'youraudittrailURL.symphony.com'
+basePath: '/at2'
 tags:
   - description: |
       Audits endpoints
