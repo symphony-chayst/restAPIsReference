@@ -6,7 +6,7 @@ Released in 1.54.2. Fetches receipts details from a specific message.
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 🚧 Required roles
+> #### 🚧 Required roles
 >
 > Calling this endpoint requires the Content Management role with the VIEW\_MANAGE\_MESSAGES entitlement.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

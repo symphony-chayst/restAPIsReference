@@ -70,11 +70,11 @@ https://acme.symphony.com/agent/v4/message/import \
 * You must have a Service User with the **Content Management** roles. This user can be set up in the Admin Portal. In most cases, you will also want this user to have the User Provisioning role as well. This user will be used to import messages.
 * You must have a X.509 identity certificate for your import service user for REST API [authentication](../bot-authentication/), where the common name on the certificate matches your service user's username.
 
-> 📘 Service User Accounts
+> #### 📘 Service User Accounts
 >
 > A service account is a type of account used for bots or applications, rather than for real end-users.
 
-> 🚧 Importing Messages
+> #### 🚧 Importing Messages
 >
 > The Content Management role is required to call the Import Message endpoint.
 >
@@ -86,16 +86,11 @@ https://acme.symphony.com/agent/v4/message/import \
 
 You must specify each message to import as an object with the following fields:
 
-<table><thead><tr><th>Field</th><th width="159">Type</th><th width="102" data-type="checkbox">Required</th><th>Description</th></tr></thead><tbody><tr><td>message</td><td>string</td><td>true</td><td><ul><li>Messages can be sent either in plain text or <a href="https://docs.developers.symphony.com/building-bots-on-symphony/messages/overview-of-messageml">MessageML</a>, Symphony’s message format which allows for basic formatting and entities.</li><li>It is not possible to import file attachments.</li></ul></td></tr><tr><td>data</td><td>string</td><td>false</td><td>Entity data in EntityJSON</td></tr><tr><td>intendedMessageTimestamp</td><td>integer</td><td>true</td><td><p>The timestamp representing the time when the message was sent in the original system in milliseconds since January 1 1970 00:00:00 UTC.</p><p></p><p>Displays in Symphony clients as the timestamp of when the message was sent.</p><p></p><p>For example, if the message was originally sent in another system on January 1, 2016 and was imported on February 1, 2016, the Symphony conversation UI would show the message as being sent on January 1, 2016.</p><p></p><p>Must be a valid time in the past; a timestamp in the future returns an error.</p></td></tr><tr><td>intendedMessageFromUserId</td><td>long integer</td><td>true</td><td><p></p><p>The userId (long integer) of the Symphony user who sent the message. This user must:</p><ul><li>Be a member of the <code>streamId</code> that the message is being imported into.</li><li>Be an active user at the time of import.</li></ul><p>Importing messages from users who are inactive or not stream members results in an error.</p><p></p><p>You can deactivate this user after importing the message.</p><p></p><p>Note that the import service user does not need to be a member of the stream into which the message is imported.</p></td></tr><tr><td>originatingSystemId</td><td>string</td><td>true</td><td>An identifier for the original system through which the message was initially sent.</td></tr><tr><td>originalMessageId</td><td>string</td><td>false</td><td>The ID of the message in the originating system is used to prevent duplicate imports. During message import, the original messages IDs are compared to previously imported entries; in case of an exact match, the matching messages are ignored in the import.</td></tr><tr><td>streamId</td><td>string</td><td>true</td><td><p>The ID of the stream (IM, multi-party IM or chatroom) into which the message is imported. Must be an active stream. Importing a message into an inactive stream results in an error. See <a href="https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams">Conversation ID</a> for details. It is possible to deactivate the room (or user in the case of an IM/MIM) after import.</p><p></p><p><strong>Note</strong>: You can’t stream messages to this endpoint: <a href="ref:read-messagesevents-stream-v4">Read Messages/Events Stream v4</a></p></td></tr><tr><td>attachments</td><td>array of objects</td><td>false</td><td><p>One or more files to be sent along with the message. The limit is set to 30Mb total size; also, it is recommended not to exceed 25 files.</p><p></p><p>Each attachment object is made up of the two following required field:</p><ul><li><code>filename</code> including the extension (i.e. img.png, test.txt)</li><li><code>content</code> as Base64 encoded string</li></ul></td></tr><tr><td>previews</td><td>array of objects</td><td>false</td><td><p>Optional attachment preview.</p><p></p><p>Each preview object is made up of the two following required field:</p><ul><li><code>filename</code> including the extension (i.e. img.png, test.txt) </li><li><code>content</code> as Base64 encoded string</li></ul><p>When using previews, make sure to declare the same number of previews as the attachments declared.</p></td></tr></tbody></table>
+<table><thead><tr><th width="198">Field</th><th width="86">Type</th><th width="68" data-type="checkbox">Required</th><th>Description</th></tr></thead><tbody><tr><td>message</td><td>string</td><td>true</td><td><ul><li>Messages can be sent either in plain text or <a href="https://docs.developers.symphony.com/building-bots-on-symphony/messages/overview-of-messageml">MessageML</a>, Symphony’s message format which allows for basic formatting and entities.</li><li>It is not possible to import file attachments.</li></ul></td></tr><tr><td>data</td><td>string</td><td>false</td><td>Entity data in EntityJSON</td></tr><tr><td>intendedMessageTimestamp</td><td>integer</td><td>true</td><td><p>The timestamp representing the time when the message was sent in the original system in milliseconds since January 1 1970 00:00:00 UTC.</p><p></p><p>Displays in Symphony clients as the timestamp of when the message was sent.</p><p></p><p>For example, if the message was originally sent in another system on January 1, 2016 and was imported on February 1, 2016, the Symphony conversation UI would show the message as being sent on January 1, 2016.</p><p></p><p>Must be a valid time in the past; a timestamp in the future returns an error.</p></td></tr><tr><td>intendedMessageFromUserId</td><td>long integer</td><td>true</td><td><p></p><p>The userId (long integer) of the Symphony user who sent the message. This user must:</p><ul><li>Be a member of the <code>streamId</code> that the message is being imported into.</li><li>Be an active user at the time of import.</li></ul><p>Importing messages from users who are inactive or not stream members results in an error.</p><p></p><p>You can deactivate this user after importing the message.</p><p></p><p>Note that the import service user does not need to be a member of the stream into which the message is imported.</p></td></tr><tr><td>originatingSystemId</td><td>string</td><td>true</td><td>An identifier for the original system through which the message was initially sent.</td></tr><tr><td>originalMessageId</td><td>string</td><td>false</td><td>The ID of the message in the originating system is used to prevent duplicate imports. During message import, the original messages IDs are compared to previously imported entries; in case of an exact match, the matching messages are ignored in the import.</td></tr><tr><td>streamId</td><td>string</td><td>true</td><td>The ID of the stream (IM, multi-party IM or chatroom) into which the message is imported. Must be an active stream. Importing a message into an inactive stream results in an error. See <a href="https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams">Conversation ID</a> for details. It is possible to deactivate the room (or user in the case of an IM/MIM) after import.</td></tr><tr><td>attachments</td><td>array of objects</td><td>false</td><td><p>One or more files to be sent along with the message. The limit is set to 30Mb total size; also, it is recommended not to exceed 25 files.</p><p></p><p>Each attachment object is made up of the two following required field:</p><ul><li><code>filename</code> including the extension (i.e. img.png, test.txt)</li><li><code>content</code> as Base64 encoded string</li></ul></td></tr><tr><td>previews</td><td>array of objects</td><td>false</td><td><p>Optional attachment preview.</p><p></p><p>Each preview object is made up of the two following required field:</p><ul><li><code>filename</code> including the extension (i.e. img.png, test.txt) </li><li><code>content</code> as Base64 encoded string</li></ul><p>When using previews, make sure to declare the same number of previews as the attachments declared.</p></td></tr></tbody></table>
 
 ### V4ImportResponse
 
-| Field                 | Type       | Description                                                              |
-| --------------------- | ---------- | ------------------------------------------------------------------------ |
-| `messageId`           | **string** | Contains the Symphony message ID if the message is successfully created. |
-| `originatingSystemId` | **string** | See the description in **v4ImportedMessage format**.                     |
-| `originalMessageId`   | **string** | See the description in **v4ImportedMessage format**.                     |
-| `diagnostic`          | **string** | Contains an error message if the message import fails.                   |
+<table><thead><tr><th>Field</th><th width="73.33333333333331">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>messageId</code></td><td><strong>string</strong></td><td>Contains the Symphony message ID if the message is successfully created.</td></tr><tr><td><code>originatingSystemId</code></td><td><strong>string</strong></td><td>See the description in <strong>v4ImportedMessage format</strong>.</td></tr><tr><td><code>originalMessageId</code></td><td><strong>string</strong></td><td>See the description in <strong>v4ImportedMessage format</strong>.</td></tr><tr><td><code>diagnostic</code></td><td><strong>string</strong></td><td>Contains an error message if the message import fails.</td></tr></tbody></table>
 
 **Unread Status and Notifications**
 
@@ -149,7 +144,7 @@ If all these users exist, you can skip this step.
 
 User accounts can be provisioned via Symphony's REST API.
 
-> 📘 User Provisioning Service User Account
+> #### 📘 User Provisioning Service User Account
 >
 > Accounts are provisioned by a Service User account which must be assigned the User Provisioning role. This user can be set up in the Admin Portal.
 >
@@ -163,9 +158,9 @@ You will also need to ensure that all the streams (IMs/MIMs/chatrooms) have been
 
 If all of these streams exist, you can skip this step.
 
-Chatrooms can be created and managed via Symphony's REST API. Refer to the [Create Room v3](ref:create-room-v3) endpoint.
+Chatrooms can be created and managed via Symphony's REST API. Refer to the [Create Room v3](../streams-conversations/room-endpoints/create-room-v3.md) endpoint.
 
-> 📘 Changing Chatroom Ownership
+> #### 📘 Changing Chatroom Ownership
 >
 > If the import service user account is used to create chatrooms, the import service user will be the owner of those chatrooms.
 >
@@ -173,30 +168,30 @@ Chatrooms can be created and managed via Symphony's REST API. Refer to the [Crea
 
 In some cases, you may wish to import conversations into chats between two or more users - IMs or MIMs.
 
-IMs and MIMs can be created using the [Create IM or MIM (admin)](ref:create-im-or-mim-admin) endpoint.
+IMs and MIMs can be created using the [Create IM or MIM (admin)](../streams-conversations/im-mim-endpoints/create-im-or-mim-admin.md) endpoint.
 
-> 🚧 Admin IM/MIM Creation
+> #### 🚧 Admin IM/MIM Creation
 >
-> The User Provisioning role is required to call the [Create IM or MIM (admin)](ref:create-im-or-mim-admin) endpoint.
+> The User Provisioning role is required to call the [Create IM or MIM (admin)](../streams-conversations/im-mim-endpoints/create-im-or-mim-admin.md) endpoint.
 >
-> You must use this endpoint rather than the [Create IM or MIM](ref:create-im-or-mim) endpoint, so that the calling service user is not included as a participant of the chat.
+> You must use this endpoint rather than the [Create IM or MIM](../streams-conversations/im-mim-endpoints/create-im-or-mim.md) endpoint, so that the calling service user is not included as a participant of the chat.
 
 ### Message Import
 
 Messages are imported using the **Import Message** endpoint described above.
 
-> 🚧 Message Import Limits
+> #### 🚧 Message Import Limits
 >
 > * We recommend importing in batches of no more than 5,000 messages at a time. Importing more than this number may result in slowness.
 > * We recommend to be very precautious when using attachments with this endpoint as it will increase the payload hence the network usage between the Bot and the Agent.
 
-> 🚧 Migration Times
+> #### 🚧 Migration Times
 >
 > You should plan for a migration period, length dependent on the volume of messages to import and network latency.
 >
 > In our experience, an organization can import about 200K messages / hour.
 
-> ❗️ Import Limitations
+> #### ❗️ Import Limitations
 >
 > It is only possible to import messages from another system into Symphony. It is not possible to import read receipts or chatroom events (ex. membership changes).
 

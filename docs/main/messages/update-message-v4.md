@@ -8,7 +8,7 @@ Available on Agent 20.13.1+ with SBE 20.13.2+ in Beta. Starting with SBE 20.16, 
 
 * For authentication, you must either use the `sessionToken` that was created for delegated application access, or both the `sessionToken` and `keyManagerToken` together.
 
-> 📘 Controlled Availability
+> #### 📘 Controlled Availability
 >
 > Message Update is currently released with **Controlled Availability** because of the following limitations:
 >
@@ -17,7 +17,7 @@ Available on Agent 20.13.1+ with SBE 20.13.2+ in Beta. Starting with SBE 20.16, 
 >
 > Both limits will be lifted in a future release.
 
-> 🚧 Permissions and guidelines
+> #### 🚧 Permissions and guidelines
 >
 > * Entitlement `canUpdateMessage` is required.
 > * Wall posts cannot be updated.

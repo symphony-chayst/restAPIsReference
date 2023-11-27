@@ -6,7 +6,7 @@ Released in 1.47. Log out a user’s session.
 [authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)
 {% endswagger %}
 
-> 📘 Note
+> #### 📘 Note
 >
 > You must provide a certificate where the Common Name of the certificate matches the username of an active Service User account on your pod.\
 > To call the Logout endpoint for a user, you must have a valid sessionToken for the user.

@@ -8,14 +8,14 @@ Available on Agent 2.62.0 and above. Posts a message to multiple existing stream
 
 Blast Message enables you to post a new message to a given list of streams (each stream can either be a chatroom, an IM or a multiparty IM).\
 It also includes all capabilities and limitations from Create Message V4 endpoint (i.e. using Symphony Elements, Apache FreeMarker Template, etc.)\
-_Please check_ [_Create Message V4_](ref:create-message-v4) _where you will find those capabilities and limitations_
+_Please check_ [_Create Message V4_](create-message-v4.md) _where you will find those capabilities and limitations_
 
 Please note that the blast message is not transactional, so you could have some failures sending some messages while others are successfully sent; for this reason, the service returns 200 OK even in case of error (i.e. there is an incorrect stream id within the list of `sids` provided). But in this case, each message failed is detailed.
 
-> 🚧 Known Limitations
+> #### 🚧 Known Limitations
 >
 > * Considering performance purposes for encryption/decryption, the maximum number of stream Ids is set to 100. In case you want to send more messages, you will need to perform multiple requests to the endpoint.
-> * See [Create Message V4](ref:create-message-v4) for more information about other limitations
+> * See [Create Message V4](create-message-v4.md) for more information about other limitations
 
 > 📘 See also
 >

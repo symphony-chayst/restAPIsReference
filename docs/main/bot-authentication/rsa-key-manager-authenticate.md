@@ -10,7 +10,7 @@ To know more about RSA authentication process, refer to [RSA Bot Authentication 
 
 For more information on creating and using an RSA key manager token, refer to [RSA Bot Authentication Workflow](https://docs.developers.symphony.com/building-bots-on-symphony/authentication/rsa-authentication).
 
-> ❗️ Key Manager Token Management
+> #### ❗️ Key Manager Token Management
 >
 > The token you receive is valid for the lifetime of a session that is defined by your pod's administration team. This ranges from 1 hour to 2 weeks.
 >
@@ -18,7 +18,7 @@ For more information on creating and using an RSA key manager token, refer to [R
 >
 > [Datafeeds](../datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
 
-> 🚧 Important
+> #### 🚧 Important
 >
 > * The following restrictions apply:
 >   * The JWT must have an expiration date between the current time and five minutes from the current time.

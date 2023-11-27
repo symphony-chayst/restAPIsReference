@@ -6,7 +6,7 @@ Released in 1.52. Retrieves a list of supported file extensions for attachments.
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 See also
+> #### 📘 See also
 >
 > [Message](https://docs.developers.symphony.com/building-bots-on-symphony/messages)\
 > [MessageML](https://docs.developers.symphony.com/building-bots-on-symphony/messages/overview-of-messageml)\

@@ -6,7 +6,7 @@ Released prior to 1.43. Authenticates the API caller on the key manager using th
 [authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)
 {% endswagger %}
 
-> ❗️ Key Manager Token Management
+> #### ❗️ Key Manager Token Management
 >
 > The token you receive is valid for the lifetime of a session that is defined by your pod's administration team. This ranges from 1 hour to 2 weeks.
 >
@@ -14,7 +14,7 @@ Released prior to 1.43. Authenticates the API caller on the key manager using th
 >
 > [Datafeeds](../datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
 
-> 🚧
+> #### 🚧
 >
 > Before calling the Pod endpoints, the caller must be authenticated with the pod (the dedicated Symphony cloud service) by calling the [Session Authenticate](rsa-session-authenticate.md) endpoint, followed by this one.
 

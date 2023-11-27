@@ -6,7 +6,7 @@ Released in 1.51. Authenticates the API caller on the Symphony servers (pod) usi
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)
 {% endswagger %}
 
-> ❗️ Session Token Management
+> #### ❗️ Session Token Management
 >
 > The token you receive is valid for the lifetime of a session that is defined by your pod's administration team. This ranges from 1 hour to 2 weeks.
 >
@@ -14,7 +14,7 @@ Released in 1.51. Authenticates the API caller on the Symphony servers (pod) usi
 >
 > [Datafeeds](../datafeed/) survive session expiration, you do not need to re-create your datafeed if your session expires.
 
-> 🚧 Important
+> #### 🚧 Important
 >
 > * The following restrictions apply:
 >   * The JWT must have an expiration date between the current time and five minutes from the current time.

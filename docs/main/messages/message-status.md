@@ -17,7 +17,7 @@ Note:
 * For security reasons, the response excludes `userName` for external users.
 * If a message is suppressed, the `sent` array will never contain any users as the message would no longer be accessible to users who have not already seen it. If the message has been `read` or `delivered` prior to being suppressed, the relevant arrays are available.
 
-> 📘 known exceptions
+> #### 📘 known exceptions
 >
 > • If the user was on the stream when the message was sent and the stream had "viewHistory" (for rooms) enabled, he can get the message status.\
 > • If the user is a member of the stream, he can get the message status.

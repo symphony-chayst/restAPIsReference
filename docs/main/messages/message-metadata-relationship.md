@@ -6,11 +6,11 @@ Released in v20.2.1. Gets the message metadata relationship. This API allows use
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 Message Relationship
+> #### 📘 Message Relationship
 >
 > The Message Metadata API returns information about the current message relationships (parent, replies, forwards and form replies).
 
-> 🚧 Required Roles
+> #### 🚧 Required Roles
 >
 > Calling this endpoint requires the Content Management role.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

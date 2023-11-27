@@ -29,7 +29,7 @@ In addition, be aware that although the message is suppressed, the data from the
 • Suppressed Message Sent From -> user that sent the suppressed message.\
 • Suppressed Message Timestamp -> date when the message was suppressed.
 
-> 🚧 Restricted Endpoint
+> #### 🚧 Restricted Endpoint
 >
 > * Users can suppress their own messages only.
 > * Users with the Content Management role can suppress any messages.

@@ -6,7 +6,7 @@ Released prior to 1.43. Authenticates the API caller on the Symphony servers (po
 [authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)
 {% endswagger %}
 
-> ❗️ Session Token Management
+> #### ❗️ Session Token Management
 >
 > The token you receive is valid for the lifetime of a session that is defined by your pod's administration team. This ranges from 1 hour to 2 weeks.
 >
@@ -16,7 +16,7 @@ Released prior to 1.43. Authenticates the API caller on the Symphony servers (po
 
 To call the Session Authenticate endpoint, you must provide a certificate where the Common Name of the certificate matches the username of an active Service User account on your pod.
 
-> 🚧 Important
+> #### 🚧 Important
 >
 > * Before calling any of the Pod or Agent API endpoints, the caller must be authenticated on both the pod and key manager by calling this endpoint, followed by the [Key Manager Authenticate](rsa-key-manager-authenticate.md) endpoint.
 >

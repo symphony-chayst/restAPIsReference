@@ -12,7 +12,7 @@ Available on Agent 2.53.0 and above. Posts a message to an existing stream.
 * For authentication, you must either use the `sessionToken` that was created for delegated application access, or both the `sessionToken` and `keyManagerToken` together.
 * When calling this as an [OBO-Enabled Endpoints](../apps-on-behalf-of-obo/obo-enabled-endpoints.md#api-endpoints-enabled-for-obo), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 
-> 🚧 Known Limitations
+> #### 🚧 Known Limitations
 >
 > * You can’t send a message that contains only an attachment without any message content. `message` must contain a least one space.
 > * DLP (Expression Filters) only works with 1.53 version onwards.
