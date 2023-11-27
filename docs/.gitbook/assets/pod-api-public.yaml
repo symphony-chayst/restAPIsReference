@@ -50,6 +50,21 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/CompanyCertInfoList'
+          examples:
+            application/json:
+              - companyCertAttributes:
+                  name: agentservice
+                  type:
+                    type: USER
+                  status:
+                    type: TRUSTED
+                companyCertInfo:
+                  fingerPrint: "300a..."
+                  lastSeen: 0
+                  updatedAt: 0
+                  updatedBy: 0
+                  commonName: agentservice
+                  expiryDate: 1781886755000
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -108,6 +123,43 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/CompanyCertDetail'
+          examples:
+            application/json:
+              - companyCertAttributes:
+                  name: jira
+                  type:
+                    type: USER
+                  status:
+                    type: KNOWN
+                companyCertInfo:
+                  fingerPrint: "450369..."
+                  issuerFingerPrint: "c35680..."
+                  lastSeen: 1529994790226
+                  updatedAt: 1529598066602
+                  updatedBy: 9208409884327
+                  commonName: jiraWebHookIntegration
+                  expiryDate: 1768510565000
+                certInfo:
+                  - name: General
+                    attributes:
+                      - name: Issuer
+                        value: C=US O=Symphony Communications LLC CN=bot_user_provisioning
+                      - name: Subject
+                        value: C=US OU=NOT FOR PRODUCTION USE O=Symphony Communications LLC CN=jiraWebHookIntegration
+                      - name: Signature Algorithm
+                        value: SHA256withRSA
+                  - name: Validity
+                    attributes:
+                      - name: Not Before
+                        value: Mon Jan 15 20:56:05 UTC 2018
+                      - name: Not After
+                        value: Thu Jan 15 20:56:05 UTC 2026
+                  - name: Public Key
+                    attributes:
+                      - name: Algorithm
+                        value: RSA
+                      - name: Format
+                        value: X.509
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -165,6 +217,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -222,6 +278,43 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/CompanyCertDetail'
+          examples:
+            application/json:
+              - companyCertAttributes:
+                  name: jira
+                  type:
+                    type: USER
+                  status:
+                    type: KNOWN
+                companyCertInfo:
+                  fingerPrint: "450369..."
+                  issuerFingerPrint: "c35680..."
+                  lastSeen: 1529994790226
+                  updatedAt: 1529598066602
+                  updatedBy: 9208409884327
+                  commonName: jiraWebHookIntegration
+                  expiryDate: 1768510565000
+                certInfo:
+                  - name: General
+                    attributes:
+                      - name: Issuer
+                        value: C=US O=Symphony Communications LLC CN=bot_user_provisioning
+                      - name: Subject
+                        value: C=US OU=NOT FOR PRODUCTION USE O=Symphony Communications LLC CN=jiraWebHookIntegration
+                      - name: Signature Algorithm
+                        value: SHA256withRSA
+                  - name: Validity
+                    attributes:
+                      - name: Not Before
+                        value: Mon Jan 15 20:56:05 UTC 2018
+                      - name: Not After
+                        value: Thu Jan 15 20:56:05 UTC 2026
+                  - name: Public Key
+                    attributes:
+                      - name: Algorithm
+                        value: RSA
+                      - name: Format
+                        value: X.509
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -284,6 +377,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -343,6 +440,21 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/CompanyCertInfoList'
+          examples:
+            application/json:
+              - companyCertAttributes:
+                  name: agentservice
+                  type:
+                    type: USER
+                  status:
+                    type: TRUSTED
+                companyCertInfo:
+                  fingerPrint: 300a...
+                  lastSeen: 0
+                  updatedAt: 0
+                  updatedBy: 0
+                  commonName: agentservice
+                  expiryDate: 1781886755000
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -405,6 +517,21 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/CompanyCertInfoList'
+          examples:
+            application/json:
+              - companyCertAttributes:
+                  name: agentservice
+                  type:
+                    type: USER
+                  status:
+                    type: TRUSTED
+                companyCertInfo:
+                  fingerPrint: 300a...
+                  lastSeen: 0
+                  updatedAt: 0
+                  updatedBy: 0
+                  commonName: agentservice
+                  expiryDate: 1781886755000
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -473,6 +600,21 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/CompanyCertInfoList'
+          examples:
+            application/json:
+              - companyCertAttributes:
+                  name: agentservice
+                  type:
+                    type: USER
+                  status:
+                    type: TRUSTED
+                companyCertInfo:
+                  fingerPrint: 300a...
+                  lastSeen: 0
+                  updatedAt: 0
+                  updatedBy: 0
+                  commonName: agentservice
+                  expiryDate: 1781886755000
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -518,10 +660,17 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/PodCertificate'
+          examples:
+            application/json:
+              certificate: PEM_CERTIFICATE
         '500':
           description: 'Server error, see response body for further details.'
           schema:
             $ref: '#/definitions/Error'
+          examples:
+            application/json:
+              code: 500
+              message: // Server error, see response body for further details.
   '/v1/connection/list':
     get:
       summary: List of requesting user's connection
@@ -3480,6 +3629,16 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/Disclaimer'
+          examples:
+            application/json:
+              id: 571d20dae4b042aaf06d2e7c
+              name: New Enterprise Disclaimer
+              content: This is a second enterprise disclaimer.
+              frequencyInHours: 168
+              isDefault: false
+              isActive: true
+              createdDate: 1461526746875
+              modifiedDate: 1461526746875
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3532,6 +3691,24 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/DisclaimerList'
+          examples:
+            application/json:
+              - id: 571d2052e4b042aaf06d2e7a
+                name: Enterprise Disclaimer
+                content: This is a disclaimer for the enterprise.
+                frequencyInHours: 24
+                isDefault: false
+                isActive: true
+                createdDate: 1461526610846
+                modifiedDate: 1461526610846
+              - id: 571d20dae4b042aaf06d2e7c
+                name: New Enterprise Disclaimer
+                content: This is a second enterprise disclaimer.
+                frequencyInHours: 168
+                isDefault: false
+                isActive: true
+                createdDate: 1461526746875
+                modifiedDate: 1461526746875
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3589,6 +3766,9 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/UserIdList'
+          examples:
+            application/json:
+              - 7215545078541
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3641,6 +3821,24 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/GroupList'
+          examples:
+            application/json:
+              - id: 571db1f2e4b027c4f055a594
+                name: Group 1
+                active: true
+                memberCount: 1
+                policies:
+                  - 571db2e4e4b012df6341f393
+                createdDate: 1461563890135
+                modifiedDate: 1461563926812
+              - id: 571db20ae4b012df6341f391
+                name: Group 2
+                active: true
+                memberCount: 1
+                policies:
+                  - 571db2e4e4b012df6341f393
+                createdDate: 1461563914581
+                modifiedDate: 1461564112286
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3711,6 +3909,9 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/IntegerList'
+          examples:
+            application/json:
+              - 7215545078541
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3781,6 +3982,11 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/BulkActionResult'
+          examples:
+            application/json:
+              overallResult: SUCCESS
+              results:
+                - ""
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -3843,6 +4049,11 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/BulkActionResult'
+          examples:
+            application/json:
+              overallResult: SUCCESS
+              results:
+                - ""
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -4025,6 +4236,24 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/PolicyList'
+          examples:
+            application/json:
+              - id: 56e9df05e4b00737e3d3b82d
+                policyType: BLOCK
+                active: true
+                groups:
+                  - 56e9def8e4b0b406041812e6
+                  - 56e9deffe4b0b406041812e7
+                createdDate: 1458167557358
+                modifiedDate: 1458330606752
+              - id: 571cd64de4b042aaf06d2d8b
+                policyType: BLOCK
+                active: true
+                groups:
+                  - 571cd646e4b042aaf06d2d84
+                  - 571cd64ce4b042aaf06d2d8a
+                createdDate: 1461507661146
+                modifiedDate: 1461507661146
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5083,6 +5312,16 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/Disclaimer'
+          examples:
+            application/json:
+              id: 571d2052e4b042aaf06d2e7a
+              name: Enterprise Disclaimer
+              content: This is a disclaimer for the enterprise.
+              frequencyInHours: 24
+              isDefault: false
+              isActive: true
+              createdDate: 1461526610846
+              modifiedDate: 1461526610846
         '204':
           description: No content. User doesn't have an assigned disclaimer
         '400':
@@ -5143,6 +5382,10 @@ paths:
          description: Success
          schema:
            $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5207,6 +5450,10 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: OK
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5266,6 +5513,9 @@ paths:
           description: The userid's of the delegates of this user.
           schema:
             $ref: '#/definitions/IntegerList'
+          examples:
+            application/json:
+              - 7215545078461
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -5330,6 +5580,10 @@ paths:
           description: Sucesss.
           schema:
             $ref: '#/definitions/SuccessResponse'
+          examples:
+            application/json:
+              format: TEXT
+              message: Added delegate [7215545078461] for account [7215545078541]
         '400':
           description: 'Client error, see response body for further details.'
           schema:
@@ -7898,6 +8152,7 @@ definitions:
         pem:
           type: string
           description: An X509 certificate in PEM format
+          example: -----BEGIN CERTIFICATE-----MIIH/TC...p9DBiB/-----END CERTIFICATE-----
         attributes:
           $ref: '#/definitions/CompanyCertAttributes'
   CompanyCertDetail:
@@ -7918,6 +8173,20 @@ definitions:
           $ref: '#/definitions/CompanyCertAttributes'
         companyCertInfo:
           $ref: '#/definitions/CompanyCertInfo'
+      example:
+        - companyCertAttributes:
+            name: agentservice
+            type:
+              type: USER
+            status:
+              type: TRUSTED
+          companyCertInfo:
+            fingerPrint: 300a...
+            lastSeen: 0
+            updatedAt: 0
+            updatedBy: 0
+            commonName: agentservice
+            expiryDate: 1781886755000
   CompanyCertType:
     type: object
     properties:
@@ -7928,6 +8197,7 @@ definitions:
           - USER
           - OPERATIONSSIGNING
           - OPERATIONSUSER
+        example: USER
   CompanyCertTypeList:
     type: array
     items:
@@ -7942,12 +8212,14 @@ definitions:
           - KNOWN
           - REVOKED
           - DISABLED
+        example: TRUSTED
   CompanyCertAttributes:
     type: object
     properties:
       name:
         type: string
         description: Friendly name assigned by administrator
+        example: agentservice
       type:
         $ref: '#/definitions/CompanyCertType'
       status:
@@ -7958,54 +8230,83 @@ definitions:
       fingerPrint:
         type: string
         description: Unique identifier
+        example: 300a...
       issuerFingerPrint:
         type: string
         description: Unique identifier of issuer cert if known
+        example: 450s...
       lastSeen:
         type: integer
         format: int64
         description: Date when we last saw this certificate presented
+        example: 0
       updatedAt:
         type: integer
         format: int64
         description: Date when this cert was last updated by administrator
+        example: 0
       updatedBy:
         type: integer
         format: int64
         description: User ID of administrator who last updated this cert
+        example: 0
       commonName:
         type: string
         description: The Symphony account name which this certificate authenticates
+        example: agentservice
       expiryDate:
         type: integer
         format: int64
         description: Expiry date of this cert
+        example: 1781886755000
   CertInfo:
     type: array
     items:
       $ref: '#/definitions/CertInfoItem'
+    example:
+      - name: Validity
+        attributes:
+          - name: Not Before
+            value: Mon Jan 15 20:56:05 UTC 2018
+          - name: Not After
+            value: Thu Jan 15 20:56:05 UTC 2026
+      - name: Public Key
+        attributes:
+          - name: Algorithm
+            value: RSA
+          - name: Format
+            value: X.509
   CertInfoItem:
     type: object
     properties:
       name:
         type: string
+        example: Public Key
       attributes:
         type: array
         items:
           $ref: '#/definitions/NameValuePair'
+        example:
+          - name: Algorithm
+            value: RSA
+          - name: Format
+            value: X.509
   PodCertificate:
     type: object
     properties:
       certificate:
         description: Certificate in PEM format
         type: string
+        example: PEM_CERTIFICATE
   NameValuePair:
     type: object
     properties:
       name:
         type: string
+        example: Algorithm
       value:
         type: string
+        example: RSA
   Stream:
     type: object
     properties:
@@ -8659,23 +8960,31 @@ definitions:
     properties:
       id:
         type: string
+        example: 571db1f2e4b027c4f055a594
       name:
         type: string
+        example: Group 1
       active:
         type: boolean
+        example: true
       memberCount:
         type: integer
         format: int32
+        example: 1
       policies:
         type: array
         items:
           type: string
+        example:
+         - 571db2e4e4b012df6341f393
       createdDate:
         type: integer
         format: int64
+        example: 1461563890135
       modifiedDate:
         type: integer
         format: int64
+        example: 1461563926812
   Product:
     description: Application Product
     type: object
@@ -8728,32 +9037,58 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Policy'
+    example:
+      - id: 56e9df05e4b00737e3d3b82d
+        policyType: BLOCK
+        active: true
+        groups:
+          - 56e9def8e4b0b406041812e6
+          - 56e9deffe4b0b406041812e7
+        createdDate: 1458167557358
+        modifiedDate: 1458330606752
+      - id: 571cd64de4b042aaf06d2d8b
+        policyType: BLOCK
+        active: true
+        groups:
+          - 571cd646e4b042aaf06d2d84
+          - 571cd64ce4b042aaf06d2d8a
+        createdDate: 1461507661146
+        modifiedDate: 1461507661146
   Policy:
     description: Information Barrier Policy record.
     type: object
     properties:
       id:
         type: string
+        example: 56e9df05e4b00737e3d3b82d
       policyType:
         type: string
         enum:
           - BLOCK
           - ALLOW
+        example: BLOCK
       active:
         type: boolean
+        example: true
       memberCount:
         type: integer
         format: int32
+        example: 3
       groups:
         type: array
         items:
           type: string
+        example:
+          - 56e9deffe4b0b406041812e6
+          - 56e9deffe4b0b406041812e7
       createdDate:
         type: integer
         format: int64
+        example: 1458167557358
       modifiedDate:
         type: integer
         format: int64
+        example: 1458330606752
   UserAppEntitlement:
     description: Application Entitlements for the user
     type: object
@@ -8877,6 +9212,23 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Group'
+    example:
+      - id: 571db1f2e4b027c4f055a594
+        name: Group 1
+        active: true
+        memberCount: 1
+        policies:
+          - 571db2e4e4b012df6341f393
+        createdDate: 1461563890135
+        modifiedDate: 1461563926812
+      - id: 571db20ae4b012df6341f391
+        name: Group 2
+        active: true
+        memberCount: 1
+        policies:
+          - 571db2e4e4b012df6341f393
+        createdDate: 1461563914581
+        modifiedDate: 1461564112286
   UserAppEntitlementsPatchList:
     description: Array of app entitlements to patch for a user
     type: array
@@ -8990,44 +9342,72 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Disclaimer'
+    example:
+      - id: 571d2052e4b042aaf06d2e7a
+        name: Enterprise Disclaimer
+        content: This is a disclaimer for the enterprise.
+        frequencyInHours: 24
+        isDefault: false
+        isActive: true
+        createdDate: 1461526610846
+        modifiedDate: 1461526610846
+      - id: 571d20dae4b042aaf06d2e7c
+        name: New Enterprise Disclaimer
+        content: This is a second enterprise disclaimer.
+        frequencyInHours: 168
+        isDefault: false
+        isActive: true
+        createdDate: 1461526746875
+        modifiedDate: 1461526746875
   Disclaimer:
     type: object
     properties:
       id:
         type: string
+        example: 571d20dae4b042aaf06d2e7c
       name:
         type: string
+        example: New Enterprise Disclaimer
       content:
         type: string
+        example: This is a second enterprise disclaimer.
       frequencyInHours:
         type: integer
         format: int32
+        example: 168
       isDefault:
         type: boolean
+        example: false
       isActive:
         type: boolean
+        example: true
       createdDate:
         type: integer
         format: int64
+        example: 1461526746875
       modifiedDate:
         type: integer
         format: int64
+        example: 1461526746875
       format:
         type: string
         enum:
           - TEXT
           - XML
+        example: TEXT
   DelegateAction:
     type: object
     properties:
       userId:
         type: integer
         format: int64
+        example: 7215545078461
       action:
         type: string
         enum:
           - ADD
           - REMOVE
+        example: ADD
   UserInfo:
     description: User record.
     type: object
@@ -9629,10 +10009,12 @@ definitions:
         enum:
           - SUCCESS
           - FAIL
+        example: SUCCESS
       results:
         type: array
         items:
           type: string
+        example: ""
   UserConnectionRequest:
     type: object
     description: Request body for the Connection APIs
