@@ -10,7 +10,7 @@ description: >-
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-To delete a policy, first call [Disable Policy](doc:disable-policy), then call this endpoint.
+To delete a policy, first call [Disable Policy](v2-disable-policy.md), then call this endpoint.
 
 > ### 🚧 Required Permissions
 >

@@ -19,4 +19,4 @@ As shown in the example, the updated user application entitlements should be inc
 > The endpoint is designed to update all app entitlements of a user using a single API call.\
 > It is not meant to modify one single entitlement for a user.
 >
-> However, it is possible to do this using the Patch [Update User Apps](ref:partial-update-user-apps) endpoint.
+> However, it is possible to do this using the Patch [Update User Apps](partial-update-user-apps.md) endpoint.

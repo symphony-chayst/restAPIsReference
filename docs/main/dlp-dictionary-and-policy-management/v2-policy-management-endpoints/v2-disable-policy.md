@@ -10,7 +10,7 @@ description: >-
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-Delete disabled policies with [Delete Policy](doc:delete-policy).
+Delete disabled policies with [Delete Policy](v2-delete-policy.md).
 
 > ### 🚧 Required Permissions
 >

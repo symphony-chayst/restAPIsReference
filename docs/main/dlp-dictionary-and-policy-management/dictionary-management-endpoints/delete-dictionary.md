@@ -12,7 +12,7 @@ Available on Agent 2.0.0 and above. See the [SBE x Agent compatibilities](https:
 
 > ### 🚧 Important
 >
-> A dictionary can only be deleted if no longer associated with any enabled or disabled policy. Use [All DLP Policies](ref:all-policies) and [Get Policy](ref:get-policy) to retrieve the dictionary or dictionaries associated with a particular policy.
+> A dictionary can only be deleted if no longer associated with any enabled or disabled policy. Use [All DLP Policies](../v3-policy-management-endpoints/v3-all-policies.md) and [Get Policy](../v3-policy-management-endpoints/v3-get-policy.md) to retrieve the dictionary or dictionaries associated with a particular policy.
 
 > ### 🚧 Required Permissions
 >

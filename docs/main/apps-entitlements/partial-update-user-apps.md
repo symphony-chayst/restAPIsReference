@@ -14,7 +14,7 @@ As shown in the example, the updated user application entitlements should be inc
 
 > ### 📘 Info
 >
-> Unlike [Update User Apps](ref:update-user-apps) endpoint, it is not mandatory to provide in the body request all app entitlements for a given app.\
+> Unlike [Update All User Apps](update-user-apps.md) endpoint, it is not mandatory to provide in the body request all app entitlements for a given app.\
 > You can therefore update only one or several of them among the following body params: "install", "listed", or "products".
 >
 > The "product" field is not required but cannot be set to "null". When provided, please specify all subfields specified such as in the example: "appId", "subscribed", "type", "sku", and "name".

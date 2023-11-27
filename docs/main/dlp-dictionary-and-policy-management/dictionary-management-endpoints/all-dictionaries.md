@@ -10,7 +10,7 @@ Available on Agent 2.0.0 and above. See the [SBE x Agent compatibilities](https:
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-Results do not include dictionary content or [deleted dictionaries](ref:delete-dictionary).
+Results do not include dictionary content or [deleted dictionaries](delete-dictionary.md).
 
 > ### 🚧 Required Permissions
 >

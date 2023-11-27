@@ -10,7 +10,7 @@ Available on Agent 2.0.0 and above. See the [SBE x Agent compatibilities](https:
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-Call this endpoint to create a new dictionary without any terms, then call [Upload Dictionary Content](ref:upload-dictionary) upload an associated dictionary file.
+Call this endpoint to create a new dictionary without any terms, then call [Upload Dictionary Content](upload-dictionary-content.md) upload an associated dictionary file.
 
 > 🚧 Required Permissions
 >

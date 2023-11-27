@@ -2,12 +2,12 @@
 
 The following sections show examples of message and attachment violations:
 
-* [V3 Messages - Content Violation](ref:sample-responses#v3-messages---content-violation)
-* [V3 Attachments - Content Violation](ref:sample-responses#v3-attachments---content-violation)
-* [V3 Attachments - Password Protection Violation](ref:sample-responses#v3-attachments---password-protection-violation)
-* [V3 Attachments - Classification Tag(s) Violation](ref:sample-responses#v3-attachments---classification-tags-violation)
-* [V3 Attachments - Size Violation](ref:sample-responses#v3-attachments---size-violation)
-* [V3 Attachments - Extension Violation](ref:sample-responses#v3-attachments---extension-violation)
+* [V3 Messages - Content Violation](v3-violations-sample-responses.md#v3-messages-content-violation)
+* [V3 Attachments - Content Violation](v3-violations-sample-responses.md#v3-attachments-content-violation)
+* [V3 Attachments - Password Protection Violation](v3-violations-sample-responses.md#v3-attachments-password-protection-violation)
+* [V3 Attachments - Classification Tag(s) Violation](v3-violations-sample-responses.md#v3-attachments-classification-tags-violation)
+* [V3 Attachments - Size Violation](v3-violations-sample-responses.md#v3-attachments-size-violation)
+* [V3 Attachments - Extension Violation](v3-violations-sample-responses.md#v3-attachments-extension-violation)
 
 ## V3 Messages - Content Violation
 

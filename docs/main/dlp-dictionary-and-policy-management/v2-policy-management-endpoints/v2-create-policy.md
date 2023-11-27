@@ -11,7 +11,7 @@ description: >-
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-After you create a policy, call [Enable Policy](ref:enable-policy) to start enforcing the policy.
+After you create a policy, call [Enable Policy](v2-enable-policy.md) to start enforcing the policy.
 
 > ### 🚧 Required Permissions
 >

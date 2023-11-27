@@ -2,9 +2,9 @@
 
 The following sections show specific scenarios of v3 attachment violations:
 
-* [One Attachment - Multiple Violations](ref:special-scenarios-of-attachment-violations#one-attachment---multiple-violations)
-* [Special Case - Zip Files](ref:special-scenarios-of-attachment-violations#zip-files)
-* [Multiple Attachments](ref:special-scenarios-of-attachment-violations#multiple-attachments)
+* [One Attachment - Multiple Violations](v3-violations-special-scenarios-of-attachments.md#one-attachment-multiple-violations)
+* [Special Case - Zip Files](v3-violations-special-scenarios-of-attachments.md#zip-files)
+* [Multiple Attachments](v3-violations-special-scenarios-of-attachments.md#multiple-attachments)
 
 ## One Attachment - Multiple Violations
 

@@ -12,7 +12,7 @@ description: >-
 
 > ### 🚧 Important
 >
-> Do not use this endpoint to create new policies. Use [Create Policy](ref:create-policy).
+> Do not use this endpoint to create new policies. Use [Create Policy](v3-create-policy.md).
 
 > ### ❗️ Warning
 >

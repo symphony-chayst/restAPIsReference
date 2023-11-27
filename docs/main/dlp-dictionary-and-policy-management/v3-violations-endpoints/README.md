@@ -5,7 +5,7 @@
 The Violations endpoints enable you to get violations of messages, signals, and streams. Use these endpoints to retrieve Expression Filtering v3 (EFv3) violations.
 
 * **Message Violations:** A Block or warning that happens when sending messages with terms that match the violation policy. EFv3 provides DLP enforcement on the content (except mentions) of IMs, MIMs, chat rooms, wall posts, shared signals, posts on behalf of, shared wall posts, shared articles, blasts, forwards and replies.\
-  In addition, administrators can configure EFv3 policies that will enforce DLP on the content of attachments and certain metadata of attachments. The metadata that can be enforced in EFv3 are size (e.g. 3 Mb limit), classification tags, password protection and attachment type (file extension, e.g .txt files). For more information on creating and updating EFv3 policies please view the documentation for [V3 Policy Management endpoints](ref:v3-policy-management-endpoints).
+  In addition, administrators can configure EFv3 policies that will enforce DLP on the content of attachments and certain metadata of attachments. The metadata that can be enforced in EFv3 are size (e.g. 3 Mb limit), classification tags, password protection and attachment type (file extension, e.g .txt files). For more information on creating and updating EFv3 policies please view the documentation for [V3 Policy Management endpoints](../v3-policy-management-endpoints/).
 * **Signal Violations:** A Block or warning that happens when creating or updating signals with terms that match the violation policy. For signals, only the signal name is analyzed.\
   Note that if a signal created before enabling DLP contains violations, DLP will block the signal when trying to “push signal”.
 * **Stream Violations:** A Block or warning that happens when creating or updating rooms with terms that match the violation policy. For streams, the DLP analyses the name and description of internal and external rooms.
@@ -22,19 +22,19 @@ Additionally, the policy action could be set to "log-only". If the message actio
 ## EFv3 Endpoints:
 
 • Stream metadata - https:///agent/v3/dlp/violations/stream/?startTime=1504234983000\&endTime=1504237983000\&limit=100\&next=\
-[Details here](ref:v3-stream-violations)
+[Details here](v3-stream-violations.md)
 
 • Signal names and rules - https:///agent/v3/dlp/violations/signal/?startTime=1504234983000\&endTime=1504237983000\&limit=100\&next= \
-[Details here](ref:v3-signal-violations)
+[Details here](v3-signal-violations.md)
 
 • Messages - https:///agent/v3/dlp/violations/message/?startTime=1504234983000\&endTime=1504237983000\&limit=100\&next=\
-[Details here](ref:v3-message-violations)
+[Details here](v3-message-violations.md)
 
 > ### 📘 Attachment Related Violations
 >
 > Violations that occur for attachment content or metadata will be queryable through the Messages endpoint
 >
-> The fileId of the attachment and messageId of the message that triggered the DLP policy are included in the violation. You can use these two parameters in the [download attachment endpoint](ref:v3-violation-attachment-download) to download the actual attachment
+> The fileId of the attachment and messageId of the message that triggered the DLP policy are included in the violation. You can use these two parameters in the [download attachment endpoint](v3-violation-attachment-download.md) to download the actual attachment
 
 ## Key Parameters
 
@@ -45,8 +45,8 @@ Additionally, the policy action could be set to "log-only". If the message actio
 
 ## Key Headers
 
-* Session token obtained from [Session Authenticate](ref:session-authenticate) endpoint - `sessionToken`.
-* Key manager token obtained from [Key Manager Authenticate](ref:key-manager-authenticate) endpoint - `keyManagerToken`.
+* Session token obtained from [Session Authenticate](../../bot-authentication/rsa-session-authenticate.md) endpoint - `sessionToken`.
+* Key manager token obtained from [Key Manager Authenticate](../../bot-authentication/rsa-key-manager-authenticate.md) endpoint - `keyManagerToken`.
 
 Please, visit the [Swagger API definition](https://github.com/symphonyoss/symphony-api-spec) for more details.
 
@@ -54,8 +54,8 @@ Please, visit the [Swagger API definition](https://github.com/symphonyoss/sympho
 
 For more information and examples of message and attachment violations, refer to:
 
-[Sample responses](ref:sample-responses).\
-[Special Scenarios of Attachment Violations](ref:v3-violations-endpoints).
+[Sample responses](v3-violations-sample-responses.md).\
+[Special Scenarios of Attachment Violations](v3-violations-special-scenarios-of-attachments.md).
 
 > ### 🚧 Migrating from older versions of DLP
 >
