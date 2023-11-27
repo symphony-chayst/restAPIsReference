@@ -5379,9 +5379,9 @@ paths:
         - User
       responses:
         '200':
-         description: Success
-         schema:
-           $ref: '#/definitions/SuccessResponse'
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
           examples:
             application/json:
               format: TEXT
@@ -10014,7 +10014,8 @@ definitions:
         type: array
         items:
           type: string
-        example: ""
+        example:
+          - ""
   UserConnectionRequest:
     type: object
     description: Request body for the Connection APIs
