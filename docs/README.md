@@ -9,7 +9,7 @@ This is the API reference documentation page for the following Symphony APIs: Po
 An overview of the API is available [here](https://docs.developers.symphony.com/bots/overview-of-rest-api) on our developer doc website.
 
 {% hint style="info" %}
-**New API portal.** Please note that we migrated our documentation to a different provider to improve the quality of the documentation. In this transition period you may notice missing information or an inconsistent look and feel. Please reach out to the Symphony support or your usual point of contact at Symphony if you encounter any issue.  \
+**New API portal.** Please note that we migrated our documentation to a different provider to provide a better service and improve the overall quality of the documentation. In this transition period you may notice missing information or an inconsistent look and feel. Please reach out to the Symphony support or your usual point of contact at Symphony if you encounter any issue. \
 Thank you for your understanding.
 {% endhint %}
 
@@ -28,7 +28,7 @@ In-cloud deployments of Symphony use the following formats as both the Agent URL
 * Pod Url: YOUR-POD-SUBDOMAIN.symphony.com
 * Agent Url: YOUR-POD-SUBDOMAIN.symphony.com
 
-#### On-premise deployments
+#### On-Premise deployments
 
 For enterprise deployments of Symphony, the Agent URL and the Key Auth URL may differ from your pod subdomain because the Symphony software is deployed on premise. Therefore, enterprise deployments use the following formats:
 
