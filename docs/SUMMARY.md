@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Symphony API Reference documentation](README.md)
 
 ## Endpoints Reference <a href="#main" id="main"></a>
 
@@ -242,10 +242,10 @@
     * [V3 Violation Attachment Download](main/dlp-dictionary-and-policy-management/v3-violations-endpoints/v3-violation-attachment-download.md)
 * [Audit Trail 2](main/audit-trail-2/README.md)
   * [OAuth2 Authenticate](main/audit-trail-2/oauth2-authenticate.md)
-  * [Get Audit trails](main/audit-trail-2/get_at2-v1-audits.md)
-  * [Get distinct values of a list of filters](main/audit-trail-2/get_at2-v1-filters-values.md)
-  * [Get Audit Trail Stream](main/audit-trail-2/get_at2-v1-audits-stream.md)
-  * [Get categories permissions](main/audit-trail-2/get_at2-v1-categories-permissions.md)
+  * [Get Audit trails](main/audit-trail-2/get\_at2-v1-audits.md)
+  * [Get distinct values of a list of filters](main/audit-trail-2/get\_at2-v1-filters-values.md)
+  * [Get Audit Trail Stream](main/audit-trail-2/get\_at2-v1-audits-stream.md)
+  * [Get categories permissions](main/audit-trail-2/get\_at2-v1-categories-permissions.md)
 
 ## Deprecated Endpoints
 
