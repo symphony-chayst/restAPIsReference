@@ -196,7 +196,7 @@
   * [List Certificate Types](main/certificates/list-certificate-types.md)
   * [Update Company Certificate](main/certificates/update-company-certificate.md)
 * [Malware Scanner](main/malware-scanner/README.md)
-  * [Malware Scnanner APIs](main/malware-scanner/malware-scnanner-apis/README.md)
+  * [Malware Scanner APIs](main/malware-scanner/malware-scnanner-apis/README.md)
     * [File Malware Scanner State](main/malware-scanner/malware-scnanner-apis/file-malware-scanner-state.md)
     * [Update File Malware Scanner State](main/malware-scanner/malware-scnanner-apis/update-file-malware-scanner-state.md)
   * [Customer Malware Scanner APIs](main/malware-scanner/customer-malware-scanner-apis/README.md)
