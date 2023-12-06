@@ -6,6 +6,10 @@ Released in Symphony 20.7. This API suspends or re-activates (unsuspend) a user 
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
+{% hint style="info" %}
+`The value of the suspendedUntil` field should be provided in milliseconds
+{% endhint %}
+
 ### Request Examples
 
 ```bash
@@ -16,7 +20,7 @@ curl -X PUT \
 -d '{
       "suspended": true,
       "suspensionReason": "The user will be OOO due to a mandatory leave",
-      "suspendedUntil": 1601546400
+      "suspendedUntil": 1601546400000
     }'
 ```
 
