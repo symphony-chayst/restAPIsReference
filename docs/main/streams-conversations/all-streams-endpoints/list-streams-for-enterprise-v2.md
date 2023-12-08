@@ -1,8 +1,6 @@
 # List Streams for Enterprise
 
-`Released in 1.50`
-
-Returns a list of all the streams (IMs, MIMs, chatrooms, Wall posts as well as streams reserved for internal use) for the calling user's company, sorted by creation date (ascending – oldest to newest).&#x20;
+Returns a list of all the streams (IMs, chatrooms, Wall posts as well as streams reserved for internal use) for the calling user's company, sorted by creation date (ascending – oldest to newest).&#x20;
 
 **Filtering** parameters can be used to narrow the list of streams that are returned. For more information, refer to the **Filtering Returned Streams** section below.
 
@@ -27,7 +25,7 @@ https://acme.symphony.com/pod/v2/admin/streams/list \
         }'
 ```
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > This endpoint may only be called by Service User accounts with the User Provisioning role.
 
@@ -51,11 +49,11 @@ For instance, the filter below would return active external chatrooms created by
 }
 ```
 
-> 📘 lastMessageDate
+> #### 📘 lastMessageDate
 >
 > This is the date that the last message was sent in that room. The time is in epoch format.
 
-> 📘 Scope vs. Origin
+> #### 📘 Scope vs. Origin
 >
 > The `scope` property refers to the participants of the room: whether the room contains only users within the company (internal scope) or whether the room contains users within the company as well as users belonging to another company (external scope). The scope property can apply to IMs and MIMs as well.
 >
@@ -65,13 +63,13 @@ For instance, the filter below would return active external chatrooms created by
 >
 > The response has defined variable "isExternal", and for external scope, can have two values {true, false}. This value is false, whenever the stream is created by an internal user.
 
-> 📘 Privacy
+> #### 📘 Privacy
 >
 > The `privacy` property applies only to rooms with internal scope. It refers to the privacy setting of the internal room: whether members (who must belong to the same company) must be added to the room or whether anyone in the company can find and join the room.
 >
 > External rooms are always private - members must be added to the room.
 
-> 📘 Date Range Filter
+> #### 📘 Date Range Filter
 >
 > The `startDate` and `endDate` properties can be used to filter the list of streams to return only streams that were modified within the specified time range.
 >

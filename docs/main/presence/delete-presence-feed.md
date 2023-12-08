@@ -1,6 +1,5 @@
 # Delete Presence Feed
 
-`Released in 1.48.`\
 Deletes a presence status feed. This endpoint returns the ID of the deleted feed if the deletion is successful.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/presence/feed/{feedId}/delete" method="post" expanded="true" fullWidth="true" %}

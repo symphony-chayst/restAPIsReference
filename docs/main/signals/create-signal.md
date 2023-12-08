@@ -1,7 +1,5 @@
 # Create Signal
 
-`Available on Agent 2.0.0 and above. Data Loss Protection (DLP) included in 1.53.`
-
 Creates a new Signal.
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/signals/create" method="post" expanded="true" fullWidth="true" %}

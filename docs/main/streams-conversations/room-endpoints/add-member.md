@@ -1,14 +1,12 @@
 # Add Member
 
-`Released prior to 1.43.`
-
 Adds a new member to an existing room.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/room/{id}/membership/add" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 Room ID
+> #### 📘 Room ID
 >
 > The room ID can be located in the Symphony web or desktop client by clicking on the timestamp of any message in the conversation. This will open the Message Status module overlay, and the Conversation ID can be found in the overlay footer.
 >
@@ -16,13 +14,13 @@ Adds a new member to an existing room.
 >
 > See [Overview of Streams](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for details.
 
-> 🚧 Rules and limitations
+> #### 🚧 Rules and limitations
 >
-> * \*\*Joining Public Rooms: \*\* this endpoint can be used by the calling user to join a public room. To do so, specify the ID of the public room the user wishes to join in the URL and specify the user ID of the calling user in the body.
+> * **Joining Public Rooms:** this endpoint can be used by the calling user to join a public room. To do so, specify the ID of the public room the user wishes to join in the URL and specify the user ID of the calling user in the body.
 >   * New members cannot be added to deactivated rooms.
 >   * For rooms with more than 500 users, members should be added/deleted 1 member every "3 seconds" to allow key management functions time to process.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > New room members can only be added by:
 >

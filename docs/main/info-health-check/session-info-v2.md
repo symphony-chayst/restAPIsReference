@@ -1,6 +1,6 @@
 # Session User
 
-Released in 1.47. Returns the userId of the calling user.
+Returns the userId of the calling user.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v2/sessioninfo" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

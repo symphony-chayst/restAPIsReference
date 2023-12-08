@@ -1,6 +1,6 @@
 # Search Users
 
-Released prior to 1.43. Search for end-users, bots or distribution lists (groups) by first name, last name, display name, and email, and filter results by company, title, location, marketCoverage, responsibility, function, or instrument.
+Search for end-users, bots or distribution lists (groups) by first name, last name, display name, and email, and filter results by company, title, location, marketCoverage, responsibility, function, or instrument.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/search" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
@@ -8,7 +8,7 @@ Released prior to 1.43. Search for end-users, bots or distribution lists (groups
 
 ### Request Example
 
-```curl
+```bash
 curl -X POST \
 https://acme.symphony.com/pod/v1/user/search?local=false \
 -H "sessionToken: SESSION_TOKEN" \
@@ -28,7 +28,7 @@ https://acme.symphony.com/pod/v1/user/search?local=false \
 }'
 ```
 
-> 📘 Note
+> #### 📘 Note
 >
 > * This endpoint can return inexact matches of the specified criteria, while [Find Users](../user-management/find-users.md) returns only exact matches.
 > * Account type:

@@ -1,7 +1,5 @@
 # List User Streams
 
-`Released prior to 1.43.`
-
 Returns a list of all the streams of which the requesting user is a member, sorted by creation date (ascending - oldest to newest).
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/streams/list" method="post" expanded="true" fullWidth="true" %}
@@ -42,6 +40,6 @@ https://acme.symphony.com/pod/v1/streams/list \
 }
 ```
 
-> 📘 Overview of streams
+> #### 📘 Overview of streams
 >
-> A stream is like a container for messages exchanged between two or more users via a given instant message (IM), multi-party instant message (MIM), or chat room. For more information, refer to [Overview of streams](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams).
+> A stream is like a container for messages exchanged between two or more users via a given instant message (IM) or chat room. For more information, refer to [Overview of streams](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams).

@@ -1,19 +1,17 @@
 # Remove Member
 
-`Released prior to 1.43.`
-
 Removes an existing member from an existing room.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/room/{id}/membership/remove" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 🚧 Rules and limitations
+> #### 🚧 Rules and limitations
 >
 > * Currently, it is possible to remove all members from a room, however, this action is not recommended since the removal of all members leaves the room in an unrecoverable state. At any time, a room should have at least one owner.
 > * It is not possible to remove members from deactivated rooms.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > New room members can only be removed by:
 >

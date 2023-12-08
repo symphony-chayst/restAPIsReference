@@ -1,14 +1,12 @@
 # Room Members
 
-`Released prior to 1.43.`
-
 Lists the current members of an existing room.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v2/room/{id}/membership/list" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Room membership can only be read by:
 >
@@ -18,7 +16,7 @@ Lists the current members of an existing room.
 >
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.
 
-> 📘 Room ID and User ID
+> #### 📘 Room ID and User ID
 >
 > **Room ID**
 >
@@ -32,7 +30,7 @@ Lists the current members of an existing room.
 >
 > The user `id` returns a `long` numeric type.
 
-> 📘 Note - Groups
+> #### 📘 Note - Groups
 >
 > Since 20.14, please note that the object `addedThroughGroups` has been added only for members added to the room via Groups.
 >

@@ -1,6 +1,6 @@
 # List Features
 
-Released prior to 1.43. Returns the full set of Symphony features available for this pod.
+Returns the full set of Symphony features available for this pod.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/system/features/list" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
@@ -49,7 +49,7 @@ Features entitlements definition:
 * `sdaPermissionsOpenExternalApp`: Allow Opening External Apps from SDA.
 * `sdaPermissionsPointerLock`: Enable Pointer Lock on SDA.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires the User Provisioning role with `ACCESS_USER_PROVISIONING_API` privilege.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

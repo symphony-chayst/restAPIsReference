@@ -1,6 +1,5 @@
 # Read Presence Feed
 
-`Released in 1.48.`\
 Reads the specified presence feed that was created using the [Create Presence feed](create-presence-feed.md) endpoint. The feed returned includes the user presence statuses that have changed since they were last read.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/presence/feed/{feedId}/read" method="get" expanded="true" fullWidth="true" %}

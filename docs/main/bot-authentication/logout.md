@@ -1,6 +1,6 @@
 # Session Logout
 
-Released in 1.47. Log out a user’s session.
+Log out a user’s session.
 
 {% swagger src="../../.gitbook/assets/authenticator-api-public.yaml" path="/v1/logout" method="post" expanded="true" fullWidth="true" %}
 [authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)

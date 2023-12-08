@@ -1,8 +1,6 @@
 # Update IM
 
-`Released in 20.13.`
-
-Updates the attributes of an existing IM.
+Updates the attributes of an existing IM conversation.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/im/{id}/update" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
@@ -12,7 +10,7 @@ Returns an error when:
 
 * The call doesn’t include an update to at least one editable attribute.
 
-> 📘 Stream ID
+> #### 📘 Stream ID
 >
 > The stream ID can be located in the Symphony web or desktop client by clicking on the timestamp of any message in the conversation. This will open the Message Status module overlay, and the Conversation ID can be found in the overlay footer.
 >
@@ -20,7 +18,7 @@ Returns an error when:
 >
 > Note: visit [Overview of streams](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for more information.
 
-> 🚧 Attributes
+> #### 🚧 Attributes
 >
 > * The `pinnedMessageId` attribute allows to display an exact copy of the original message in a pinned area placed beneath the chat header and that remains always visible to all users. From this area, they can interact with the message content (i.e. forms or ui actions buttons), and they are able to automatically jump to the original message in the chat canvas. You can use this attribute as follows:
 >   * either by entering the URLSafe Base 64 ID of the message you wish to pin beneath the chat header (as you can see in the example). Even if another message is pinned, this new message will replace it in the pinned area;

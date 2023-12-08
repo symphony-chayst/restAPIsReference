@@ -1,6 +1,6 @@
 # User Authentication by User Name
 
-Released in 1.53. Enables an RSA application to authenticate on behalf of a particular user.
+Enables an RSA application to authenticate on behalf of a particular user.
 
 {% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/app/username/{username}/authenticate" method="post" expanded="true" fullWidth="true" %}
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)

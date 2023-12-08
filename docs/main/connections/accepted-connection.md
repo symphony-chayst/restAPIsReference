@@ -1,6 +1,5 @@
 # Accept Connection
 
-`Released prior to 1.43.`\
 Accept the connection request from a requesting user.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/connection/accept" method="post" expanded="true" fullWidth="true" %}
@@ -9,11 +8,11 @@ Accept the connection request from a requesting user.
 
 This endpoint allows the user to accept a specific connection request. To define which connection request is to be accepted, the `userId` of the user who initiated the connection request must be included in the body.
 
-> 📘 Note
+> #### 📘 Note
 >
 > Pods from all users involved need to have `crossPod` enabled between them.
 
-> 📘 Accepted Connections
+> #### 📘 Accepted Connections
 >
 > For users of the same private pod who are implicitly connected, this endpoint returns the connection with status of "Accepted".
 
@@ -28,8 +27,4 @@ Currently, there are four possible connection status:
 
 The following table shows the connection current behaviors:
 
-| Initial Connection Status       | Request Action | New Connection Status |
-| ------------------------------- | -------------- | --------------------- |
-| None (connection did not exist) | Connect        | PENDING\_OUTGOING     |
-| PENDING\_INCOMING               | Accept         | ACCEPTED              |
-| PENDING\_INCOMING               | Reject         | REJECTED              |
+<table><thead><tr><th width="324.3333333333333">Initial Connection Status</th><th>Request Action</th><th>New Connection Status</th></tr></thead><tbody><tr><td>None (connection did not exist)</td><td>Connect</td><td>PENDING_OUTGOING</td></tr><tr><td>PENDING_INCOMING</td><td>Accept</td><td>ACCEPTED</td></tr><tr><td>PENDING_INCOMING</td><td>Reject</td><td>REJECTED</td></tr></tbody></table>

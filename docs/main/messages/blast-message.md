@@ -1,6 +1,7 @@
 # Blast Message
 
-Available on Agent 2.62.0 and above. Posts a message to multiple existing streams. Starting with Agent 23.6, this endpoint is OBO-enabled.
+Posts a message to multiple existing streams. \
+`Available on Agent 2.62.0 and above.  Starting with Agent 23.6, this endpoint is OBO-enabled.`
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v4/message/blast" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

@@ -1,7 +1,5 @@
 # Update Room
 
-`Released in 1.48.Data Loss Protection (DLP) included in 1.54.2.`
-
 Updates the attributes of an existing chat room.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v3/room/{id}/update" method="post" expanded="true" fullWidth="true" %}
@@ -13,7 +11,7 @@ Returns an error when:
 * The call doesn’t include an update to at least one editable attribute.
 * The attribute being updated is read-only, such as \``copyProtected`. See **Attributes** below.
 
-> 📘 Stream ID
+> #### 📘 Stream ID
 >
 > The stream ID can be located in the Symphony web or desktop client by clicking on the timestamp of any message in the conversation. This will open the Message Status module overlay, and the Conversation ID can be found in the overlay footer.
 >
@@ -21,7 +19,7 @@ Returns an error when:
 >
 > Note: visit [Overview of streams](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for more information.
 
-> 🚧 Attributes
+> #### 🚧 Attributes
 >
 > * Once set to `true`, `copyProtected` cannot be set to `false`. Copy protection can be added to a room but cannot be removed.
 > * The `discoverable` attribute cannot be true if crossPod is set.
@@ -34,7 +32,7 @@ Returns an error when:
 >   * either by entering an empty value to upin any message and remove therefore this area from being visible to users as follows: "pinnedMessageId": "";
 >   * _Please note that these actions (pin/unpin) can also be performed by end users when they are owners of the room._
 
-> 📘 Note - Groups
+> #### 📘 Note - Groups
 >
 > Since 20.14, please note that the object `groups` has been added in the payload only if at least a Group has been added to the room. It is an array containing:
 >
@@ -43,7 +41,7 @@ Returns an error when:
 >
 > See [Groups](ref:groups-distribution-lists) for more information.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Rooms can only be updated by owners of the room.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

@@ -1,6 +1,6 @@
 # Update User Features
 
-Released prior to 1.43. Updates the feature entitlements for a particular user.
+Updates the feature entitlements for a particular user.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/user/{uid}/features/update" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
@@ -41,7 +41,7 @@ https://acme.symphony.com/pod/v1/admin/user/7215545057281/features/update \
 ]'
 ```
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires the User Provisioning role with `ACCESS_USER_PROVISIONING_API` privilege.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

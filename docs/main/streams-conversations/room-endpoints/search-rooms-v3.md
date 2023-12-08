@@ -1,14 +1,12 @@
 # Search Rooms
 
-`Released in 1.48.`
-
 Search for rooms, querying name, description, and specified keywords.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v3/room/search" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 Room Search Scope
+> #### 📘 Room Search Scope
 >
 > Room search is performed on the set of:
 >
@@ -18,6 +16,6 @@ Search for rooms, querying name, description, and specified keywords.
 >
 > Note: visit [Overview](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for an overview of streams.
 
-> 🚧 Room Description Search
+> #### 🚧 Room Description Search
 >
 > The description is only searched for hashtags and cashtags containing the search query. For example if `query` were `foo` and the description of a room contained "foo", this room would not be returned in the search results; however, if the description contained "#foo", this room would be returned in the search results.

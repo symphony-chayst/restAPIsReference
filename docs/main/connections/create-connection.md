@@ -1,17 +1,16 @@
 # Create Connection
 
-`Released prior to 1.43.`\
 Sends a connection request to another user.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/connection/create" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 Internal Connections
+> #### 📘 Internal Connections
 >
 > Users who belong to the same private pod are implicitly connected. If you attempt to connect with an internal user, this endpoint will return the corresponding connection object with a status of `accepted`.
 
-> 📘 Note
+> #### 📘 Note
 >
 > * When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 > * Pods from all users involved need to have `crossPod` enabled between them.
@@ -28,8 +27,4 @@ Currently, there are four possible connection status:
 
 The following table shows the connection current behaviors:
 
-| Initial Connection Status       | Request Action | New Connection Status |
-| ------------------------------- | -------------- | --------------------- |
-| None (connection did not exist) | Connect        | PENDING\_OUTGOING     |
-| PENDING\_INCOMING               | Accept         | ACCEPTED              |
-| PENDING\_INCOMING               | Reject         | REJECTED              |
+<table><thead><tr><th width="301.3333333333333">Initial Connection Status</th><th>Request Action</th><th>New Connection Status</th></tr></thead><tbody><tr><td>None (connection did not exist)</td><td>Connect</td><td>PENDING_OUTGOING</td></tr><tr><td>PENDING_INCOMING</td><td>Accept</td><td>ACCEPTED</td></tr><tr><td>PENDING_INCOMING</td><td>Reject</td><td>REJECTED</td></tr></tbody></table>

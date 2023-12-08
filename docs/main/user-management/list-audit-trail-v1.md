@@ -1,6 +1,8 @@
 # List Audit Trail
 
-Available on Agent 2.55.0 and above. See the [SBE x Agent compatibilities](https://docs.developers.symphony.com/admin-guide/agent-guide/sbe-x-agent-compatibility-matrix) for more details about the minimal requirements.Returns a list of actions performed by a privileged account acting as privileged user, given a period of time.
+Returns a list of actions performed by a privileged account acting as privileged user, given a period of time.
+
+`Available on Agent 2.55.0 and above.`&#x20;
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/audittrail/privilegeduser" method="get" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)
@@ -30,7 +32,7 @@ Roles for which audit trail can be exported. It retrieves the audit trail of all
 * L2 (`L2_SUPPORT`)
 * Scope Manager (`SCOPE_MANAGEMENT`).
 
-> 🚧 Required Roles and Permissions
+> #### 🚧 Required Roles and Permissions
 >
 > Calling this endpoint requires a **Service Account** with the **Audit Trail Management** role.\
 > See [Permissions](ref:permissions) for a list of roles and associated privileges.

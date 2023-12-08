@@ -1,6 +1,6 @@
 # Get Message
 
-Available on Agent 2.53.3 and above. Returns details about the specified message.
+Returns details about the specified message.
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/message/{id}" method="get" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

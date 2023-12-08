@@ -1,6 +1,8 @@
 # Suspend User Account
 
-Released in Symphony 20.7. This API suspends or re-activates (unsuspend) a user account.
+This API suspends or re-activates (unsuspend) a user account.
+
+`Released in Symphony 20.7.`&#x20;
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/user/{userId}/suspension/update" method="put" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
@@ -34,12 +36,12 @@ curl -X PUT \
     }'
 ```
 
-> 📘 Required Fields
+> #### 📘 Required Fields
 >
 > When suspending a user account, `suspended=true`, all three body parameters are required.\
 > When activating a user account, `suspended=false`, the other two remaining body parameters are not required.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires a service account with the User Provisioning role.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and their associated privileges.

@@ -1,6 +1,6 @@
 # Update User
 
-Released in 1.51. Updates an existing user.
+Updates an existing user.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v2/admin/user/{uid}/update" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
@@ -41,7 +41,7 @@ https://acme.symphony.com/pod/v1/admin/user/7215545078541/update \
 }'
 ```
 
-> 📘 Note - Suspension
+> #### 📘 Note - Suspension
 >
 > Since 20.14, `userSystemInfo` from the payload includes suspension info:
 >
@@ -51,11 +51,11 @@ https://acme.symphony.com/pod/v1/admin/user/7215545078541/update \
 > _Please note that even if the suspendedUntil date is in the past, the user will remain suspended=true until he first logs on the client after the suspension ended. The suspended info are then automatically updated._\
 > See the [Suspend User Account](suspend-user-v1.md) endpoint for more information.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires the ACCESS\_USER\_PROVISIONING\_API and ACCESS\_ADMIN\_API privileges.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.
 
-> ❗️ Known Issues
+> #### ❗️ Known Issues
 >
 > There is a known bug where the "Industries" and "Asset Classes" fields cannot be cleared once set. For example, if you set `assetClasses` on a user to \[`Conglomerates`, `Healthcare`], you can update the user and set it to \[`Conglomerates`], but you cannot update the user and clear it by setting it to \[].

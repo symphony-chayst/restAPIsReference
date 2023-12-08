@@ -1,14 +1,12 @@
 # Promote Owner
 
-`Released prior to 1.43.`
-
 Promotes user to owner of the chat room.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/room/{id}/membership/promoteOwner" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 Room ID
+> #### 📘 Room ID
 >
 > The room ID can be located in the Symphony web or desktop client by clicking on the timestamp of any message in the conversation. This will open the Message Status module overlay, and the Conversation ID can be found in the overlay footer.
 >
@@ -16,7 +14,7 @@ Promotes user to owner of the chat room.
 >
 > Note: visit [Overview](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for an overview of streams.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Room members can only be promoted to owners by:
 >

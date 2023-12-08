@@ -1,6 +1,5 @@
 # Get All Presence
 
-`Released in 1.47.`\
 Returns the presence of all users in a pod.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v2/users/presence" method="get" expanded="true" fullWidth="true" %}

@@ -1,6 +1,6 @@
 # Suppress Message
 
-Released prior to 1.43. Suppress a message, preventing its contents from being displayed to users.
+Suppress a message, preventing its contents from being displayed to users.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/messagesuppression/{id}/suppress" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

@@ -1,6 +1,6 @@
 # Message Metadata
 
-Released in v20.2.1. Gets the message metadata relationship. This API allows users to track the relationship between a message and all the forwards and replies of that message.
+Gets the message metadata relationship. This API allows users to track the relationship between a message and all the forwards and replies of that message.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/messages/{messageId}/metadata/relationships" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

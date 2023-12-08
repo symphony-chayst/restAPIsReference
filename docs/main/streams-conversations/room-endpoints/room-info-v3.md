@@ -1,12 +1,12 @@
 # Room Info
 
-`Released in 1.48.`Returns information about a particular chat room.
+Returns information about a particular chat room.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v3/room/{id}/info" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 Stream ID
+> #### 📘 Stream ID
 >
 > The stream ID can be located in the Symphony web or desktop client by clicking on the timestamp of any message in the conversation. This will open the Message Status module overlay, and the Conversation ID can be found in the overlay footer.
 >
@@ -14,7 +14,7 @@
 >
 > See [Overview of streams](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for details.
 
-> 📘 Note - Groups
+> #### 📘 Note - Groups
 >
 > Since 20.14, please note that the object `groups` has been added in the payload only if at least a Group has been added to the room. It is an array containing:
 >
@@ -23,7 +23,7 @@
 >
 > See [Groups](../../groups-distribution-lists/) for more information.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Rooms information can only be requested by:
 >

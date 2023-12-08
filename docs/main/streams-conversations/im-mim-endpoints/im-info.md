@@ -1,14 +1,12 @@
 # IM Info
 
-`Released in 20.13.`
-
-Returns information about a particular IM.
+Returns information about a particular IM conversation.
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/im/{id}/info" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 📘 Stream ID
+> #### 📘 Stream ID
 >
 > The stream ID can be located in the Symphony web or desktop client by clicking on the timestamp of any message in the conversation. This will open the Message Status module overlay, and the Conversation ID can be found in the overlay footer.
 >
@@ -16,7 +14,7 @@ Returns information about a particular IM.
 >
 > See [Overview of streams](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for details.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Streams information can only be requested by:
 >

@@ -1,6 +1,8 @@
 # Health Check Extended
 
-Available on Agent 2.57.0 and above. Returns the connectivity status of the Agent services as well as users connectivity.
+Returns the connectivity status of the Agent services as well as users connectivity.
+
+`Available on Agent 2.57.0 and above.`&#x20;
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v3/health/extended" method="get" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

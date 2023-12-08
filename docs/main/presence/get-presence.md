@@ -1,6 +1,5 @@
 # Get Presence
 
-`Released in 1.47.`\
 Returns the online status of the calling user.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v2/user/presence" method="get" expanded="true" fullWidth="true" %}

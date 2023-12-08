@@ -1,6 +1,5 @@
 # External Presence Interest
 
-`Released in 1.44.`\
 To get the [presence](user-presence-v3.md) state of external users, you must first register interest in those users using this endpoint.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/presence/register" method="post" expanded="true" fullWidth="true" %}
@@ -22,7 +21,7 @@ When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/), use t
 
 ### Querying Presence of External Users
 
-> 📘 External Users Presence Visibility
+> #### 📘 External Users Presence Visibility
 >
 > Any user can see the presence of other users of the same company. For users of a different company, the two users must be connected to see presence.
 
@@ -34,11 +33,11 @@ To query the presence of external users:
 
 To query the presence of internal users, you do not need to register interest.
 
-> ❗️ Rate Limit
+> #### ❗️ Rate Limit
 >
 > Getting an external user’s presence is limited to one call every 5 minutes.
 
-> 🚧 Roles and Privileges
+> #### 🚧 Roles and Privileges
 >
 > Calling this endpoint requires the ADMIN\_PRESENCE\_UPDATE privilege.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

@@ -1,6 +1,6 @@
 # Users Lookup
 
-Released in 1.50. Search users by emails, ids or username.
+Search users by emails, ids or username.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v3/users" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
@@ -42,15 +42,11 @@ The service account is allowed to search for users using their registered email 
 
 When calling this as an [OBO-enabled endpoint](../apps-on-behalf-of-obo/obo-enabled-endpoints.md#api-endpoints-enabled-for-obo), use the [OBO User Authenticate](../apps-on-behalf-of-obo/obo-rsa-user-authentication-by-user-id.md) token for `sessionToken`.
 
-### Xpod entitlements set
-
-The callers need to have the xpod (cross-company) entitlements set, otherwise, the API will return a 204 error (no content).
-
-> 🚧 Rules & Limitations
+> #### 🚧 Rules & Limitations
 >
 > * Please note that the endpoint returns only the first 1000 entries.
 
-> 📘 Note
+> #### 📘 Note
 >
 > **Search list sizes:** search lists may contain up to 100 elements.\
 > **Inactive users:** the results will include inactive users.\

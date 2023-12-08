@@ -1,6 +1,6 @@
 # Share Content
 
-`Available on Agent 2.0.0 and above.` Share third-party content, such as a news article, into the specified stream. The stream can be a chat room, an IM, or an MIM.
+Share third-party content, such as a news article, into the specified stream. The stream can be a chat room or an IM.
 
 {% swagger src="../../../.gitbook/assets/agent-api-public.yaml" path="/v3/stream/{sid}/share" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
@@ -32,11 +32,11 @@ https://acme.symphony.com/agent/v3/stream/7w68A8sAG_qv1GwVc9ODzX___ql_RJ6zdA/sha
 }'
 ```
 
-> 📘 Note
+> #### 📘 Note
 >
 > Visit [Overview](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for an overview of streams.
 
-> 🚧 Roles and Privileges
+> #### 🚧 Roles and Privileges
 >
 > For not public rooms, the caller needs to be on the stream or have the Content Management role.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

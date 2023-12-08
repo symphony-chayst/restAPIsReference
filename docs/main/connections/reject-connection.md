@@ -1,6 +1,5 @@
 # Reject Connection
 
-`Released prior to 1.43.`\
 Accept the connection request from a requesting user.
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/connection/reject" method="post" expanded="true" fullWidth="true" %}
@@ -11,7 +10,7 @@ This endpoint allows the user to reject a specific connection request. To define
 
 Pods from all users involved need to have `crossPod` enabled between them.
 
-> 📘 Rejected Connections
+> #### 📘 Rejected Connections
 >
 > Reject the connection between the requesting user and request sender. If both users are in the same private pod, an error will be returned because both users have an implicit connection which cannot be rejected.
 

@@ -1,9 +1,10 @@
 # Datahose - Read Events
 
-`Not yet available in production. Dependency on Agent 22.6+.`\
 Creates and reads real time messages / events streams.&#x20;
 
 The datahose API provides messages and events from all conversations in the pod, even the ones the service user is not part of. The types of events surfaced can be found in the [Real Time Events](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/real-time-events) list.
+
+`Not yet available in production. Dependency on Agent 22.6+.`
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v5/events/read" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

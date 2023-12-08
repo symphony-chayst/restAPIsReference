@@ -1,6 +1,8 @@
 # Update Message
 
-Available on Agent 20.13.1+ with SBE 20.13.2+ in Beta. Starting with SBE 20.16, the feature is now in Controlled Availability. Update an existing message. Starting with Agent 23.6, this endpoint is OBO-enabled.
+Update an existing message.&#x20;
+
+`Available on Agent 20.13.1+ with SBE 20.13.2+ in Beta. Starting with SBE 20.16, the feature is now in Controlled Availability. Starting with Agent 23.6, this endpoint is OBO-enabled.`
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v4/stream/{sid}/message/{mid}/update" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)
