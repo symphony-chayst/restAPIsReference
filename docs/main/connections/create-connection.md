@@ -1,6 +1,8 @@
-# Create Connection
+---
+description: Sends a connection request to another user.
+---
 
-Sends a connection request to another user.
+# Create Connection
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/connection/create" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

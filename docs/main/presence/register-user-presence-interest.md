@@ -1,6 +1,10 @@
-# External Presence Interest
+---
+description: >-
+  To get the presence state of external users, you must first register interest
+  in those users using this endpoint.
+---
 
-To get the [presence](user-presence-v3.md) state of external users, you must first register interest in those users using this endpoint.
+# External Presence Interest
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/presence/register" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

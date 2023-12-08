@@ -1,5 +1,5 @@
 ---
-description: Released prior to 1.43. List the applications configured in your pod.
+description: List the applications configured in your pod.
 ---
 
 # List Apps
@@ -8,7 +8,7 @@ description: Released prior to 1.43. List the applications configured in your po
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Restricted Endpoint
+> #### 🚧 Restricted Endpoint
 >
 > Only Administrators are entitled to call this endpoint.
 >

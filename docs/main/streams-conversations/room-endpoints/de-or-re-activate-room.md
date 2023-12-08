@@ -1,6 +1,8 @@
-# De/Re-activate Room
+---
+description: Deactivate or reactivate a chatroom. At creation, a new chatroom is active.
+---
 
-Deactivate or reactivate a chatroom. At creation, a new chatroom is active.
+# De/Re-activate Room
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/room/{id}/setActive" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)

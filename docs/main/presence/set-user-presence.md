@@ -1,6 +1,8 @@
-# Set Other User's Presence - Admin
+---
+description: Sets the presence state of a another user.
+---
 
-Sets the presence state of a another user.
+# Set Other User's Presence - Admin
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v3/user/presence" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

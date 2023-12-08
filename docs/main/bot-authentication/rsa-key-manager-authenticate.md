@@ -1,6 +1,10 @@
+---
+description: Authenticates the API caller on the key manager using a JWT.
+---
+
 # Key Manager Authenticate
 
-Authenticates the API caller on the key manager using a JWT.
+
 
 {% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/authenticate" method="post" expanded="true" fullWidth="true" %}
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)

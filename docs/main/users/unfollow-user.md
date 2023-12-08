@@ -1,6 +1,8 @@
-# Unfollow User
+---
+description: Make a list of users to stop following a specific user.
+---
 
-Make a list of users to stop following a specific user.
+# Unfollow User
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/{uid}/unfollow" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

@@ -1,6 +1,8 @@
-# List User Followers
+---
+description: Returns the list of followers of a specific user.
+---
 
-Returns the list of followers of a specific user.
+# List User Followers
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/{uid}/followers" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

@@ -1,6 +1,8 @@
-# Session Logout
+---
+description: Log out a user’s session.
+---
 
-Log out a user’s session.
+# Session Logout
 
 {% swagger src="../../.gitbook/assets/authenticator-api-public.yaml" path="/v1/logout" method="post" expanded="true" fullWidth="true" %}
 [authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)

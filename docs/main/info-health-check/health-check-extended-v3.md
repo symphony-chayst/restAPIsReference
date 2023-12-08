@@ -1,6 +1,10 @@
-# Health Check Extended
+---
+description: >-
+  Returns the connectivity status of the Agent services as well as users
+  connectivity.
+---
 
-Returns the connectivity status of the Agent services as well as users connectivity.
+# Health Check Extended
 
 `Available on Agent 2.57.0 and above.`&#x20;
 

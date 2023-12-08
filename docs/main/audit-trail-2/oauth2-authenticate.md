@@ -12,7 +12,7 @@ This authentication is required to use the Audit Trails 2 enpoints.
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)
 {% endswagger %}
 
-> ### 📘 Notes
+> #### 📘 Notes
 >
 > * Use scope 'at2' in order get access to the Audit Trail 2 endpoints.
 > * The payload consists is a JWT token object that is divided in three properties as follow:

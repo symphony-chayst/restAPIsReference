@@ -1,5 +1,5 @@
 ---
-description: Released prior to 1.43. Get all Information Policies.
+description: Get all Information Policies.
 ---
 
 # List Policies
@@ -8,7 +8,7 @@ description: Released prior to 1.43. Get all Information Policies.
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Roles and Privileges
+> #### 🚧 Roles and Privileges
 >
 > Calling this endpoint requires the ACCESS\_USER\_PROVISIONING\_API privilege.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

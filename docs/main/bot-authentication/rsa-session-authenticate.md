@@ -1,6 +1,8 @@
-# Session Authenticate
+---
+description: Authenticates the API caller on the Symphony servers (pod) using a JWT.
+---
 
-&#x20;Authenticates the API caller on the Symphony servers (pod) using a JWT.&#x20;
+# Session Authenticate
 
 {% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/authenticate" method="post" expanded="true" fullWidth="true" %}
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)

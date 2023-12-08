@@ -1,6 +1,10 @@
-# List Audit Trail
+---
+description: >-
+  Returns a list of actions performed by a privileged account acting as
+  privileged user, given a period of time.
+---
 
-Returns a list of actions performed by a privileged account acting as privileged user, given a period of time.
+# List Audit Trail
 
 `Available on Agent 2.55.0 and above.`&#x20;
 

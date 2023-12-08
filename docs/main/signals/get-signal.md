@@ -1,6 +1,8 @@
-# Get Signal
+---
+description: Gets details about the specified signal.
+---
 
-Gets details about the specified signal.
+# Get Signal
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/signals/{id}/get" method="get" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

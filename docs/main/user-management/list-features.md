@@ -1,6 +1,8 @@
-# List Features
+---
+description: Returns the full set of Symphony features available for this pod.
+---
 
-Returns the full set of Symphony features available for this pod.
+# List Features
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/system/features/list" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

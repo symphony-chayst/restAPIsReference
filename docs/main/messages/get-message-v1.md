@@ -1,6 +1,8 @@
-# Get Message
+---
+description: Returns details about the specified message.
+---
 
-Returns details about the specified message.
+# Get Message
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/message/{id}" method="get" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

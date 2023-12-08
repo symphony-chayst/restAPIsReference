@@ -1,8 +1,8 @@
 ---
 description: >-
-  Released in 1.52. Deletes a URI protocol from a pod's configuration. Each pod
-  stores a configuration to indicate which URI protocols can be transformed to a
-  link inside a message in the UI.
+  Deletes a URI protocol from a pod's configuration. Each pod stores a
+  configuration to indicate which URI protocols can be transformed to a link
+  inside a message in the UI.
 ---
 
 # Delete Protocol
@@ -11,7 +11,7 @@ description: >-
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> ### ❗️ Required Permissions
+> #### ❗️ Required Permissions
 >
 > This endpoint may only be called by _Service User_ accounts with the _User Provisioning_ role.
 >

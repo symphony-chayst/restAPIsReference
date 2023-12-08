@@ -1,8 +1,5 @@
 ---
-description: >-
-  Available on Agent 2.53.0 and above. See the SBE x Agent compatibilities for
-  more details about the minimal requirements. API for downloading attachments
-  sent as part of messages flagged by DLP system
+description: API for downloading attachments sent as part of messages flagged by DLP system
 ---
 
 # V3 Violation Attachment Download
@@ -11,6 +8,6 @@ description: >-
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Important
+> #### 🚧 Important
 >
 > A successful call returns the attachment body encoded in Base64. Be sure to decode the downloaded attachment.

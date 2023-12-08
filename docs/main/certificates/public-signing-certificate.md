@@ -1,7 +1,7 @@
 ---
 description: >-
-  Released in 1.47. Retrieve the pod certificate that can be use to validate
-  signed JWT tokens generated from the pod.
+  Retrieve the pod certificate that can be use to validate signed JWT tokens
+  generated from the pod.
 ---
 
 # Public (Signing) Certificate

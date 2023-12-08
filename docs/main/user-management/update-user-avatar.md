@@ -1,6 +1,8 @@
-# Update User Avatar
+---
+description: Updates the avatar of a particular user.
+---
 
-Updates the avatar of a particular user.
+# Update User Avatar
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/user/{uid}/avatar/update" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

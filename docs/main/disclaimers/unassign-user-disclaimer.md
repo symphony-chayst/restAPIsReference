@@ -1,5 +1,5 @@
 ---
-description: Released in 1.55.2. Un-assigns a disclaimer from a user.
+description: Un-assigns a disclaimer from a user.
 ---
 
 # Unassign User Disclaimer
@@ -8,7 +8,7 @@ description: Released in 1.55.2. Un-assigns a disclaimer from a user.
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Roles and privileges
+> #### 🚧 Roles and privileges
 >
 > Calling this endpoint requires a Service Account with the User Provisioning role.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

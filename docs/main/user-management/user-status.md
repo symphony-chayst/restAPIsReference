@@ -1,6 +1,8 @@
-# User Status
+---
+description: Get the status, active or inactive, for a particular user.
+---
 
-Get the status, active or inactive, for a particular user.
+# User Status
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/user/{uid}/status" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

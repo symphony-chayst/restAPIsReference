@@ -1,6 +1,10 @@
-# Create IM
+---
+description: >-
+  Creates a new instant message conversation or returns an existing IM between
+  the specified users and the calling user.
+---
 
-Creates a new instant message conversation or returns an existing IM between the specified users and the calling user.
+# Create IM
 
 {% hint style="info" %}
 **Important**: This endpoint also allows the creation of Multi-party Instant Messages, which are not supported anymore. If you need to create a chat with several participants, please create a room instead.

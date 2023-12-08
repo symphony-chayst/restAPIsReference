@@ -1,6 +1,10 @@
-# List User Streams (Admin)
+---
+description: >-
+  Returns a list of all the streams of which the specified user is a member,
+  sorted by creation date (ascending - oldest to newest).
+---
 
-Returns a list of all the streams of which the specified user is a member, sorted by creation date (ascending - oldest to newest).
+# List User Streams (Admin)
 
 `Released in 20.16.`&#x20;
 

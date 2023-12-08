@@ -1,6 +1,8 @@
-# Get User Presence
+---
+description: Returns the online status of the specified user.
+---
 
-Returns the online status of the specified user.
+# Get User Presence
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v3/user/{uid}/presence" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

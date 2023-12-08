@@ -1,8 +1,8 @@
 ---
 description: >-
-  Released in 1.52. Adds a URI protocol to a pod's configuration. Each pod
-  stores a configuration to indicate which URI protocols can be transformed to a
-  link inside a message in the UI.
+  Adds a URI protocol to a pod's configuration. Each pod stores a configuration
+  to indicate which URI protocols can be transformed to a link inside a message
+  in the UI.
 ---
 
 # Create Protocol

@@ -1,5 +1,5 @@
 ---
-description: Released prior to 1.43. Create a company trusted or untrusted certificate
+description: Create a company trusted or untrusted certificate
 ---
 
 # Create Company Certificate
@@ -8,11 +8,11 @@ description: Released prior to 1.43. Create a company trusted or untrusted certi
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> ### 📘 Note
+> #### 📘 Note
 >
 > This v2 endpoint rejects expired certificates. When creating company certificates, make sure that you are calling the v2 version of this endpoint, and not v1.
 
-> ### 🚧 Roles and privileges
+> #### 🚧 Roles and privileges
 >
 > Calling this endpoint requires the USER\_PROVISIONING or the SUPER\_ADMINISTRATOR role.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

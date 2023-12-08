@@ -1,6 +1,10 @@
-# Delete Presence Feed
+---
+description: >-
+  Deletes a presence status feed. This endpoint returns the ID of the deleted
+  feed if the deletion is successful.
+---
 
-Deletes a presence status feed. This endpoint returns the ID of the deleted feed if the deletion is successful.
+# Delete Presence Feed
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/presence/feed/{feedId}/delete" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

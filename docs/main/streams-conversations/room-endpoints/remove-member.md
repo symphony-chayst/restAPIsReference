@@ -1,6 +1,8 @@
-# Remove Member
+---
+description: Removes an existing member from an existing room.
+---
 
-Removes an existing member from an existing room.
+# Remove Member
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/room/{id}/membership/remove" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)

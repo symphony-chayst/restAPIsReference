@@ -1,6 +1,8 @@
-# Attachment Types
+---
+description: Retrieves a list of supported file extensions for attachments.
+---
 
-Retrieves a list of supported file extensions for attachments.
+# Attachment Types
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/files/allowedTypes" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

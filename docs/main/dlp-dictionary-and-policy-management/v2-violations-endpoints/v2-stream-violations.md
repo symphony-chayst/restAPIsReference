@@ -1,7 +1,7 @@
 ---
 description: >-
-  Available on Agent 2.0.0 and above. Gets violations as a result of policy
-  enforcement on streams. Matched terms are decrypted by the agent.
+  Gets violations as a result of policy enforcement on streams. Matched terms
+  are decrypted by the agent.
 ---
 
 # V2 Stream Violations
@@ -12,7 +12,7 @@ When a violation occurs during the creation of a stream, note that there won't b
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires a `ceservice` account. For more information, see the [Symphony Administration Guide](https://symphony.direct/).
 >

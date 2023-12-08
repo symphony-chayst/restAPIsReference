@@ -1,6 +1,8 @@
-# Create Room
+---
+description: Creates a new chatroom. See Room Attributes for room creation parameters.
+---
 
-Creates a new chatroom. See [Room Attributes](room-attributes-1.md) for room creation parameters.
+# Create Room
 
 `Starting with SBE 20.14, it is possible to create External chat rooms with view history enabled, depending on a pod parameter.`
 

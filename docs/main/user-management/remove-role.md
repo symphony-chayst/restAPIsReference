@@ -1,6 +1,8 @@
-# Remove Role
+---
+description: Removes a role or optional entitleable action from a user’s account.
+---
 
-Removes a role or optional entitleable action from a user’s account.
+# Remove Role
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/user/{uid}/roles/remove" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

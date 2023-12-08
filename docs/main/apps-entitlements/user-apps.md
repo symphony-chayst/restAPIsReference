@@ -1,7 +1,5 @@
 ---
-description: >-
-  Released prior to 1.43. Returns the list of Symphony application entitlements
-  for this user.
+description: Returns the list of Symphony application entitlements for this user.
 ---
 
 # List User Apps
@@ -10,7 +8,7 @@ description: >-
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Important
+> #### 🚧 Important
 >
 > This endpoint returns all enabled entitlements for a specific user, returning both the global and the custom settings.\
 > Currently, it is not possible to identify by API response whether the returned entitlements are global or custom.

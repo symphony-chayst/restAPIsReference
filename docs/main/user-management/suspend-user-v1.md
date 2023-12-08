@@ -1,6 +1,8 @@
-# Suspend User Account
+---
+description: Suspend or re-activate (unsuspend) a user account.
+---
 
-This API suspends or re-activates (unsuspend) a user account.
+# Suspend User Account
 
 `Released in Symphony 20.7.`&#x20;
 

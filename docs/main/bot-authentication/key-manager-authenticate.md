@@ -1,6 +1,10 @@
-# Key Manager Authenticate (Cert)
+---
+description: >-
+  Authenticates the API caller on the key manager using the client certificate
+  provided in the TLS session, returning a key manager token.
+---
 
-Authenticates the API caller on the key manager using the client certificate provided in the TLS session, returning a key manager token.
+# Key Manager Authenticate (Cert)
 
 {% swagger src="../../.gitbook/assets/authenticator-api-public.yaml" path="/v1/authenticate" method="post" expanded="true" fullWidth="true" %}
 [authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)

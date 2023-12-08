@@ -1,7 +1,5 @@
 ---
-description: >-
-  Available on Agent 2.0.0 and above. See the SBE x Agent compatibilities for
-  more details about the minimal requirements. Disables a policy.
+description: Disables a policy.
 ---
 
 # V2 Disable Policy
@@ -12,7 +10,7 @@ description: >-
 
 Delete disabled policies with [Delete Policy](v2-delete-policy.md).
 
-> ### 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires a Service User Account set with the Expression Filter Policy Management role. For more information about Service User accounts and their roles, see the [Symphony Administration Guide](https://symphony.direct/).
 >

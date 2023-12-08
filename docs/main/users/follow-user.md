@@ -1,6 +1,8 @@
-# Follow User
+---
+description: Make a list of users to start following a specific user.
+---
 
-Make a list of users to start following a specific user.
+# Follow User
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/{uid}/follow" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

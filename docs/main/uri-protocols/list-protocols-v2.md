@@ -1,5 +1,5 @@
 ---
-description: Released in 1.52. Gets a list of URI protocols for the pod.
+description: Gets a list of URI protocols for the pod.
 ---
 
 # List Protocols

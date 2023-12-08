@@ -1,6 +1,8 @@
-# List Message Receipts
+---
+description: Fetches receipts details from a specific message.
+---
 
-Fetches receipts details from a specific message.
+# List Message Receipts
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/messages/{messageId}/receipts" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

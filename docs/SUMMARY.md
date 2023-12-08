@@ -250,6 +250,6 @@
 
 * [Get Message IDs by Timestamp](deprecated-endpoints/get-message-ids-by-timestamp.md)
 * [Health Check v2](deprecated-endpoints/health-check-v2.md)
-* [Datafeed v1](endpoints-reference/datafeed/datafeed-v1/README.md)
-  * [Create Datafeed v1](endpoints-reference/datafeed/datafeed-v1/create-messagesevents-stream-v4.md)
-  * [Read Datafeed v1](endpoints-reference/datafeed/datafeed-v1/read-messagesevents-stream-v4.md)
+* [Datafeed 1](endpoints-reference/datafeed/datafeed-v1/README.md)
+  * [Create Datafeed 1](endpoints-reference/datafeed/datafeed-v1/create-messagesevents-stream-v4.md)
+  * [Read Datafeed 1](endpoints-reference/datafeed/datafeed-v1/read-messagesevents-stream-v4.md)

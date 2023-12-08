@@ -1,7 +1,5 @@
 ---
-description: >-
-  Released prior to 1.43. Updates all the application entitlements for a
-  particular user.
+description: Updates all the application entitlements for a particular user.
 ---
 
 # Update All User Apps
@@ -12,7 +10,7 @@ description: >-
 
 As shown in the example, the updated user application entitlements should be included in the data parameter.
 
-> ### ❗️ Important
+> #### ❗️ Important
 >
 > Please, consider the following information before using this endpoint:
 >

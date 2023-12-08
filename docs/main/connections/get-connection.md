@@ -1,6 +1,10 @@
-# Get Connection
+---
+description: >-
+  Get connection status, i.e. check if the calling user is connected to the
+  specified user.
+---
 
-Get connection status, i.e. check if the calling user is connected to the specified user.
+# Get Connection
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/connection/user/{userId}/info" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

@@ -1,8 +1,7 @@
 ---
 description: >-
-  Available on Agent 2.0.0 and above. Gets violations as a result of policy
-  enforcement on messages.The message part of this violation is the same as
-  documented in Create Message v4.
+  Gets violations as a result of policy enforcement on messages. The message
+  part of this violation is the same as documented in Create Message v4.
 ---
 
 # V2 Message Violations
@@ -11,7 +10,7 @@ description: >-
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires a `ceservice` account. For more information, see the [Symphony Administration Guide](https://symphony.direct/).
 >

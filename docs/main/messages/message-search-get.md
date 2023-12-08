@@ -1,6 +1,8 @@
-# Message Search
+---
+description: Allows to search messages based on multiple search parameters.
+---
 
-Allows to search messages based on multiple search parameters.
+# Message Search
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/message/search" method="get" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

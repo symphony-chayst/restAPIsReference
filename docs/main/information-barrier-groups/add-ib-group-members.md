@@ -1,5 +1,5 @@
 ---
-description: Released prior to 1.43. Add members to an Information Barrier group.
+description: Add members to an Information Barrier group.
 ---
 
 # Add IB Group Members
@@ -10,7 +10,7 @@ description: Released prior to 1.43. Add members to an Information Barrier group
 
 As the example shows, the users to be added to the Information Barrier group (specified as a list of user IDs) must be included in the data parameter.
 
-> ### 🚧 Roles and Privileges
+> #### 🚧 Roles and Privileges
 >
 > Calling this endpoint requires the ACCESS\_USER\_PROVISIONING\_API privilege.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

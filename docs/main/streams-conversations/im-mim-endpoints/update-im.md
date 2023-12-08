@@ -1,6 +1,8 @@
-# Update IM
+---
+description: Updates the attributes of an existing IM conversation.
+---
 
-Updates the attributes of an existing IM conversation.
+# Update IM
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/im/{id}/update" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)

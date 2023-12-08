@@ -12,7 +12,7 @@ description: >-
 
 As shown in the example, the updated user application entitlements should be included in the data parameter.
 
-> ### 📘 Info
+> #### 📘 Info
 >
 > Unlike [Update All User Apps](update-user-apps.md) endpoint, it is not mandatory to provide in the body request all app entitlements for a given app.\
 > You can therefore update only one or several of them among the following body params: "install", "listed", or "products".

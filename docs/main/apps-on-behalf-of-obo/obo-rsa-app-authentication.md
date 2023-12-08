@@ -1,6 +1,8 @@
-# App Authentication
+---
+description: Authenticates an OBO app using the application saved RSA public key.
+---
 
-Authenticates an OBO app using the application saved RSA public key.
+# App Authentication
 
 {% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/app/authenticate" method="post" expanded="true" fullWidth="true" %}
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)

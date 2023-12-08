@@ -1,6 +1,8 @@
-# Room Info
+---
+description: Returns information about a particular chat room.
+---
 
-Returns information about a particular chat room.
+# Room Info
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v3/room/{id}/info" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)

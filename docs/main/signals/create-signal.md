@@ -1,6 +1,8 @@
-# Create Signal
+---
+description: Creates a new Signal.
+---
 
-Creates a new Signal.
+# Create Signal
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/signals/create" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

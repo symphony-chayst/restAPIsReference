@@ -1,6 +1,8 @@
-# User Authentication by User ID
+---
+description: Enables an RSA application to authenticate on behalf of a particular user.
+---
 
-Enables an RSA application to authenticate on behalf of a particular user.
+# User Authentication by User ID
 
 {% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/app/user/{userId}/authenticate" method="post" expanded="true" fullWidth="true" %}
 [login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)

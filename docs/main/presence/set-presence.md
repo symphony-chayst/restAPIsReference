@@ -1,6 +1,8 @@
-# Set Presence
+---
+description: Sets the online status of the calling user.
+---
 
-Sets the online status of the calling user.
+# Set Presence
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v2/user/presence" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

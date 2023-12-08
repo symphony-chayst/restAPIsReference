@@ -1,6 +1,8 @@
-# Reject Connection
+---
+description: Accept the connection request from a requesting user.
+---
 
-Accept the connection request from a requesting user.
+# Reject Connection
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/connection/reject" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

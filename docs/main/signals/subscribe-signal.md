@@ -1,6 +1,10 @@
-# Subscribe Signal
+---
+description: >-
+  Subscribe an array of users to a Signal. To subscribe an entire pod to a
+  Signal, set the companyWide field in Create Signal.
+---
 
-Subscribe an array of users to a Signal. To subscribe an entire pod to a Signal, set the `companyWide` field in [Create Signal](create-signal.md).
+# Subscribe Signal
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/signals/{id}/subscribe" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

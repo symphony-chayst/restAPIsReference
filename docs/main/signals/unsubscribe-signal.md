@@ -1,6 +1,8 @@
-# Unsubscribe Signal
+---
+description: Unsubscribes an array of users from the specified Signal.
+---
 
-Unsubscribes an array of users from the specified Signal.
+# Unsubscribe Signal
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/signals/{id}/unsubscribe" method="post" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

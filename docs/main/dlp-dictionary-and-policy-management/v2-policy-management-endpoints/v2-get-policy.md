@@ -1,7 +1,5 @@
 ---
-description: >-
-  Available on Agent 2.0.0 and above. See the SBE x Agent compatibilities for
-  more details about the minimal requirements. Gets a policy.
+description: Gets a policy.
 ---
 
 # V2 Get Policy
@@ -10,7 +8,7 @@ description: >-
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires a Service User Account set with the Expression Filter Policy Management role. For more information about Service User accounts and their roles, see the [Symphony Administration Guide](https://symphony.direct/).
 >

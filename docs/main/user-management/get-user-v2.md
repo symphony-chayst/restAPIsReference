@@ -1,6 +1,8 @@
-# Get User
+---
+description: Returns details for a particular user.
+---
 
-Returns details for a particular user.
+# Get User
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v2/admin/user/{uid}" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

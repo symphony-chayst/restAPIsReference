@@ -1,6 +1,8 @@
-# Attachment
+---
+description: Downloads the attachment body by the attachment ID, stream ID, and message ID.
+---
 
-Downloads the attachment body by the attachment ID, stream ID, and message ID.
+# Attachment
 
 {% swagger src="../../.gitbook/assets/agent-api-public.yaml" path="/v1/stream/{sid}/attachment" method="get" expanded="true" fullWidth="true" %}
 [agent-api-public.yaml](../../.gitbook/assets/agent-api-public.yaml)

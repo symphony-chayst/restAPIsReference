@@ -1,8 +1,7 @@
 ---
 description: >-
-  Available on Agent 2.0.0 and above. Gets violations as a result of policy
-  enforcement on signals. Signal rules and matched terms are decrypted by the
-  agent.
+  Gets violations as a result of policy enforcement on signals. Signal rules and
+  matched terms are decrypted by the agent.
 ---
 
 # V2 Signal Violations
@@ -11,7 +10,7 @@ description: >-
 [agent-api-public.yaml](../../../.gitbook/assets/agent-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires a `ceservice` account. For more information, see the [Symphony Administration Guide](https://symphony.direct/).
 >

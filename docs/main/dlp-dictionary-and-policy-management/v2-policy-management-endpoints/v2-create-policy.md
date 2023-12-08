@@ -1,8 +1,5 @@
 ---
-description: >-
-  Available on Agent 2.0.0 and above. See the SBE x Agent compatibilities for
-  more details about the minimal requirements. Creates a new policy with
-  dictionary references.
+description: Creates a new policy with dictionary references.
 ---
 
 # V2 Create Policy
@@ -13,7 +10,7 @@ description: >-
 
 After you create a policy, call [Enable Policy](v2-enable-policy.md) to start enforcing the policy.
 
-> ### 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires a Service User Account set with the Expression Filter Policy Management role. For more information about Service User accounts and their roles, see the [Symphony Administration Guide](https://symphony.direct/).
 >

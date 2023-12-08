@@ -1,6 +1,8 @@
-# Update User Features
+---
+description: Updates the feature entitlements for a particular user.
+---
 
-Updates the feature entitlements for a particular user.
+# Update User Features
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/user/{uid}/features/update" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

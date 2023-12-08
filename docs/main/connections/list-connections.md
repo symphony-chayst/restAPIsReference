@@ -1,6 +1,8 @@
-# List Connection
+---
+description: List all current connection statuses with external or specified users.
+---
 
-List all current connection statuses with external or specified users.
+# List Connection
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/connection/list" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

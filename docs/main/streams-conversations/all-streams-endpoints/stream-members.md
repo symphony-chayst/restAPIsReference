@@ -1,6 +1,8 @@
-# Stream Members
+---
+description: Returns a list of all the current members of a stream (IM or chatroom).
+---
 
-Returns a list of all the current members of a stream (IM or chatroom).
+# Stream Members
 
 {% swagger src="../../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/stream/{id}/membership/list" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)

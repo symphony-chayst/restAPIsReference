@@ -1,6 +1,8 @@
-# Find Users
+---
+description: Finds a list of users based on a specified role or feature entitlement.
+---
 
-Finds a list of users based on a specified role or feature entitlement.
+# Find Users
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/admin/user/find" method="post" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

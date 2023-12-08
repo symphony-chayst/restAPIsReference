@@ -1,6 +1,10 @@
-# Session Authenticate (Cert)
+---
+description: >-
+  Authenticates the API caller on the Symphony servers (pod) using the client
+  certificate provided in the TLS session, returning a session token.
+---
 
-Authenticates the API caller on the Symphony servers (pod) using the client certificate provided in the TLS session, returning a session token.
+# Session Authenticate (Cert)
 
 {% swagger src="../../.gitbook/assets/authenticator-api-public.yaml" path="/v1/authenticate" method="post" expanded="true" fullWidth="true" %}
 [authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)

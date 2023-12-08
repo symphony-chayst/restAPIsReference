@@ -1,5 +1,5 @@
 ---
-description: Released in 1.48. Gets an existing application.
+description: Gets an existing application.
 ---
 
 # Get App
@@ -8,7 +8,7 @@ description: Released in 1.48. Gets an existing application.
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> ### 🚧 Roles and Privileges
+> #### 🚧 Roles and Privileges
 >
 > Calling this endpoint requires the Super Administrator, Super Compliance Officer, User Provisioning or Agent role.\
 > See [Bot Permissions](https://docs.developers.symphony.com/building-bots-on-symphony/configuration/bot-permissions) for a list of roles and associated privileges.

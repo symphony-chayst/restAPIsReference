@@ -1,6 +1,10 @@
+---
+description: Returns the connectivity status of your Agent service.
+---
+
 # Health Check
 
-Returns the connectivity status of your Agent service. If your Agent service is started and running properly, the status value will be `UP`.
+If your Agent service is started and running properly, the status value will be `UP`.
 
 `Available on Agent 2.57.0 and above.`&#x20;
 

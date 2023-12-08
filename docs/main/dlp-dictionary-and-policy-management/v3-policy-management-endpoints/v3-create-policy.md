@@ -1,8 +1,5 @@
 ---
-description: >-
-  Available on Agent 2.1.4 and above. See the SBE x Agent compatibilities for
-  more details about the minimal requirements. Creates a new policy with
-  dictionary references.
+description: Creates a new policy with dictionary references.
 ---
 
 # V3 Create Policy
@@ -43,7 +40,7 @@ Field
 
 <table data-full-width="true"><thead><tr><th width="198.99999999999997">Field</th><th width="138">Type</th><th width="111">Required</th><th>Description</th></tr></thead><tbody><tr><td>applicableFileTypes</td><td><strong>array_string</strong></td><td>Yes</td><td>File types that can be applied. Can be ["PDF", "WORD", "EXCEL", "POWERPOINT", "ZIP", "CSV", "TXT"].</td></tr><tr><td>matchCriteria</td><td><strong>array_string</strong></td><td>Yes</td><td>Based on the criteria, whether a file is password protected or not means a match.Can be ["PASSWORD_PROTECTED". "NOT_PASSWORD_PROTECTED"]. The default is "NOT_PASSWORD_PROTECTED".</td></tr></tbody></table>
 
-> ### 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
 > Calling this endpoint requires a Service User Account set with the Expression Filter Policy Management role. For more information about Service User accounts and their roles, see the [Symphony Administration Guide](https://symphony.direct/).
 >

@@ -1,6 +1,8 @@
-# Get All Presence
+---
+description: Returns the presence of all users in a pod.
+---
 
-Returns the presence of all users in a pod.
+# Get All Presence
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v2/users/presence" method="get" expanded="true" fullWidth="true" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)

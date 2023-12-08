@@ -1,6 +1,8 @@
-# Update Message
+---
+description: Update an existing message.
+---
 
-Update an existing message.&#x20;
+# Update Message
 
 `Available on Agent 20.13.1+ with SBE 20.13.2+ in Beta. Starting with SBE 20.16, the feature is now in Controlled Availability. Starting with Agent 23.6, this endpoint is OBO-enabled.`
 
