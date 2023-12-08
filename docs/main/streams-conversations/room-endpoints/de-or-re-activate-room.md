@@ -8,11 +8,11 @@ Deactivate or reactivate a chatroom. At creation, a new chatroom is active.
 [pod-api-public.yaml](../../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
 
-> 🚧 Rules and limitations
+> #### 🚧 Rules and limitations
 >
 > Only rooms with members can be reactivated
 
-> 📘 Room ID
+> #### 📘 Room ID
 >
 > The room ID can be located in the Symphony web or desktop client by clicking on the timestamp of any message in the conversation. This will open the Message Status module overlay, and the Conversation ID can be found in the overlay footer.
 >
@@ -20,8 +20,9 @@ Deactivate or reactivate a chatroom. At creation, a new chatroom is active.
 >
 > See [Overview of Streams](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/overview-of-streams) for details.
 
-> 🚧 Required Permissions
+> #### 🚧 Required Permissions
 >
+> **External Rooms that have not been created by your company cannot be de/re-activated.**\
 > Rooms can only be de/re-activated by:
 >
 > * Owners of the room
