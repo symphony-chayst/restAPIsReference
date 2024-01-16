@@ -15,8 +15,8 @@ info:
     an API client will have to call both of these implementations
     and pass both of the session tokens returned as headers in all
     subsequent requests to the Symphony API.
-host: 'yourpodURL.symphony.com'
-basePath: '/login'
+host: 'yourkeymanagerURL.symphony.com'
+basePath: '/relay'
 paths:
   '/pubkey/authenticate':
     post:
