@@ -26,7 +26,7 @@ Datahose is not yet available in production.
 
 {% hint style="warning" %}
 **Configuration:** The credentials of the Content Export service need to be setup in the Agent configuration for datahose to work. \
-The description of the configuration fiels for the Content Export service is available in the [Agent configuration guide](https://docs.developers.symphony.com/admin-guide/agent-guide/agent-configuration-fields#agent-configuration-fields) (look for `agent.privatekey.ceservice` and `agent.certificate.ceservice`). &#x20;
+The description of the configuration fields for the Content Export service is available in the [Agent configuration guide](https://docs.developers.symphony.com/admin-guide/agent-guide/agent-configuration-fields#agent-configuration-fields) (look for `agent.privatekey.ceservice` and `agent.certificate.ceservice`). &#x20;
 {% endhint %}
 
 ### Using ackId
