@@ -231,6 +231,12 @@
   * [Get distinct values of a list of filters](main/audit-trail-2/get\_at2-v1-filters-values.md)
   * [Get Audit Trail Stream](main/audit-trail-2/get\_at2-v1-audits-stream.md)
   * [Get categories permissions](main/audit-trail-2/get\_at2-v1-categories-permissions.md)
+* [Compliance Barrier Groups](main/compliance-barrier-groups/README.md)
+  * [Compliance User Groups](main/compliance-barrier-groups/compliance-user-groups/README.md)
+    * [List Compliance User Groups](main/compliance-barrier-groups/compliance-user-groups/list-compliance-user-groups.md)
+    * [Get a Compliance User Group](main/compliance-barrier-groups/compliance-user-groups/get-a-compliance-user-group.md)
+    * [Create a Compliance User Group](main/compliance-barrier-groups/compliance-user-groups/create-a-compliance-user-group.md)
+    * [Update a Compliance User Group](main/compliance-barrier-groups/compliance-user-groups/update-a-compliance-user-group.md)
 
 ## Deprecated Endpoints
 
