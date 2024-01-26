@@ -96,9 +96,6 @@
   * [Get User Presence](main/presence/user-presence-v3.md)
   * [External Presence Interest](main/presence/register-user-presence-interest.md)
   * [Set Presence](main/presence/set-presence.md)
-  * [Create Presence Feed](main/presence/create-presence-feed.md)
-  * [Read Presence Feed](main/presence/read-presence-feed.md)
-  * [Delete Presence Feed](main/presence/delete-presence-feed.md)
   * [Set Other User's Presence - Admin](main/presence/set-user-presence.md)
 * [Users](main/users/README.md)
   * [Users Lookup](main/users/users-lookup-v3.md)
@@ -240,6 +237,9 @@
 
 ## Deprecated Endpoints
 
+* [Create Presence Feed](deprecated-endpoints/create-presence-feed.md)
+* [Read Presence Feed](deprecated-endpoints/read-presence-feed.md)
+* [Delete Presence Feed](deprecated-endpoints/delete-presence-feed.md)
 * [Get Message IDs by Timestamp](deprecated-endpoints/get-message-ids-by-timestamp.md)
 * [Health Check v2](deprecated-endpoints/health-check-v2.md)
 * [Datafeed 1](endpoints-reference/datafeed/datafeed-v1/README.md)
