@@ -6,8 +6,8 @@ description: Authenticates the API caller on the key manager using a JWT.
 
 
 
-{% swagger src="../../.gitbook/assets/login-api-public.yaml" path="/pubkey/authenticate" method="post" expanded="true" fullWidth="true" %}
-[login-api-public.yaml](../../.gitbook/assets/login-api-public.yaml)
+{% swagger src="../../.gitbook/assets/km-api-public.yaml" path="/pubkey/authenticate" method="post" %}
+[km-api-public.yaml](../../.gitbook/assets/km-api-public.yaml)
 {% endswagger %}
 
 To know more about RSA authentication process, refer to [RSA Bot Authentication Workflow](https://docs.developers.symphony.com/building-bots-on-symphony/authentication/rsa-authentication).
