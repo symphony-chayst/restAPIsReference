@@ -17,8 +17,8 @@ info:
     an API client will have to call both of these implementations
     and pass both of the session tokens returned as headers in all
     subsequent requests to the Symphony API.
-host: 'yourpodURL-api.symphony.com'
-basePath: '/sessionauth'
+host: 'yourkeymanagerURL-api.symphony.com'
+basePath: '/keyauth'
 paths:
   '/v1/authenticate':
     post:

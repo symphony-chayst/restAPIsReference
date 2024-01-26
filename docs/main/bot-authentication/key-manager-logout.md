@@ -4,8 +4,8 @@ description: Log out a user’s key manager session.
 
 # Key Manager Logout
 
-{% swagger src="../../.gitbook/assets/authenticator-api-public.yaml" path="/v1/logout" method="post" expanded="true" fullWidth="true" %}
-[authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)
+{% swagger src="../../.gitbook/assets/km-cert-api-public.yaml" path="/v1/logout" method="post" %}
+[km-cert-api-public.yaml](../../.gitbook/assets/km-cert-api-public.yaml)
 {% endswagger %}
 
 To call the Key Manager Logout endpoint for a user, you must have a valid keyManagerToken for the user.

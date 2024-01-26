@@ -6,8 +6,8 @@ description: >-
 
 # Key Manager Authenticate (Cert)
 
-{% swagger src="../../.gitbook/assets/authenticator-api-public.yaml" path="/v1/authenticate" method="post" expanded="true" fullWidth="true" %}
-[authenticator-api-public.yaml](../../.gitbook/assets/authenticator-api-public.yaml)
+{% swagger src="../../.gitbook/assets/km-cert-api-public.yaml" path="/v1/authenticate" method="post" %}
+[km-cert-api-public.yaml](../../.gitbook/assets/km-cert-api-public.yaml)
 {% endswagger %}
 
 > #### ❗️ Key Manager Token Management
