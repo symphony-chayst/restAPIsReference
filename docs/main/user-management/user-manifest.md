@@ -1,10 +1,10 @@
 ---
 description: >-
-  Released in 24.1. Returns the manifest of the service user. The manifest
-  contains the list of supported commands.
+  Released in 24.1. Returns the manifest of the calling service user (Bot). The
+  manifest contains the list of supported chat commands.
 ---
 
-# User Manifest
+# Get Bot Manifest
 
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/manifest/own" method="get" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
