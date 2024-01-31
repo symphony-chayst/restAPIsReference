@@ -9,3 +9,5 @@ description: >-
 {% swagger src="../../.gitbook/assets/pod-api-public.yaml" path="/v1/user/manifest/own" method="get" %}
 [pod-api-public.yaml](../../.gitbook/assets/pod-api-public.yaml)
 {% endswagger %}
+
+To learn more about what Bot manifests are, their structure and how to configure them, please have a look at [update-user-manifest.md](update-user-manifest.md "mention")
