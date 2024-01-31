@@ -18,7 +18,7 @@ The manifest describes the list of Slash commands that your bot supports, and is
 
 Every time a user is in a room with your bot, he can display all supported commands by typing "/" in the chat text editor.
 
-The auto complete menu makes it much easier to discover all supported commandsIt becomes much easier to discover the supported commands, and the auto complete menu helps the user to properly format the command.
+With the auto complete menu, users can easily discover all the features available through your Bot. The menu also makes it much easier and faster to type properly formatted commands.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
