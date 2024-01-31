@@ -89,31 +89,31 @@ Sample manifest:
 }
 ```
 
-Once the manifest is ready, it needs to be **1. Compressed** (remove all unnecessary characters such as spaces, new lines, etc), then **2. JSON-escaped**, and finally **3. Uploaded to Symphony**, using the Upload Bot Manifest endpoint.
+Once the manifest is ready, it needs to be **1. Compressed** then **2. JSON-escaped**, and finally **3. Uploaded to Symphony**, using the Upload Bot Manifest endpoint.
 
 1. **Compress the manifest**
 
+The maximum length of the manifest is 6000 characters, hence the benefit of removing all unnecessary characters. such as spaces, tabs or new lines.&#x20;
+
+{% code title="Compressed manifest" overflow="wrap" %}
 ```json
 {"commands": [{"args": [{"name": "[query1]"}, {"name": "[query2]"}], "desc": "Search users based on name, company or job title", "example": "/search John Smith", "name": "search"}, {"args": [{"name": "[product_name]"}], "desc": "Onboard a new user on a product.", "example": "/onboard Mtx102", "name": "onboard"}, {"args": [{"name": "[cmdname]"}], "desc": "Get more information on how to use a command.", "example": "/help onboard", "name": "help"}, {"args": [{"name": "[nbusers]"}, {"name": "[product]"}], "desc": "List top users of a product.", "example": "/topperf 10 Mtx503", "name": "topperf"}]}
 ```
-
-The maximum length of the manifest is 6000 characters, hence the benefit of removing any unnecessary characters.&#x20;
+{% endcode %}
 
 2. **JSON-escape**
 
-Then you need to JSON-escape the manifest.&#x20;
+Then you need to JSON-escape the manifest. Free tools are available online to perform this operation.&#x20;
 
+{% code title="JSON-escaped manifest" overflow="wrap" %}
 ```
 {\"commands\": [{\"args\": [{\"name\": \"[query1]\"}, {\"name\": \"[query2]\"}], \"desc\": \"Search users based on name, company or job title\", \"example\": \"\/search John Smith\", \"name\": \"search\"}, {\"args\": [{\"name\": \"[product_name]\"}], \"desc\": \"Onboard a new user on a product.\", \"example\": \"\/onboard Mtx102\", \"name\": \"onboard\"}, {\"args\": [{\"name\": \"[cmdname]\"}], \"desc\": \"Get more information on how to use a command.\", \"example\": \"\/help onboard\", \"name\": \"help\"}, {\"args\": [{\"name\": \"[nbusers]\"}, {\"name\": \"[product]\"}], \"desc\": \"List top users of a product.\", \"example\": \"\/topperf 10 Mtx503\", \"name\": \"topperf\"}]}
 ```
-
-Free tools are available online to perform this operation.&#x20;
+{% endcode %}
 
 3. **Upload to Symphony**
 
-Upload the JSON-escaped manifest as a body parameter of the Update Bot Manifest endpoint as shown below.&#x20;
-
-Example of call to the Update Bot Manifest endpoint:
+Upload the JSON-escaped manifest as a body parameter of the Update Bot Manifest endpoint as shown in the example below:
 
 ```batch
 curl --location 'https://mypodurl.symphony.com/pod/v1/user/manifest/own' \
@@ -124,9 +124,9 @@ curl --location 'https://mypodurl.symphony.com/pod/v1/user/manifest/own' \
 }'
 ```
 
-Once the manifest is uploaded, you can test that the Bot commands auto complete menu works by opening a chat with your bot and typing the "/" character.
+Once the manifest is uploaded, you can test that the commands auto complete menu displays correctly by opening a chat with your bot and typing the "/" character.
 
-If the auto complete menu does not open, please open the developer tools console to check if an error log points to a format error. This error log could start with '`Error while parsing the manifest from the bot`'.
+If the auto complete menu does not display, please open the developer tools console and look for an error log related to the format of the manifest. This log could start with '`Error while parsing the manifest from the bot`'.
 
 Please note that the manifest is cached on the Client: Reload your Client to refresh the cache after you have uploaded a new version of your manifest.
 
