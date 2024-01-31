@@ -121,3 +121,10 @@ curl --location 'https://mypodurl.symphony.com/pod/v1/user/manifest/own' \
   "manifest": "{\"commands\": [{\"args\": [{\"name\": \"[query1]\"}, {\"name\": \"[query2]\"}], \"desc\": \"Search users based on name, company or job title\", \"example\": \"\/search John Smith\", \"name\": \"search\"}, {\"args\": [{\"name\": \"[product_name]\"}], \"desc\": \"Onboard a new user on a product.\", \"example\": \"\/onboard Mtx102\", \"name\": \"onboard\"}, {\"args\": [{\"name\": \"[cmdname]\"}], \"desc\": \"Get more information on how to use a command.\", \"example\": \"\/help onboard\", \"name\": \"help\"}, {\"args\": [{\"name\": \"[nbusers]\"}, {\"name\": \"[product]\"}], \"desc\": \"List top users of a product.\", \"example\": \"\/topperf 10 Mtx503\", \"name\": \"topperf\"}]}"
 }'
 ```
+
+Once the manifest is uploaded, you can test that the Bot commands auto complete menu works by opening a chat with your bot and typing the "/" character.
+
+If the auto complete menu does not open, please open the developer tools console to check if an error log points to a format error. This error log could start with '`Error while parsing the manifest from the bot`'.
+
+Please note that the manifest is cached on the Client: Reload your Client to refresh the cache after you have uploaded a new version of your manifest.
+
