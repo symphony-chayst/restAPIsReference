@@ -18,7 +18,7 @@ The manifest describes the list of Slash commands that your bot supports, and is
 
 Every time a user is in a room with your bot, he can display all supported commands by typing "/" in the chat text editor.
 
-With the auto complete menu, users can easily discover all the features available through your Bot. The menu also makes it much easier and faster to type properly formatted commands.
+With this new auto complete menu, users can easily discover all the features available through your Bot. The menu also makes it much easier and faster to type properly formatted commands.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -91,11 +91,11 @@ Sample manifest:
 
 ### Steps
 
-Once the manifest is ready, it needs to be **1. Compressed** then **2. JSON-escaped**, and finally **3. Uploaded to Symphony**, using the Upload Bot Manifest endpoint.
+Once you have completed your manifest, it needs to be **1. Compressed** then **2. JSON-escaped**, and finally **3. Uploaded to Symphony**, using the Upload Bot Manifest endpoint.
 
 #### **1. Compress the manifest**
 
-The maximum length of the manifest is 6000 characters, hence the benefit of removing all unnecessary characters. such as spaces, tabs or new lines.&#x20;
+The maximum length of the manifest is 6000 characters, hence the benefit of removing all unnecessary characters such as spaces, tabs or new lines.&#x20;
 
 {% code title="Compressed manifest" overflow="wrap" %}
 ```json
@@ -126,11 +126,13 @@ curl --location 'https://mypodurl.symphony.com/pod/v1/user/manifest/own' \
 }'
 ```
 
+The endpoint above needs to be called with the identity of the Bot for which the manifest is uploaded. There is currently no endpoint to update the manifest of another service user.
+
 ### Validation
 
 Once the manifest is uploaded, you can test that the commands auto complete menu displays correctly by opening a chat with your bot and typing the "/" character.
 
-If the auto complete menu does not display, please open the console of the developer tools and look for an error log related to the format of the manifest. This log could start with '`Error while parsing the manifest from the bot`'.
+If the auto complete menu does not display, please open the developer tools' console and look for an error log related to the format of the manifest. This log could start with '`Error while parsing the manifest from the bot`'.
 
 Please note that the manifest is cached on the Client: Reload your Client to refresh the cache after you have uploaded a new version of your manifest.
 
