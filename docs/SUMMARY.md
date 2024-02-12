@@ -229,11 +229,21 @@
   * [Get Audit Trail Stream](main/audit-trail-2/get\_at2-v1-audits-stream.md)
   * [Get categories permissions](main/audit-trail-2/get\_at2-v1-categories-permissions.md)
 * [Compliance Barrier Groups](main/compliance-barrier-groups/README.md)
+  * [Compliance Group Types](main/compliance-barrier-groups/compliance-group-types.md)
   * [Compliance User Groups](main/compliance-barrier-groups/compliance-user-groups/README.md)
     * [List Compliance User Groups](main/compliance-barrier-groups/compliance-user-groups/list-compliance-user-groups.md)
     * [Get a Compliance User Group](main/compliance-barrier-groups/compliance-user-groups/get-a-compliance-user-group.md)
     * [Create a Compliance User Group](main/compliance-barrier-groups/compliance-user-groups/create-a-compliance-user-group.md)
     * [Update a Compliance User Group](main/compliance-barrier-groups/compliance-user-groups/update-a-compliance-user-group.md)
+  * [Compliance Group Assignments](main/compliance-barrier-groups/compliance-group-assignments/README.md)
+    * [List Assignments](main/compliance-barrier-groups/compliance-group-assignments/list-assignments.md)
+    * [List Compliance Group Assignments](main/compliance-barrier-groups/compliance-group-assignments/list-compliance-group-assignments.md)
+    * [Update a Compliance Group](main/compliance-barrier-groups/compliance-group-assignments/update-a-compliance-group.md)
+  * [Compliance Group Memberships](main/compliance-barrier-groups/compliance-group-memberships/README.md)
+    * [List Memberships](main/compliance-barrier-groups/compliance-group-memberships/list-memberships.md)
+    * [List Compliance Group Memberships](main/compliance-barrier-groups/compliance-group-memberships/list-compliance-group-memberships.md)
+    * [Add Compliance Group Membership](main/compliance-barrier-groups/compliance-group-memberships/add-compliance-group-membership.md)
+    * [Update a User Membership](main/compliance-barrier-groups/compliance-group-memberships/update-a-user-membership.md)
 
 ## Deprecated Endpoints
 
