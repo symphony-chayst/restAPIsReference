@@ -89,6 +89,16 @@ Sample manifest:
 }
 ```
 
+#### Notes on manifest format
+
+**Commands are single words**: The name of a command can't contain any spaces. If you want to have sub commands (e.g. `/create ticket` and `/create profile` ) then you can use arguments for that. **You can have several commands with the same name.**
+
+#### **Limitations**
+
+**Long display names**: Bots with a very long display name (more than 5 separate words) are not well supported: The list of commands will not display if a user types "/" after a mention to your Bot. Users will still be able to see the commands if they type "/" without a mention to your Bot.&#x20;
+
+**Manifest size**: The maximum length of the manifest is **6000** characters. Remove unnecessary spaces (compress) to keep the character count low.
+
 ### Steps
 
 Once you have completed your manifest, it needs to be **1. Compressed** then **2. JSON-escaped**, and finally **3. Uploaded to Symphony**, using the Upload Bot Manifest endpoint.
