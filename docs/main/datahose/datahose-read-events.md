@@ -73,4 +73,10 @@ _Please note that you can very easily access this API via our BDKs in Java and P
 
 _If a batch of messages is not confirmed by sending the `ackId`, the messages that are there will be returned in the subsequent readings and may blend into the newer messages._
 
+### Fair use policy
+
+Datahose API is subject to a fair use policy of **5** active feeds.&#x20;
+
+If your integration or workflow require more than 5 feeds active at the same time, please contact Symphony.
+
 [^1]: Status of ceservice should be UP

@@ -11,3 +11,9 @@ Datahose is a data streaming service, that gives access to all messages and even
 Similarly to [Datafeed 2](broken-reference), Datahose allows a service user account (bot) to retrieve [Real Time Events](https://docs.developers.symphony.com/building-bots-on-symphony/datafeed/real-time-events) including all chat messages. However, with Datahose, there is no need for the service user to be part of a chat conversation to receive its messages: the service user will automatically receive **all events from all conversations** of the pod in real time.
 
 Get more information on how to use Datahose with the [Datahose - Read Events](datahose-read-events.md) endpoint.
+
+### Fair use policy
+
+Datahose API is subject to a fair use policy of **5** active feeds.&#x20;
+
+If your integration or workflow require more than 5 feeds active at the same time, please contact Symphony.
